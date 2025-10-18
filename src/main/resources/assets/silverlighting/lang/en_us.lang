@@ -2,6 +2,8 @@ key.silverlighting.specialboost=boost
 
 itemGroup.silverlighting=SilverLighting
 
+silverlighting.newline=NewLine
+
 item.silverlighting.brokenbamboo.name=brokenbamboo
 item.silverlighting.anticrystal.name=anticrystal
 item.silverlighting.animasheath.name=animasheath

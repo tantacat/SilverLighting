@@ -16,6 +16,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraftforge.fml.common.network.ByteBufUtils;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
@@ -72,7 +73,7 @@ public class PacketSpecialShowSpell implements IMessage{
 				}
 				else if (last_line.equals(""))
 				{
-					player.sendMessage(new TextComponentString(I18n.format("silverlighting.newline" + "§r" + now_line)));
+					player.sendMessage(new TextComponentString(new TextComponentTranslation("silverlighting.newline").getFormattedText() + ": " + now_line));
 					j++;
 				}
 				else
@@ -81,7 +82,7 @@ public class PacketSpecialShowSpell implements IMessage{
 			}
 			
 			for (int k = i + j; i < now_tooltips.size(); k++)
-				player.sendMessage(new TextComponentString(I18n.format("silverlighting.newline" + "§r " + now_tooltips.get(k))));
+				player.sendMessage(new TextComponentString(new TextComponentTranslation("silverlighting.newline").getFormattedText() + ": " + now_tooltips.get(k)));  
 			
 		}
 		

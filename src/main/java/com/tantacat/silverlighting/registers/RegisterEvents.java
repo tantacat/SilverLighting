@@ -21,6 +21,7 @@ import mods.flammpfeil.slashblade.entity.selector.EntitySelectorAttackable;
 import mods.flammpfeil.slashblade.item.ItemProudSoul;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.util.ReflectionAccessHelper;
+import mods.flammpfeil.slashblade.util.ResourceLocationRaw;
 import mods.flammpfeil.slashblade.util.SlashBladeHooks;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.Entity;
@@ -51,6 +52,7 @@ import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
 import net.minecraftforge.fml.common.registry.EntityEntry;
 import net.minecraftforge.fml.relauncher.Side;
@@ -382,29 +384,11 @@ public class RegisterEvents {
 	
 	
 	//修复破碎的耀魂修刀的bug
-	@SideOnly(Side.CLIENT)
 	@SubscribeEvent
-	public void onGetTinyProudSoul(ItemTooltipEvent event)
-	{			
-		EntityPlayer player = event.getEntityPlayer();
-		ItemStack itemstack = event.getItemStack();
-		ItemStack tiny_soul = SlashBlade.findItemStack(SlashBlade.modid, SlashBlade.TinyBladeSoulStr, 1);
-		
-		if (!itemstack.isEmpty() && itemstack.isItemEqual(tiny_soul))
-        {
-			if (!itemstack.hasTagCompound()) return;
-			if (itemstack.isItemEnchanted()) return;
-			
-			NBTTagCompound tag = itemstack.getTagCompound();
-			Iterator<String> keys = tag.getKeySet().iterator(); 
-			
-			while (keys.hasNext())
-			{
-				String key = keys.next();
-				NBTBase nbt = tag.getTag(key);
-				if (nbt.getId() == 10 && ((NBTTagCompound)nbt).getSize() == 0)
-					keys.remove();
-			}
-        }
+	public void replaceTinySoul(PlayerLoggedInEvent event)
+	{					
+		ItemStack right_tiny_soul = SlashBlade.findItemStack(SlashBlade.modid, SlashBlade.TinyBladeSoulStr, 1);
+		ItemSlashBlade.getSpecialEffect(right_tiny_soul);
+		SlashBlade.registerCustomItemStack(SlashBlade.TinyBladeSoulStr, right_tiny_soul);
 	}
 }
