@@ -1,0 +1,75 @@
+{
+    "category": "category_1",
+    "sortnum": 7,
+    "name": "露台",
+    "icon": "flammpfeil.slashblade:slashbladeWrapper{TextureName:\"BalkonWood\"}",
+	"advancement": "silverlighting:wrape/saya",
+    "pages":[
+        {
+            "type" : "text",
+            "text" : "她献上了躯体与力量。$(br2)由她蕴造的每一把刀，都是她的化身。"
+        },
+        {
+			"advancement": "silverlighting:wrape/saya",
+            "type": "spotlight",
+            "title": "蕴造",
+            "item": "flammpfeil.slashblade:slashbladeWrapper",
+            "text": "无貌之鞘，正因失去了形体，才拥有了蕴造刀剑的力量。$(br2)你将自己的佩刀插入其中。假以时日，她一定会以你熟悉又陌生的姿态，回到你的身边。"
+        },
+        {
+			"advancement": "silverlighting:wrape/balkon_wood",
+            "type" : "text",
+            "title" : "击拆",
+            "text": "你将木剑收入鞘中，就像一开始你所做的那样。$(br2)借助鞘的力量，木剑被蕴造成了拔刀术的载体。与木偶不同，在无貌之鞘的作用下，她拥有了更强的力量。$(br2)但终究是木刀。悲剧的复现，不会近在眼前吧？"
+        },
+		{
+		    "advancement": "silverlighting:wrape/balkon_wood",
+			"type": "crafting",
+			"recipe": "silverlighting:animasheath_wood_recipe"
+		},
+        {
+			"advancement": "silverlighting:wrape/balkon_stone",
+            "type" : "text",
+            "title" : "锐岩",
+            "text": "沉重的石剑经由鞘的蕴造，挥动起来明显更加顺手。$(br2)沉重是她的本色，破坏是她的本能，如若不加约束，恐怕她会轻易的将敌人和自己一同摧毁……$(br2)小心一点。同样的悲剧，不能发生两次。"
+        },
+		{
+		    "advancement": "silverlighting:wrape/balkon_stone",
+			"type": "crafting",
+			"recipe": "silverlighting:animasheath_stone_recipe"
+		},
+        {
+			"advancement": "silverlighting:wrape/balkon_iron",
+            "type" : "text",
+            "title" : "利刀",
+            "text": "她本就是杀敌的好手。被蕴造为拔刀剑后，你对她甚至爱不释手。$(br2)她是一把锋利的刀剑，就和成为拔刀剑之前一样，在她的职责范围内做的很好。$(br2)她很好。但，你讲不出她的优点。"
+        },
+		{
+		    "advancement": "silverlighting:wrape/balkon_iron",
+			"type": "crafting",
+			"recipe": "silverlighting:animasheath_iron_recipe"
+		},
+        {
+			"advancement": "silverlighting:wrape/balkon_gold",
+            "type" : "text",
+            "title" : "山吹",
+            "text": "杀敌本不是她的职责，但你还是这样做了。$(br2)她的躯体依然脆弱，但附魔的符文在这具脆弱的剑体上流转，发挥出了比原本更强的力量。$(br2)要使用她的话，先算好她的身体能承受到什么程度吧。"
+        },
+		{
+		    "advancement": "silverlighting:wrape/balkon_gold",
+			"type": "crafting",
+			"recipe": "silverlighting:animasheath_gold_recipe"
+		},
+        {
+			"advancement": "silverlighting:wrape/balkon_diamond",
+            "type" : "text",
+            "title" : "金刚",
+            "text": "坚不可破，无坚不破。用你所能找到的最坚固的材料制成的剑，被蕴造之后变得更加强大。$(br2)无需犹豫，无需畏惧，这具身体绝不可能再次迎来折断的结局。此为金刚，不坏之刃。$(br2)用她，让你的敌人们体会绝望。"
+        },
+		{
+		    "advancement": "silverlighting:wrape/balkon_diamond",
+			"type": "crafting",
+			"recipe": "silverlighting:animasheath_diamond_recipe"
+		}
+    ]
+}

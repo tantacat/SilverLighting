@@ -1,0 +1,30 @@
+{
+  "parent": "silverlighting:animasheath/silverlighting",
+  "display": {
+    "title": {
+      "translate": "advancement.silverlighting.puresilver"
+    },
+    "description": {
+      "translate": "advancement.silverlighting.puresilver.desc",
+      "with": [ "\n" ]
+    },
+    "icon": {
+      "item": "silverlighting:animasheath",
+      "nbt": "{ench: [{lvl:1,id:35}],TextureName:\"silver/puresilver\",ModelName:\"silver/puresilver\"}"
+    },
+    "frame": "challenge"
+  },
+  "criteria": {
+    "get": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "silverlighting:animasheath",
+            "nbt": "{CurrentItemName:\"silverlighting.puresilver\"}"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,235 @@
+{
+    "category": "tantacat_tutorial",
+    "sortnum": 2,
+    "name": "刀的属性喵~",
+    "icon": "flammpfeil.slashblade:slashbladeNamed",
+    "pages":[
+        {
+            "type" : "text",
+            "text" : "这部分要一次性介绍完刀的属性喵~！$(br2)内容可能有点多，而且会涉及到后面才能获得的物品喵~！$(br2)所以记得时常来复习喵~！"
+        },
+        {
+            "type": "text",
+            "title": "准备工作喵~",
+            "text": "为了方便你查看拔刀剑的属性，建议你打开高级提示框（F3+H）喵~$(br2)聊天栏里显示$(br2)$(6)$(l)[调试]$()高级提示框:显示$(br2)就是成功了喵~"  
+        },
+        {
+            "type": "text",
+            "title": "ToolTips",
+            "text": "首先讲解一下MC的基础知识，即什么是ToolTips喵~$(br2)简单来说，你的鼠标移动到某个东西上面额外显示的一个框，这个框就是ToolTips$(br2)比如$(br)鼠标移动到这里喵~->$(t:我是ToolTips，我可以显示很多东西)这个"
+        },
+        {
+            "type": "spotlight",
+            "title": "ToolTips",
+            "item": "flammpfeil.slashblade:slashbladewood",
+            "text": "包括你鼠标移动到一个物品上面显示的也是ToolTips喵~$(br2)拿上面的物品试试吧喵~"
+        },
+        {
+            "type": "spotlight",
+            "title": "整体了解",
+            "item": "flammpfeil.slashblade:slashbladeNamed{killCount:100, ProudSoul:500, RepairCounter:10}",
+            "text": "先来总体了解一下拔刀剑的属性喵~$(br2)封:拔刀剑的$(l:tantacat_tutorial/entry_2#刀铭)刀铭$()喵~$(br)根据刀的种类分为有铭刀和无铭刀，有铭刀分为封、印、妖三种喵~$(br2)$(l:tantacat_tutorial/entry_2#击杀)KillCout(击杀数)$():表示这把刀击杀的敌人数喵~$(br)$(l:tantacat_tutorial/entry_2#耀魂)ProudSoul(耀魂值)$():表示这把刀拥有的耀魂值喵~"
+        },
+        {
+            "type": "text",
+            "text": "$(l:tantacat_tutorial/entry_2#锻造)Refine(锻造数)$():表示这把刀的锻造数喵~$(br)$(l:tantacat_tutorial/entry_2#评级)RankAttackDamage(评级伤害)$():在对应评级时拔刀剑能造成的伤害喵~$(br2)“在主手时：”及下面的两行是原版ToolTips的内容，对拔刀剑意义不大喵~$(br2)“flammpfeil.slashblade:slashbladeNamed”是拔刀剑的$(l:tantacat_tutorial/entry_2#id)物品id$()喵~$(br2)“NBT:4个标签”即此拔刀剑的$(l:tantacat_tutorial/entry_2#NBT)NBT$()拥有四个key:value喵~"
+        },
+        {
+			"anchor": "刀铭",
+            "type": "text",
+            "title": "刀铭",
+            "text": "不是所有的刀都是有刀铭的喵~$(br2)有没有刀铭的区分方法就是ToolTips中是否在物品名下方显示如“封”、“印”、“妖”的字样喵~$(br2)有一些附属mod会修改刀的刀铭喵~$(br2)比如尼格洛茨将“妖”修改为了“神”喵~"
+        },
+        {
+            "type": "spotlight",
+            "title": "刀铭——无铭刀",
+            "item": "flammpfeil.slashblade:slashbladewood",
+            "text": "无铭刀「木偶」是无铭刀喵~"
+        },
+        {
+            "type": "spotlight",
+            "title": "刀铭——封",
+            "item": "flammpfeil.slashblade:slashbladeNamed",
+            "text": "无铭「无名」是有铭刀（虽然名字是无铭刀），且是封刀喵~"
+        },
+        {
+            "type": "spotlight",
+            "title": "刀铭——印",
+            "item": "flammpfeil.slashblade:slashbladeNamed{ench:[{id:7s,lvl:1s}]}",
+            "text": "部分封刀在被附魔以后会成为印刀喵~"
+        },
+        {
+            "type": "spotlight",
+            "title": "刀铭——妖",
+            "item": "flammpfeil.slashblade:slashbladeNamed{ench:[{id:7s,lvl:1s}],display:{Name:\"铭刀「无名」\"}}",
+            "text": "印刀经过改名后会成为妖刀喵~"
+        },
+        {
+            "type": "text",
+            "title": "刀铭——妖",
+            "text": "与此同时，你能看到妖刀的ToolTips中出现了新的一行喵~$(br2)SA:次元斩$(br2)SA是刀的一种$(l:tantacat_tutorial/entry_6)特殊能力$()喵~$(br)能通过长按右键蓄力完成后松开释放喵~$(br)我们后续再详细讲解喵~$(br2)此外，部分封刀获得附魔以后会直接成为妖刀而不是印刀喵~（请翻页）"
+        },
+        {
+            "type": "spotlight",
+            "item": "flammpfeil.slashblade:slashbladeNamed{SpecialAttackType:1,isDefaultBewitched:true,CurrentItemName:\"flammpfeil.slashblade.named.muramasa\",TextureName:\"named/muramasa/muramasa\",ModelName:\"named/muramasa/muramasa\"}",
+            "text": "千鹤「村正」在没有附魔时是封刀喵~"
+        },
+        {
+            "type": "spotlight",
+            "item": "flammpfeil.slashblade:slashbladeNamed{SpecialAttackType:1,isDefaultBewitched:true,CurrentItemName:\"flammpfeil.slashblade.named.muramasa\",ench:[{id:7s,lvl:1s}],TextureName:\"named/muramasa/muramasa\",ModelName:\"named/muramasa/muramasa\"}",
+            "text": "千鹤「村正」在附魔后直接是妖刀喵~$(br2)并且你可以注意到这类刀在封刀时名字是金色的喵~"
+        },
+        {
+			"anchor": "击杀",			
+            "type": "spotlight",
+            "title": "击杀数",
+            "item": "silverlighting:brokenbamboo:11{display:{Name:\"§c锐气千刃\"}}",
+            "text": "击杀数通过使用拔刀剑击杀敌人获得喵~$(br2)当击杀数>=1000时，会使刀的状态包含FiercerEdge(凶狠利刃)喵~$(br2)刀的状态会在$(l:tantacat_tutorial/entry_4)刀的状态$()一章集中讲喵~"
+        },
+        {
+            "type": "spotlight",
+            "title": "凶狠利刃",
+            "item": "flammpfeil.slashblade:slashbladeNamed{killCount:1000}",
+            "text": "此时刀的KillCount一栏会变成红色喵~$(br2)同时，如果你有注意观察，可以发现RankAttackDamage也发生了变化，我们在后面细讲喵~"
+        },
+        {
+			"anchor": "耀魂",
+            "type": "spotlight",
+            "title": "耀魂值",
+            "item": "silverlighting:brokenbamboo:9{display:{Name:\"§c吸精之刃\"}}",
+            "text": "耀魂值可以通过击杀敌人来获得喵~$(br2)同时也可以通过耀魂碎片来获取喵~(会在$(l:tantacat_tutorial/entry_6)耀魂材料$()章节详细讲述)$(br2)当耀魂值>=1000时，会使刀的状态包含SoulEeater(噬魂之刃)喵~"
+        },
+        {
+            "type": "spotlight",
+            "title": "噬魂之刃",
+            "item": "flammpfeil.slashblade:slashbladeNamed{ProudSoul:1000}",
+            "text": "此时刀的ProudSoul一栏会变成紫色喵~$(br2)同时，进入噬魂之刃的状态的刀可以通过击杀敌人后发动嘲讽动作来回复刀的耐久喵~$(br2)耀魂值本身也能被消耗以恢复刀的耐久喵~(详见$(l:tantacat_tutorial/entry_5)刀的修复$())"
+        },
+        {
+			"anchor": "锻造",
+            "type": "spotlight",
+            "title": "锻造数",
+            "item": "flammpfeil.slashblade:slashbladeNamed{RepairCounter:10}",
+            "text": "锻造数通过将拔刀剑与耀魂材料同置于铁砧中锻造而获得喵~$(br2)锻造数能提高拔刀剑的RankAttackDamage中Limit级别及次一级别的伤害喵~"
+        },
+        {
+            "type": "spotlight",
+            "title": "锻造数",
+            "item": "flammpfeil.slashblade:slashbladeNamed{RepairCounter:100}",
+            "text": "可以看到，右边的刀由于锻造数高出左边的刀很多，所以Limit级别的伤害也高了很多喵~$(br2)不过事实上，RankAttackDamage的机制没有这么简单喵~"
+        },
+        {
+			"anchor": "评级",
+            "type": "text",
+            "title": "评级伤害",
+            "text": "评级伤害实际上分三个阶段喵~$(br)我们在这里暂时分别称其为第一阶段、第二阶段、第三阶段喵~$(br2)评级伤害实际上会受到以下三个因素影响喵~$(li)刀是否为凶狠利刃$(li)玩家等级$(li)锻造数"
+        },
+        {
+            "type": "spotlight",
+            "title": "评级伤害的阶段",
+            "item": "flammpfeil.slashblade:slashbladeNamed",
+            "text": "观察上面的刀，其中评级伤害的阶段与评级区间的对应关系如下喵~:$(li)D-C 第一阶段 被隐藏$(li)B-SS 第二阶段$(li)SSS 第三阶段$(br2)注意！Limit不是阶段三喵~。事实上，Limit是一个概念上的评级伤害，用于提示玩家可以达到的最大评级伤害喵~"   
+        },
+        {
+            "type": "spotlight",
+            "title": "凶狠利刃的影响",
+            "item": "flammpfeil.slashblade:slashbladeNamed",
+            "text": "没有进入凶狠利刃状态的刀的评级伤害如下喵~$(br2)第二阶段:B-SS$(br)第三阶段:SSS"
+        },
+        {
+            "type": "spotlight",
+            "title": "凶狠利刃的影响",
+            "item": "flammpfeil.slashblade:slashbladeNamed{killCount:1000}",
+            "text": "进入凶狠利刃状态的刀的评级伤害更改为如下喵~$(br2)第二阶段:B-A$(br)第三阶段:S-SSS$(br2)所以进入凶狠利刃以后刀能在更低的评级下发挥出最强的力量喵~"
+        },
+        {
+            "type": "text",
+            "title": "其他两项的影响",
+            "text": "设第二阶段的伤害为ba,玩家等级为lvl$(br2)则第三阶段伤害为ba+min(10+Refine,lvl)$(br2)Limit评级伤害为ba+10+Refine$(br2)所以我们会说Limit是理论上玩家能造成的最大伤害喵~"
+        },
+        {
+			"anchor": "id",
+            "type": "text",
+            "title": "拔刀剑的id(类型)",
+            "text": "接下来是拔刀剑的id喵~$(br2)拔刀剑的id一定程度上决定了拔刀剑的类型喵~$(br2)原版拔刀剑共有7种id喵~"
+        },
+        {
+            "type": "spotlight",
+            "title": "无铭刀",
+            "item": "flammpfeil.slashblade:slashbladeWood",
+            "text": "无铭刀「木偶」的id是flammpfeil.slashblade:slashbladewood喵~"
+        },
+        {
+            "type": "spotlight",
+            "title": "无铭刀",
+            "item": "flammpfeil.slashblade:slashbladeWhite",
+            "text": "利刀「白鞘」的id是flammpfeil.slashblade:slashbladewhite喵~"
+        },
+        {
+            "type": "spotlight",
+            "title": "无铭刀",
+            "item": "flammpfeil.slashblade:slashbladeBambooLight",
+            "text": "无铭刀「竹光」的id是flammpfeil.slashblade:slashbladebamboolight喵~"
+        },
+        {
+            "type": "spotlight",
+            "title": "无铭刀",
+            "item": "flammpfeil.slashblade:slashbladeSilverBambooLight",
+            "text": "名刀「银纸竹光」的id是flammpfeil.slashblade:slashbladesilverbamboolight喵~"
+        },
+        {
+            "type": "text",
+            "text": "以上四种刀都是无铭刀，同时他们的JAVA类(编程概念)都是ItemSlashBladeDetune$(br2)这不仅意味着他们是无铭刀,也意味着他们的NBT在isDestructable的值不为true时断刀刀会像原版工具一样消失喵~$(br2)这也是白鞘能在断刀时进入断刀状态而不是直接消失的原因喵~"
+        },
+        {
+            "type": "spotlight",
+            "title": "大太刀类刀",
+            "item": "flammpfeil.slashblade:slashblade",
+            "text": "大太刀「」的id是flammpfeil.slashblade:slashblade喵~$(br2)它的JAVA类是ItemSlashBlade喵~"
+        },
+        {
+            "type": "spotlight",
+            "title": "无铭类刀",
+            "item": "flammpfeil.slashblade:slashbladeNamed",
+            "text": "无铭「无名」的id是flammpfeil.slashblade:slashbladenamed喵~$(br2)它们的JAVA类是ItemSlashBladeNamed喵~$(br2)绝大多数非鞘类刀都是这个物品id，他们的区别在于NBT不同喵~"
+        },
+        {
+            "type": "spotlight",
+            "title": "无铭类刀",
+            "item": "flammpfeil.slashblade:slashbladeNamed{SpecialAttackType:1,isDefaultBewitched:true,CurrentItemName:\"flammpfeil.slashblade.named.muramasa\",ench:[{id:7s,lvl:1s}],TextureName:\"named/muramasa/muramasa\",ModelName:\"named/muramasa/muramasa\"}",
+            "text": "例如前面出现过的千鹤「村正」喵~$(br2)与无铭「无名」的id相同,但是可以看到NBT标签数量是不同的喵~(实际上NBT差异很大)"
+        },
+        {
+            "type": "spotlight",
+            "title": "鞘类刀",
+            "item": "flammpfeil.slashblade:slashbladeWrapper",
+            "text": "鞘及鞘类刀的物品id是flammpfeil.slashblade:slashbladewrapper喵~$(br2)它们的JAVA类是ItemSlashBladeWrapper喵~$(br2)这类刀是拔刀剑种机制最复杂的刀喵~$(br)通过不同的NBT组合能出现多种情况，我们在nbt部分详细介绍喵~"
+        },
+        {
+            "type": "spotlight",
+            "title": "鞘类刀",
+            "item": "flammpfeil.slashblade:slashbladeWrapper{ench:[{lvl:2s,id:19s},{lvl:2s,id:18s},{lvl:3s,id:34s},{lvl:3s,id:21s},{lvl:2s,id:20s}],WrapItem:{id:\"minecraft:wooden_sword\",Count:1b,Damage:0s},ModelName:\"named/sange/sange\",isDefaultBewitched:1b,CurrentItemName:\"flammpfeil.slashblade.named.fox.white\",TextureName:\"named/sange/white\",SpecialAttackType:0,TrueItemName:\"flammpfeil.slashblade.named.fox.white\"}",
+            "text": "狐月刀「白狐」是鞘类刀喵~$(br2)与千鹤「村正」和无铭「无名」的关系同理，区别在于NBT不同喵~"
+        },
+        {
+			"anchor": "NBT",
+            "type": "text",
+            "title": "NBT",
+            "text": "终于来到最后一个部分了喵！就是NBT喵！$(br2)首先我们来大致了解一下NBT是啥喵~$(br2)NBT是MC原版的一个机制，用于存储MC中各种事物的数据，拔刀剑正是看中了这一点通过NBT中不同的数据以完成同一个物品id能表示多个不同的物品喵~"
+        },
+        {
+            "type": "text",
+            "title": "键值对",
+            "text": "要提到NBT的格式就不得不提到键值对喵~$(br2)简单来说，键值对就是“键(Key):值(Value)”这样的一对组合，一个键只能对应一个唯一的值喵~$(br2)键必须是字符串喵~不过值的数据类型就很多了喵~"
+        },
+        {
+            "type": "text",
+            "title": "值的类型",
+            "text": "MC中NBT键值对的值的类型有如下喵~$(li)End$(li)Byte$(li)Short$(li)Int$(li)Long$(li)Float$(li)Double$(li)ByteArray$(li)String$(li)TagList$(li)NBT$(li)IntArray$(li)LongArray"
+        },
+        {
+            "type": "text",
+            "text": "其中比较常见的有$(li)Byte(布尔类型)$(li)Short(短整型)$(li)Int(整型)$(li)Float(浮点数)$(li)Double(双精度浮点数)$(li)String(字符串)$(li)TagList(NBT列表)$(li)NBT$(br2)$(l:https://www.mcmod.cn/post/3977.html)关于拔刀剑的NBT详情可以参考这个网站"
+        }
+    ]
+}

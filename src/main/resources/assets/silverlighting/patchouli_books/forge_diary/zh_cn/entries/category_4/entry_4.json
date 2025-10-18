@@ -1,0 +1,48 @@
+{
+	"category": "category_4",
+	"sortnum": 4,
+	"name": "暮色沉沦",
+	"icon": "flammpfeil.slashblade:slashbladeNamed{TextureName:\"named/yasha/yasha\",ModelName:\"named/yasha/yashaTrue\"}",
+	"advancement": "twilightforest:progress_lich",
+	"pages":[
+		{
+			"type" : "text",
+			"text" : "迷宫深处，你听到了刀剑的悲鸣。你为实现她们的愿望而来。"
+		},
+		{
+			"type" : "text",
+			"title" : "迷宫",
+			"text" : "你来到了暮色，为了解除暮色结界而深入了牛头人的迷宫。$(br2)这里，有什么东西在吸引着你。"
+		},
+		{
+			"advancement": "silverlighting:named/yasha",
+			"type" : "text",
+			"title" : "夜叉",
+			"text" : "你从名为牛头人的怪物身上取下了她。$(br2)握住她的瞬间，来自无数躯体的相同意志几乎吞没了你——$(br2)“杀死我。”"
+		},
+        {
+			"advancement": "silverlighting:named/yashatrue",
+            "type": "text",
+            "title": "鬼哭",
+            "text": "你在迷宫的领袖手中见到了熟悉而陌生的剑。她像是夜叉，但又有着迥异于夜叉的直刀躯体。$(br2)你从米诺菇的手中夺下了她。"
+        },
+        {
+			"advancement": "silverlighting:named/yashatrue",
+            "type": "text",
+            "title": "沉沦",
+            "text": "那是一个刀匠家族的故事。$(br2)她们为了生存下去，带着得意之作“夜叉”驻扎于迷宫。$(br2)在停滞的时间里，她们获得了无尽的寿命，而人类的意识最终被记忆所淹没，沦为了遍布迷宫的怪物。$(br2)而“夜叉”们，清晰的体会了整个过程。$(br2)杀死她们，是她们最后的夙愿。"
+        },
+		{
+			"advancement": "silverlighting:named/yashatrue",
+            "type": "text",
+            "title": "继承",
+            "text": "那是一位锻刀人的领袖的故事。$(br2)她为了生存下去，率领全族被软禁于迷宫。而她也成为了暮色结界的一个节点，被更严苛的囚禁着。$(br2)时间磨灭了她的意识，可若她沦为怪物，她的一切努力都将化为乌有……$(br2)于是，夜叉接管了她的身体。"
+        },
+		{
+			"advancement": "silverlighting:named/yashatrue",
+            "type": "text",
+            "title": "终幕",
+            "text": "那是一把名刀的故事。$(br2)她是夜叉的领袖，有着让恶鬼哭泣的名号。$(br2)她替代了死去的主人继续看守着迷宫。$(br2)她做到了。她没有让任何一名族人死去。$(br2)死去的，是名为牛头人的怪物。"
+        }
+	]
+}

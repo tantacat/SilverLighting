@@ -1,0 +1,37 @@
+{
+    "category": "category_1",
+    "sortnum": 8,
+    "name": "利刀白鞘",
+    "icon": "flammpfeil.slashblade:slashbladeWhite",
+	"advancement": "flammpfeil.slashblade:white",
+    "pages":[
+        {
+            "type" : "text",
+            "text" : "铸铁为锋，可断金石。$(br2)这是你和刀的故事，没有什么能来打扰。"
+        },
+        {
+			"advancement": "flammpfeil.slashblade:white",
+            "type": "text",
+            "title": "利剑",
+            "text": "顶着木制的刀刃，可算不得真正的刀剑。在寻得钢铁后，你做的第一件事就是将她的身体从木头换成了钢铁。$(br2)这副钢铁的躯体让她的力量大幅度增强，虽然还不算完全没有顾虑，但她已经不会轻易折断了。"
+        },
+        {
+			"advancement": "flammpfeil.slashblade:white",
+            "type": "text",
+            "title": "同生",
+            "text": "她对你的热情让你有些…不知所措。$(br2)你们相处的实在是太久了。久到她已经完全掌握了你的性格，久到她的一举一动都是已经变成了你最喜欢的样子。$(br2)她的目的昭然若揭。$(br2)你当然没必要拒绝她，对吧？"
+        },
+        {
+			"advancement": "flammpfeil.slashblade:brokenwhite",
+            "type": "text",
+            "title": "失色",
+            "text": "即使是钢铁的身体，也并非坚不可摧。$(br2)她终究是折断了。尽管因为这具钢铁的身体而没有消失，但你仍然为此感到心痛。$(br2)但，崭新的灵感自你的记忆中迸发。$(br2)破而后立，说的就是这个意思吧？"
+        },
+		{
+			"advancement": "flammpfeil.slashblade:brokenwhite",
+			"type": "crafting",
+			"recipe": "flammpfeil.slashblade:slashblade",
+			"text": "别让她失望。"
+		}
+    ]
+}

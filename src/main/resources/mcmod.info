@@ -1,0 +1,16 @@
+[
+{
+  "modid": "silverlighting",
+  "name": "SilverLighting",
+  "description": "The story for her.The story for you",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["tantacat & fliveghost"],
+  "credits": "The Forge and FML guys, for making this example",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

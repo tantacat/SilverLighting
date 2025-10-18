@@ -1,0 +1,108 @@
+{
+	"category": "category_3",
+	"sortnum": 4,
+	"name": "幻影剑技",
+	"icon": "",
+	"advancement": "silverlighting:phantomsword",
+	"pages":[ 
+		{
+			"type" : "text",
+			"text" : " "
+		},
+        {
+            "type": "empty"
+        },
+        
+		{
+			"advancement": "silverlighting:phantomsword",
+            "type": "text",
+            "title": "幻影剑（Summond Sword）",
+            "text": "将荣耀凝结成实体，向前发射的剑技，是剑娘少有的$(l)远程$()手段。基于这一技巧，能够推展出很多崭新的幻影剑技。"
+        },
+        {
+            "type": "image",
+            "images": [
+				"silverlighting:textures/image/3-4-幻影剑-1.png",
+				"silverlighting:textures/image/3-4-幻影剑-2.png"
+			],
+            "text": "妖刀有力量附魔时，按下幻影剑按键（默认鼠标中键）。"
+        },
+		
+        {
+			"advancement": "silverlighting:phantomblade",
+            "type": "text",
+            "title": "幻影飞刀（Summond Blade）",
+            "text": "幻影剑的一种新的形态，可以$(l)追踪$()附近的敌人。"
+        },
+        {
+            "type": "image",
+            "images": ["silverlighting:textures/image/3-4-幻影飞刀.png"],
+            "text": "向拥有幻影剑的刀剑敲击耀魂宝珠，将幻影剑切换为幻影飞刀。"
+        },
+        
+        {
+            "type": "text",
+            "title": "护身幻影剑（Spiral Swords）",
+            "text": "召来六支幻影剑，并控制其$(l)环绕自身$()。可以对周围的敌人造成杀伤，也可以再向周围$(l)射出$()。"
+        },
+        {
+            "type": "image",
+            "images": ["silverlighting:textures/image/3-4-护身幻影剑.png"],
+			"text": "长按幻影剑按键。"
+        },
+        
+        {
+            "type": "text",
+            "title": "急袭幻影剑（Blistering Swords）",
+            "text": "召来幻影剑，急速向前发射，可以$(l)穿透$()方块和生物造成伤害。刀越趁手，能够发射的数量就越多。"
+        },
+        {
+            "type": "image",
+            "images": [
+				"silverlighting:textures/image/3-4-急袭幻影剑-1.png",
+				"silverlighting:textures/image/3-4-急袭幻影剑-2.png"
+			],
+            "text": "按住潜行和前进时长按幻影剑按键。"
+        },
+        
+        {
+            "type": "text",
+            "title": "绞杀幻影剑（Storm Swords）",
+            "text": "召来一圈环绕目标的幻影剑，在稍后对目标进行$(l)绞杀$()，造成高额伤害和击飞。对同一个目标，最多同时存在$(l)两圈$()绞杀幻影剑。"
+        },
+        {
+            "type": "image",
+            "images": [
+				"silverlighting:textures/image/3-4-绞杀幻影剑-1.png",
+				"silverlighting:textures/image/3-4-绞杀幻影剑-2.png"
+			],
+            "text": "按住潜行和后退时长按幻影剑按键。"
+        },
+        {
+            "type": "text",
+            "title": "骤雨幻影剑（Heavy Rain Swords）",
+            "text": "在前方一定范围内，自上而下降下如雨的幻影剑造成伤害。"
+        },
+        {
+            "type": "image",
+            "images": [
+				"silverlighting:textures/image/3-4-骤雨幻影剑-1.png",
+				"silverlighting:textures/image/3-4-骤雨幻影剑-2.png"
+			],
+			"text": "同时按住潜行，前进和后退时，长按幻影剑按键。"
+        },
+        {
+            "type": "text",
+            "title": "威吓幻影剑（Super Taunt）",
+            "text": "在身侧召唤原地旋转的小型幻影剑，同时可以触发$(l)敛锐藏锋$()的效果。"
+        },
+        {
+            "type": "image",
+            "images": [
+				"silverlighting:textures/image/3-4-威吓幻影剑-1.png",
+				"silverlighting:textures/image/3-4-威吓幻影剑-2.png"
+			],
+			"text": "按住快速锁定（默认左Ctrl）时按下幻影剑按键。"
+        }
+	]
+}

@@ -1,0 +1,39 @@
+{
+	"category": "category_4",
+	"sortnum": 11,
+	"name": "付丧结月",
+	"icon": "flammpfeil.slashblade:slashbladeNamed{TextureName:\"named/a_tukumo\",ModelName:\"named/agito\"}",
+	"advancement": "flammpfeil.slashblade:slashblade",
+	"pages":[
+		{
+			"type" : "text",
+			"text" : "久远的故事在你的手中重现。$(br2)她仍是她，只要你愿意。"
+		},
+		{
+			"type" : "text",
+			"title" : "付丧",
+			"text" : "通过某种方式，你复现了记忆里的某项仪式。由此锻出的付丧获得了强大的力量，但性格似乎也发生了什么奇妙的转变……$(br2)她在战斗时表现出的癫狂让人不安。$(br2)作为她的刀匠，你不会坐视不管。"
+		},
+		{
+			"type": "crafting",
+			"recipe": "flammpfeil.slashblade:tukumo"
+		},
+		{
+			"advancement": "silverlighting:enchanted",
+			"type" : "text",
+			"title" : "异心",
+			"text" : "莫名的记忆在她的体内复苏。$(br2)偶尔，她会向你讲述一些故事…无数片段拼凑而成的故事。如果只是依靠这些，你甚至无法判断记忆来自多久之前。$(br2)而这份记忆也在潜移默化的影响着她。平静之时尚且熟悉，她能压制住这些莫名的冲动，但一旦进入战斗，便会展现出陌生的癫狂。"
+		},
+		{
+			"advancement": "silverlighting:enchanted",
+			"type" : "text",
+			"text" : "幸好，她的心意未被篡改。无论未来如何，你只需知道，她永远属于你。"
+		},
+        {
+			"advancement": "silverlighting:named/tukumo",
+            "type": "text",
+            "title": "归家",
+            "text": "现在，她不再那么癫狂，但即便是平静时，也让你感到略微陌生。$(br2)接纳？和解？还是即将被彻底篡夺？这是她与自己的战争，你无法参与。$(br2)她对你的依恋倒是丝毫没变。$(br2)现在，该由你判断这是怎样的故事了。"
+        }
+	]
+}

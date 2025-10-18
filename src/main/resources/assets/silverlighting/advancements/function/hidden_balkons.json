@@ -1,0 +1,62 @@
+{
+  "parent": "flammpfeil.slashblade:root",
+  "criteria": {
+    "getwood": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "flammpfeil.slashblade:slashbladeWrapper",
+            "nbt": "{CurrentItemName:\"wrap.reforged.wooden_katana\"}"
+          }
+        ]
+      }
+    },
+	"getstone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "flammpfeil.slashblade:slashbladeWrapper",
+            "nbt": "{CurrentItemName:\"wrap.reforged.stone_katana\"}"
+          }
+        ]
+      }
+    },
+	"getiron": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "flammpfeil.slashblade:slashbladeWrapper",
+            "nbt": "{CurrentItemName:\"wrap.reforged.iron_katana\"}"
+          }
+        ]
+      }
+    },
+	"getgold": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "flammpfeil.slashblade:slashbladeWrapper",
+            "nbt": "{CurrentItemName:\"wrap.reforged.golden_katana\"}"
+          }
+        ]
+      }
+    },
+	"getdiamond": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "flammpfeil.slashblade:slashbladeWrapper",
+            "nbt": "{CurrentItemName:\"wrap.reforged.diamond_katana\"}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [["getwood", "getstone", "getiron", "getgold", "getdiamond"]]
+}
+

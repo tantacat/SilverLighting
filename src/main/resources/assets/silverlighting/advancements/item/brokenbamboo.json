@@ -1,0 +1,28 @@
+{
+  "parent": "silverlighting:wrape/saya",
+  "display": {
+    "title": {
+      "translate": "advancement.silverlighting.brokenbamboo"
+    },
+    "description": {
+      "translate": "advancement.silverlighting.brokenbamboo.desc",
+      "with": [ "\n" ]
+    },
+    "icon": {
+      "item": "silverlighting:brokenbamboo"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "get": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "silverlighting:brokenbamboo"
+          }
+        ]
+      }
+    }
+  }
+}

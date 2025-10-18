@@ -1,0 +1,31 @@
+{
+	"components": [
+		{
+			"type": "item",
+			"item": "#left_1",
+			"framed": true,
+			"x": 0,
+			"y": 0
+		},
+		{
+			"type": "item",
+			"item": "#right_1",
+			"framed": true,			
+			"x": 38,
+			"y": 0
+		},
+		{
+			"type": "item",
+			"item": "#output_1",
+			"framed": true,
+			"link_recipe": true,			
+			"x": 86,
+			"y": 0
+		},
+		{
+			"type": "text",
+			"text": "#text",
+			"y": 20
+		}
+	]
+}

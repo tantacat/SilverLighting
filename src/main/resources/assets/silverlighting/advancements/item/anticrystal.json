@@ -1,0 +1,29 @@
+{
+  "parent": "silverlighting:animasheath/animasheath_gleam",
+  "display": {
+    "title": {
+      "translate": "advancement.silverlighting.anticrystal"
+    },
+    "description": {
+      "translate": "advancement.silverlighting.anticrystal.desc",
+      "with": [ "\n" ]
+    },
+    "icon": {
+      "item": "silverlighting:anticrystal"
+    },
+    "frame": "challenge",
+    "hidden": true
+  },
+  "criteria": {
+    "get": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "silverlighting:anticrystal"
+          }
+        ]
+      }
+    }
+  }
+}

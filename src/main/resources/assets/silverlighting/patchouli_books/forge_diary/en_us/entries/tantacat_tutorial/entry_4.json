@@ -1,0 +1,100 @@
+{
+    "category": "tantacat_tutorial",
+    "sortnum": 4,
+    "name": "刀的状态喵~",
+    "icon": "flammpfeil.slashblade:slashbladeNamed:100{isBroken:true,TextureName:\"named/yamato\",ModelName:\"named/yamato\"}",
+    "pages":[
+        {
+            "type" : "text",
+            "text" : "刀的状态是刀的重要属性喵~$(br2)许多机制都与刀的状态有关喵~$(br2)为此有必要介绍刀的状态喵~"
+        },
+        {
+            "type": "text",
+            "text": "$(br)刀的状态有以下情况:$(br) $(li)$(l:tantacat_tutorial/entry_4#Broken)Broken$() 损坏/断刀$(li)$(l:tantacat_tutorial/entry_4#Perfect)Perfect$() 完好/满耐久$(li)$(l:tantacat_tutorial/entry_4#Enchanted)Enchanted$() 附魔/印$(li)$(l:tantacat_tutorial/entry_4#Bewitched)Bewitched$() 化妖/妖$(li)$(l:tantacat_tutorial/entry_4#SoulEeater)SoulEeater$() 噬魂者/吸精之刃$(li)$(l:tantacat_tutorial/entry_4#FiercerEdge)FiercerEdge$() 凶狠利刃/锐气千刃$(li)$(l:tantacat_tutorial/entry_4#NoScabbard)NoScabbard$() 无鞘$(li)$(l:tantacat_tutorial/entry_4#Sealed)Sealed$() 封印/封刀$(li)$(l:tantacat_tutorial/entry_4#Cursed)Cursed$() 诅咒$(br2)刀能同时具有多种状态"
+        },
+		{
+			"anchor": "Broken",
+			"type": "spotlight",
+			"title": "Broken",
+			"item": "flammpfeil.slashblade:slashblade:50{isBroken:true}",
+			"text": "当刀的耐久耗尽以后,刀会迎来三种结局:消失,变成鞘,断刀喵~$(br2)当刀断刀时,刀会进入Broken状态喵~$(br2)这个状态下的刀仍可以攻击,但攻击力和攻击范围都会有所下降,并且不再能使用SA,SB等特殊能力(类似于封)喵~"
+		},
+		{
+			"type": "spotlight",
+			"title": "Broken",
+			"item": "flammpfeil.slashblade:slashblade:1{isBroken:true}",
+			"text": "当刀进入Broken状态后,除非将耐久回满,否则无法消除Broken状态喵~"
+		},
+		{
+			"anchor": "Perfect",
+			"type": "spotlight",
+			"title": "Perfect",
+			"item": "flammpfeil.slashblade:slashblade",
+			"text": "没有\"WrapItem\"NBT的鞘类刀固定拥有此状态.$(br2)当刀为满耐久时,刀处于Perfect状态喵~$(br)处于Perfect状态的刀不可能处于Broken状态喵~$(br2)事实上如果刀同时处于这两个状态会被去除Broken状态,刀修满耐久消除Broken状态就是这样实现的喵~"
+		},
+		{
+			"anchor": "Enchanted",
+			"type": "spotlight",
+			"title": "Enchanted",
+			"item": "flammpfeil.slashblade:slashblade{ench:[{lvl:1,id:1}]}",
+			"text": "无铭刀不会拥有此状态.$(br2)当刀附魔以后会拥有此状态喵~所以一定程度上可以认为其与刀铭印绑定喵~$(br2)处于此状态的刀可以使用SA(尽管tooltips中没有显示)喵~"
+		},
+		{
+			"anchor": "Bewitched",
+			"type": "spotlight",
+			"title": "Bewitched",
+			"item": "flammpfeil.slashblade:slashblade{ench:[{lvl:1,id:1}],display:{Name:\"大太刀「妖」\"}}",
+			"text": "无铭刀不会拥有此状态.$(br2)当处于Enchanted状态的刀改名或IsDefaultBewitched为true时,刀会拥有此状态喵~同理此状态可以理解为与刀铭妖绑定喵~$(br2)处于此状态的刀力量得到极大的解放,能使用许多特殊能力喵~"
+		},
+		{
+			"type": "text",
+			"text": "包括但不限于:$(li)EnemyStep 蹬墙跳$(li)SummondSword 幻影剑技$(li)附加攻击,如UpthrustBlast,AddAttack,SlashBladeAttack$(li)与其他状态或属性联动的能力$(br2)详情参考$(l:tantacat_tutorial/entry_6)刀的特殊能力$()喵~"
+		},
+		{
+			"anchor": "SoulEeater",
+			"type": "spotlight",
+			"title": "SoulEeater",
+			"item": "flammpfeil.slashblade:slashblade{ProudSoul:1000}",
+			"text": "无铭刀不会拥有此状态.$(br2)当刀的耀魂值>=1000时刀拥有此状态喵~$(br2)拥有此状态的刀能使用SoulEater的特殊能力(详情见$(l:tantacat_tutorial/entry_6)刀的特殊能力$())喵~"
+		},
+		{
+			"anchor": "FiercerEdge",
+			"type": "spotlight",
+			"title": "FiercerEdge",
+			"item": "flammpfeil.slashblade:slashblade{killCount:1000}",
+			"text": "没有\"WrapItem\"NBT的鞘类刀不会拥有此状态.$(br2)当刀的击杀数>=1000时刀拥有此状态喵~$(br2)拥有此状态的刀能使部分幻影剑(SummondSword)和剑气(Drive)造成穿甲(真实)伤害,并改变刀的RankAttackDamage."
+		},
+		{
+			"type": "spotlight",
+			"title": "BewitchedPerfect&FiercerEdge",
+			"item": "flammpfeil.slashblade:slashblade{ench:[{lvl:1,id:1}],display:{Name:\"大太刀「妖」\"},killCount:1000}",
+			"text": "当刀同时处于Bewitched和Perfect状态时,会使拔刀斩(Battou)造成更大范围的伤害并产生爆炸的粒子效果喵~$(br2)如果同时还具有FiercerEdge的状态,则刀可以使用SuperSA."
+		},
+		{
+			"anchor": "NoScabbard",
+			"type": "spotlight",
+			"title": "NoScabbard",
+			"item": "flammpfeil.slashblade:slashblade{isNoScabbard:true}",
+			"text": "处于此状态的刀会失去右键攻击的能力,只能像原版武器一样攻击,但好在还可以使用SA喵~$(br2)并且将其置于副手也不会影响双刀流的使用喵~"
+		},
+		{
+			"anchor": "Sealed",
+			"type": "spotlight",
+			"title": "Sealed",
+			"item": "flammpfeil.slashblade:slashblade{isSealed:true,ench:[{lvl:1,id:1}],display:{Name:\"大太刀「妖」\"},killCount:1000,ProudSoul:1000}",
+			"text": "没有\"WrapItem\"NBT的鞘类刀固定拥有此状态.$(br2)当刀拥有此状态时,不会拥有Enchanted和Bewitched状态(即被锁定在封的状态,固也称封刀)喵~"
+		},
+		{
+			"type": "spotlight",
+			"title": "Sealed",
+			"item": "flammpfeil.slashblade:slashblade{isBroken:true,isSealed:true,ench:[{lvl:1,id:1}],display:{Name:\"大太刀「妖」\"},killCount:1000,ProudSoul:1000}",
+			"text": "此外,拥有此状态的刀进入Broken状态以后无法通过回满耐久的方式来去除Broken状态喵~"
+		},
+		{
+			"anchor": "Cursed",
+			"type": "text",
+			"title": "Cursed",
+			"text": "此状态在代码中有定义但无实际效果喵~$(br2)推测为废弃状态或未完成状态喵~"
+		}
+    ]
+}

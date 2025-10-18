@@ -1,0 +1,31 @@
+{
+  "parent": "flammpfeil.slashblade:root",
+  "display": {
+    "title": {
+      "translate": "achievement.flammpfeil.slashblade.agitoRust"
+    },
+    "description": {
+      "translate": "achievement.flammpfeil.slashblade.agitoRust.desc",
+      "with": [ "\n" ]
+    },
+    "icon": {
+      "item": "flammpfeil.slashblade:slashbladeNamed",
+      "nbt": "{TextureName:\"named/agito_rust\",ModelName:\"named/agito\"}"
+    },
+    "frame": "task",
+    "hidden": true
+  },
+  "criteria": {
+    "get": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "flammpfeil.slashblade:slashbladeNamed",
+            "nbt": "{CurrentItemName:\"flammpfeil.slashblade.named.agito.rust\"}"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+	"category": "category_4",
+	"sortnum": 10,
+	"name": "铁心木刃",
+	"icon": "flammpfeil.slashblade:slashbladeNamed{TextureName:\"named/tagayasan\"}",
+	"advancement": "flammpfeil.slashblade:wood",
+	"pages":[
+		{
+			"type" : "text",
+			"text" : "当杀气与荣耀凝成实体…那原本的躯体，就不会再限制她的力量。"
+		},
+		{
+			"advancement": "silverlighting:hundred_kill",
+			"type" : "text",
+			"title" : "持心",
+			"text" : "如果以某把刀为前置，锻成了新的刀剑……那她和原本的前置刀，还是相同的剑娘吗？$(br2)木偶是你的第一把刀。你不想在尚未确定后果的时候，让她去冒险。$(br2)那就慢慢来吧。$(br2)锻造只是一个手段而已，只要相处的时间足够，同样可以达成一样的结果。$(br2)你的时间，从来都是不缺的。"
+		},
+		{
+			"advancement": "silverlighting:soul_eater",
+			"type" : "text",
+			"title" : "形魂",
+			"text" : "虽然很慢，但她确实有在成长。$(br2)荣耀与杀气缠绕着刀身，以某种方式蕴养着她的意识。$(br2)可惜，木制的躯体限制还是太大。照这样下去，在她真正完善自我之前，她的身体会先一步撑不住。$(br2)在她快要撑不住的时候，将她的身体强化一下吧。"
+		},
+		{
+			"advancement": "silverlighting:soul_eater",
+			"type": "crafting",
+			"recipe": "flammpfeil.slashblade:tagayasan",
+			"text": "就算是木刀，也能在你的手中达成奇迹，是吧？"
+		},
+        {
+			"advancement": "silverlighting:named/tagayasan",
+            "type": "text",
+            "title": "木刃",
+            "text": "强化刀刃的计划成功了，但又没完全成功。$(br2)你确实做到了将她强化，但是在她的身体承载住这份力量，迎来蜕变之后，躯体如何已经变得毫无意义。$(br2)杀意与荣耀凝结成了一个坚固的外壳，将她的躯体完全包裹，甚至实现了记忆中“刀铭”的功能。"
+        },
+		{
+			"advancement": "silverlighting:named/tagayasan",
+            "type": "text",
+            "text": "不管怎么说，算是成功了吧？$(br2)她仍是最初的她。和她一起，继续向前吧。"
+		}
+	]
+}

@@ -1,0 +1,30 @@
+{
+  "parent": "silverlighting:animasheath/silverlighting",
+  "display": {
+    "title": {
+      "translate": "advancement.silverlighting.animasheath"
+    },
+    "description": {
+      "translate": "advancement.silverlighting.animasheath.desc",
+      "with": [ "\n" ]
+    },
+    "icon": {
+      "item": "silverlighting:animasheath",
+      "nbt": "{TextureName:\"silver/sheath\",ModelName:\"silver/sheath\"}"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "get": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "silverlighting:animasheath",
+            "nbt": "{CurrentItemName:\"silverlighting.animasheath\"}"
+          }
+        ]
+      }
+    }
+  }
+}

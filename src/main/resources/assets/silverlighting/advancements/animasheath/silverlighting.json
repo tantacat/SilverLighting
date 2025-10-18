@@ -1,0 +1,30 @@
+{
+  "parent": "silverlighting:item/brokenbamboo",
+  "display": {
+    "title": {
+      "translate": "advancement.silverlighting.silverlighting"
+    },
+    "description": {
+      "translate": "advancement.silverlighting.silverlighting.desc",
+      "with": [ "\n" ]
+    },
+    "icon": {
+      "item": "silverlighting:animasheath",
+      "nbt": "{ench: [{lvl:1,id:35}],TextureName:\"silver/silverlighting\",ModelName:\"silver/silverlighting\"}"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "get": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "silverlighting:animasheath",
+            "nbt": "{CurrentItemName:\"silverlighting.silverlighting\"}"
+          }
+        ]
+      }
+    }
+  }
+}

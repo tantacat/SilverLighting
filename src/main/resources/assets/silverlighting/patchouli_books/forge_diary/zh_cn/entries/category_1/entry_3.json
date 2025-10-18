@@ -1,0 +1,37 @@
+{
+    "category": "category_1",
+    "sortnum": 3,
+    "name": "无铭刀「竹光」",
+    "icon": "flammpfeil.slashblade:slashbladeBambooLight",
+	"advancement": "silverlighting:bamboolight",
+    "pages":[
+        {
+            "type" : "text",
+            "text" : "她不会拒绝你的任何请求，不是吗？"
+        },
+        {
+			"advancement": "silverlighting:bamboolight",
+            "type" : "text",
+            "title" : "修刃",
+            "text" : "竹子远比木头坚韧，她也一样。$(br2)你空挥着崭新的她，手感熟悉却又略感陌生。只需稍加适应…很快就好。$(br2)你感觉到你挥刀的手在颤抖，但不知为何，刀筋笔直。"
+        },
+        {
+			"advancement": "silverlighting:bamboolight",
+            "type" : "text",
+            "title" : "铸心",
+            "text" : "她的进步神速。不光是适应这具新的身体，好像也包括灵魂的一些成长。$(br2)她开始向你表达自己的想法，她开始回应你的每一句话，就如同你所期望的那样。$(br2)你和她彻夜交谈。像是要填补长久以来的寂寞，将压抑的一切倾注到她的身上。"
+        },
+        {
+			"advancement": "silverlighting:bamboolight",
+            "type" : "text",
+            "title" : "炼形",
+            "text" : "…你意识到自己似乎过于心急了。$(br)飞速的成长并非没有代价，在你的脑海里浮现的唯一的锻造法，像是一条狭窄的走廊，唯一的方向还没有未来。$(br2)她还不知道她的命运。越来越多的对话里，你听得出来她想要陪着你，直到最后。$(br2)……如果这是必然到来的命运，那就尽可能的放慢脚步，用多出来的时间……陪伴彼此吧。"
+        },
+		{
+			"advancement": "silverlighting:bamboolight",
+			"type": "crafting",
+			"recipe": "flammpfeil.slashblade:silverlight",
+			"text": "……如果这是必然到来的命运，那就尽可能的放慢脚步，用多出来的时间……陪伴彼此吧。"
+		}
+    ]
+}

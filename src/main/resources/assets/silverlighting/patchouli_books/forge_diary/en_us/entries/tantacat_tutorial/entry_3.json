@@ -1,0 +1,227 @@
+{
+    "category": "tantacat_tutorial",
+    "sortnum": 3,
+    "name": "耀魂材料喵~",
+    "icon": "flammpfeil.slashblade:proudsoul",
+    "pages":[
+        {
+            "type" : "text",
+            "text" : "如果你的刀断掉了，你可能会获得像右边展示的那样的物品喵~$(br2)这种物品我们称其为耀魂材料喵~$(br2)包括你前面在第一章获得的附魔的耀魂宝珠也是一种特殊的耀魂材料喵~"
+        },
+        {
+            "type": "text",
+            "title": "耀魂材料的种类",
+            "text": "耀魂材料共有七种喵~$(br2)他们共用一个物品id:flammpfeil.slashblade:proudsoul,通过meta值来区分喵~$()$(br) $(li)$(l:tantacat_tutorial/entry_3#耀魂碎片)耀魂碎片$() meta:0$(li)$(l:tantacat_tutorial/entry_3#耀魂铁锭)耀魂铁锭$() meta:1$(li)$(l:tantacat_tutorial/entry_3#耀魂宝珠)耀魂宝珠$() meta:2$(li)$(l:tantacat_tutorial/entry_3#破碎的耀魂)破碎的耀魂$() meta:3$(li)$(l:tantacat_tutorial/entry_3#刀魂结晶)刀魂结晶$() meta:4$(li)$(l:tantacat_tutorial/entry_3#耀偏方三八面魂)耀偏方三八面魂$() meta:5"
+        },
+        {
+            "type": "entity",
+            "entity": "flammpfeil.slashblade:BladeStand",
+            "text": "在讲解耀魂材料之前，先来介绍一下刀挂台喵~使用任意耀魂材料对橡木栅栏潜行右键即可生成刀挂台喵~" 
+        },
+        {
+            "type": "entity",
+            "entity": "flammpfeil.slashblade:BladeStand{Blade:{id:\"flammpfeil.slashblade:slashblade\",Count:1b,Damage:0s}}",
+            "text": "手持拔刀剑左键或右键可以将刀放上刀挂台喵~"  
+        },
+        {
+            "type": "text",
+            "title": "点燃的刀挂台",
+            "text": "刀挂台能够被火焰，岩浆等事物点燃喵~$(br2)刀挂台及点燃的刀挂台能用于对耀魂材料和刀进行特殊处理喵~$(br2)我们也称这种特殊处理为世界合成喵~"
+        },
+        {
+            "type": "text",
+            "title": "刀挂台的样式",
+            "text": "此外,刀挂台有许多不同的样式,样式为刀挂台类型+翻转类型组合喵~$(br2)刀挂台类型共有5种,与耀魂材料有如下匹配喵~$(li)物品实体/刀魂结晶/耀偏方三八面魂:-1$(li)耀魂碎片:0$(li)耀魂铁锭:1$(li)耀魂宝珠:2$(li)破碎的耀魂:3$(br2)翻转类型共有0,1,2,3四种喵~"  
+        },
+        {
+            "type": "entity",
+            "name": "刀挂台(0+0)",
+            "entity": "flammpfeil.slashblade:BladeStand{StandType:0,Flip:0,Blade:{id:\"flammpfeil.slashblade:slashblade\",Count:1b,Damage:0s}}"
+        },
+        {
+            "type": "entity",
+            "name": "刀挂台(0+1)",
+            "entity": "flammpfeil.slashblade:BladeStand{StandType:0,Flip:1,Blade:{id:\"flammpfeil.slashblade:slashblade\",Count:1b,Damage:0s}}"
+        },
+        {
+            "type": "entity",
+            "name": "刀挂台(0+2)",
+            "entity": "flammpfeil.slashblade:BladeStand{StandType:0,Flip:2,Blade:{id:\"flammpfeil.slashblade:slashblade\",Count:1b,Damage:0s}}"
+        },
+        {
+            "type": "entity",
+            "name": "刀挂台(0+3)",
+            "entity": "flammpfeil.slashblade:BladeStand{StandType:0,Flip:3,Blade:{id:\"flammpfeil.slashblade:slashblade\",Count:1b,Damage:0s}}"
+        },
+        {
+            "type": "entity",
+            "name": "刀挂台(1+0)",
+            "entity": "flammpfeil.slashblade:BladeStand{StandType:1,Flip:0,Blade:{id:\"flammpfeil.slashblade:slashblade\",Count:1b,Damage:0s}}"
+        },
+        {
+            "type": "entity",
+            "name": "刀挂台(2+0)",
+            "entity": "flammpfeil.slashblade:BladeStand{StandType:2,Flip:0,Blade:{id:\"flammpfeil.slashblade:slashblade\",Count:1b,Damage:0s}}"
+        },
+        {
+            "type": "entity",
+            "name": "刀挂台(3+0)",
+            "entity": "flammpfeil.slashblade:BladeStand{StandType:3,Flip:0,Blade:{id:\"flammpfeil.slashblade:slashblade\",Count:1b,Damage:0s}}"
+        },
+        {
+            "type": "entity",
+            "name": "刀挂台(-1+0)",
+            "entity": "flammpfeil.slashblade:BladeStand{StandType:-1,Flip:0,Blade:{id:\"flammpfeil.slashblade:slashblade\",Count:1b,Damage:0s}}",
+            "text": "被扔出的刀,玩家死亡掉落的刀变成的刀挂台就是这种喵~"
+        },                
+        {
+			"anchor": "耀魂碎片",
+            "type": "spotlight",
+            "title": "耀魂碎片",
+            "item": "flammpfeil.slashblade:proudsoul",
+            "text": "耀魂碎片是最基础的耀魂材料喵~$(br2)每当刀断掉的时候会根据刀的耀魂值掉落一定数量的耀魂碎片喵~$(br2)设耀魂值为p,掉落的耀魂碎片数量为m+1$(br2)则当p<=1000时,m=p/100取整,当p>1000时,m=(p-800)/100取整"
+        },
+        {
+            "type": "text",
+            "title": "耀魂碎片",
+            "text": "理论上刀可以最多一次掉落11个耀魂碎片(当耀魂值=1000时)喵~$(br2)代码上,每额外掉落一个耀魂碎片/(总计m个)刀的耀魂值会减少100/(100*m),但是不知道为什么没有生效喵~$(br2)耀魂碎片能在铁砧中给刀增加200耀魂值并恢复最大耐久40%的耐久喵~$(br2)此外,耀魂碎片能直接将水瓶酿造成力量Ⅱ的药水喵~"                   
+        },        
+        {
+			"anchor": "破碎的耀魂",
+            "type": "crafting",
+            "recipe": "flammpfeil.slashblade:ps_soul2tiny",
+            "text": "耀魂碎片可以分解为破碎的耀魂喵~$(br2)破碎的耀魂在铁砧中给刀增加100耀魂值并恢复最大耐久20%耐久喵~"
+        },
+        {
+            "type": "crafting",
+            "title": " ",
+            "recipe": "flammpfeil.slashblade:ps_tiny2soul",
+            "text": "破碎的耀魂也可以合成回耀魂碎片喵~$(br2)此外,对着放有刀的刀挂台左键使用能将刀挂台点燃并使刀增加50点耀魂值喵~"
+        },
+        {
+			"anchor": "耀魂铁锭",
+            "type": "crafting",
+            "recipe": "flammpfeil.slashblade:ps_soul2ingot",
+            "text": "将耀魂碎片与铁锭结合可以得到耀魂铁锭喵~$(br2)在铁砧中能给刀增加400耀魂值并恢复最大耐久60%的耐久喵~"
+        },
+        {
+			"anchor": "耀魂宝珠",
+            "type": "smelting",
+            "recipe": "flammpfeil.slashblade:proudsoul:1",
+            "text": "将耀魂铁锭放入熔炉熔炼可以得到耀魂宝珠喵~$(br2)在铁砧中能给刀增加400耀魂值并恢复最大耐久70%的耐久喵~此外,耀魂宝珠还能切换拔刀剑的RangeAttack(详见$(l:tantacat_tutorial/entry_6)刀的特殊能力$())"
+        },
+        {
+			"anchor": "刀魂结晶",
+            "type": "spotlight",
+            "item": "flammpfeil.slashblade:proudsoul:4",
+            "text": "刀魂结晶也是一种耀魂材料,获取方式不同于合成和熔炼等一般的合成方式喵~$(br2)你需要使用耀魂碎片左键点燃的带有刀的刀挂台喵~这样会消耗耀魂碎片和刀的50点耀魂值生成一个刀魂结晶喵~$(br2)这个处理就是一种世界合成喵~"
+        },
+        {
+            "type": "text",
+            "text": "刀魂结晶在铁砧中能给刀增加500耀魂值并恢复最大耐久100%的耐久喵~$(br2)使用刀魂结晶左键非点燃的放有刀的刀挂台能对刀的SE进行操作(详情见$(l:tantacat_tutorial/entry_6)刀的特殊能力$())$(br2)而若是对点燃的带刀刀挂台进行同样的操作,则会消耗刀魂结晶和刀50点耀魂值生成耀偏方三八面魂喵~"
+        },
+        {
+			"anchor": "耀偏方三八面魂",
+            "type": "spotlight",
+            "item": "flammpfeil.slashblade:proudsoul:5",
+            "text": "耀偏方三八面魂在铁砧中的作用与刀魂结晶类似,也会增加刀500耀魂值并恢复最大耐久100%的耐久喵~$(br2)但不同的是刀魂结晶的经验消耗不随惩罚增加,固定为5喵~$(br2)耀偏方三八面魂的最大作用在于拔刀剑认主喵~"
+        },
+        {
+            "type": "spotlight",
+            "item": "flammpfeil.slashblade:slashbladeNamed{SpecialAttackType:1,isDefaultBewitched:true,CurrentItemName:\"flammpfeil.slashblade.named.muramasa\",ench:[{id:7s,lvl:1s}],TextureName:\"named/muramasa/muramasa\",ModelName:\"named/muramasa/muramasa\",OwnerMost:0L,OwnerLeast:0L}",
+            "text": "对带刀刀挂台使用耀偏方三八面魂会使刀挂台被点燃同时使其上的刀的耀魂值增加500并认主喵~$(br2)认主后刀的tooltips中妖的字样会是金色的。同时如果这把刀的主人是其他玩家你会在其tooltips第一行看到额外的提示并且这把刀对于你来说是封刀(此处有bug仍显示为妖)喵~$(br2)你也无法从刀挂台上拿下这把刀喵~"
+        },
+        {
+            "type": "text",
+            "text": "以上是所有耀魂材料的基础介绍喵~$(br2)补充一点,同时也是前面提到过的,任意耀魂材料在铁砧中均能增加刀的Refine喵~$(br2)如果不记得了记得去复习喵~$(br2)接下来,介绍这些耀魂材料的特殊版本喵~"
+        },
+        {
+            "type": "text",
+            "title": "特殊的耀魂材料",
+            "text": "特殊的耀魂材料大体上分三种,其中的印魂碎片能进一步细分喵~$(li)$(l:tantacat_tutorial/entry_3#印魂碎片)印魂碎片$()$(li2)附魔的破碎的耀魂$(li2)附魔的耀魂碎片$(li2)附魔的耀魂铁锭$(li2)附魔的耀魂宝珠$(li2)附魔的刀魂结晶$(li2)附魔的耀偏方三八面魂$(l:tantacat_tutorial/entry_3#SA宝珠)$(li)SA宝珠$()$(li)$(l:tantacat_tutorial/entry_3#缚铭结晶)缚铭结晶$()$(br)印魂碎片你只能通过正常手段获取前三种喵~"
+        },
+        {
+			"anchor": "印魂碎片",
+            "type": "spotlight",
+            "title": "印魂碎片",
+            "item": "flammpfeil.slashblade:proudsoul:3{ench:[{id:7s,lvl:1s}]}",
+            "text": "一般而言,你可能最先接触到的印魂碎片是附魔的破碎的耀魂喵~$(br2)附魔的拔刀剑断刀时伴随耀魂碎片出现,一次只掉落一个,带有随机一级附魔喵~$(br2)但是这些随机附魔的抽取实际上也是有规则的喵~"
+        },
+        {
+            "type": "text",
+            "title": "抽取附魔的机制",
+            "text": "抽取的附魔池有稀有和普通两种喵~$(br2)稀有附魔池包含力量,冲击,荆棘,火焰保护,摔落保护,时运,水下呼吸和耐久喵~$(br)普通附魔池包括稀有附魔池和剑类武器的所有附魔喵~$(br2)若刀带有耐久附魔,则进行耐久等级次数的判定,成功率为0.3,成功时抽取稀有池,否则为普通池。若还带有抢夺附魔则一定成功"
+        },
+        {
+            "type": "spotlight",
+            "title": "印魂碎片",
+            "item": "flammpfeil.slashblade:proudsoul{ench:[{id:7s,lvl:1s}]}",
+            "text": "与破碎的耀魂合成耀魂碎片的方法类似,用两个附魔完全相同的破碎的耀魂能合成带有相同附魔的耀魂碎片喵~$(br2)附魔的耀魂碎片也能分解成两个相同附魔的破碎的耀魂喵~附魔的耀魂碎片还能通过杀死boss和命名生物获得,一次掉落一个(附魔仅为稀有池附魔)喵~"  
+        },
+        {
+            "type": "spotlight",
+            "title": "印魂碎片",
+            "item": "flammpfeil.slashblade:proudsoul:1{ench:[{id:7s,lvl:1s}]}",
+            "text": "举一反三,附魔的耀魂铁锭是使用四个相同附魔的耀魂碎片加铁锭合成的喵~"
+        },
+        {
+            "type": "spotlight",
+            "title": "印魂碎片",
+            "item": "flammpfeil.slashblade:proudsoul:2{ench:[{id:7s,lvl:1s}]}",
+            "text": "但不幸的是,附魔的耀魂宝珠并不能举一反三喵~$(br2)熔炼附魔的耀魂铁锭获取的仍旧是普通的耀魂宝珠喵~$(br2)一般情况下,你能获取到的附魔的耀魂宝珠大概只有进度给你的那俩了喵~"
+        },
+        {
+            "type": "spotlight",
+            "title": "印魂碎片",
+			"item": "flammpfeil.slashblade:proudsoul:4{ench:[{id:7s,lvl:1s}]}",
+			"text": "附魔的刀魂结晶和宝珠一样,没有正常的获取方式喵~"
+        },
+		{
+            "type": "spotlight",
+            "title": "印魂碎片",
+			"item": "flammpfeil.slashblade:proudsoul:5{ench:[{id:7s,lvl:1s}]}",
+			"text": "附魔的耀偏方三八面魂同理无正常获取途径喵~$(br2)而且附魔的耀偏方三八面魂失去了让刀认主的功能$(br2)这是为什么呢喵？$(br2)原因其实在于印魂碎片会失去原有的世界合成功能,只有给刀附魔的世界合成功能喵~"
+        },
+		{
+			"type": "text",
+			"text": "对非点燃的带刀刀挂台左键使用印魂碎片有概率给刀附上附魔或提升附魔等级喵~$(br2)各个印魂碎片的附魔概率如下喵~$(li)附魔的耀魂碎片:50%$(li)附魔的破碎的耀魂/耀偏方三八面魂:25%$(li)附魔的耀魂宝珠/刀魂结晶:100%$(br2)若附魔成功会给没有此附魔的刀附上一级的此附魔,若拥有则提升一级等级(不超过等级上限),与印魂碎片的附魔等级无关"
+		},
+		{
+			"anchor": "SA宝珠",
+			"type": "spotlight",
+			"title": "SA宝珠",
+			"item": "flammpfeil.slashblade:proudsoul:2{SpecialAttackType:0}",
+			"text": "印魂碎片的另外一个重要作用就是用于获取SA宝珠喵~$(br2)将某具有满级附魔的刀置于未点燃的刀挂台上,使用对应附魔的印魂碎片左键此刀挂台,根据材料不同有不同概率生成此刀SA的SA宝珠喵~"
+		},
+		{
+			"type": "text",
+			"title": "生成SA宝珠的概率",
+			"text": "当此次附魔判定为成功时,若此印魂碎片附魔成功的概率>70%,则会生成SA宝珠喵~$(br2)具体来说就是,使用铁锭生成宝珠的概率为75%,使用宝珠和刀魂结晶的概率为100%,其他为0喵~$(br2)此外,虽然一般情况下你获得不了这种印魂碎片,如果此碎片具有多个附魔,则会判定多次喵~"
+		},
+		{
+			"type": "spotlight",
+			"title": "SA宝珠的作用",
+			"item": "flammpfeil.slashblade:slashblade{ench:[{lvl:1,id:1}],SpecialAttackType:1,display:{Name:\"被修改SA的大太刀\"}}",
+			"text": "SA宝珠的作用很简明易懂——更改刀的SA为宝珠上的SA(方法同印魂碎片附魔)喵~$(br2)例如上面的大太刀,其默认SA为次元斩,但是可以通过SA宝珠修改为其他SA喵~"
+		},
+		{
+			"anchor": "缚铭结晶",
+			"type": "spotlight",
+			"title": "缚铭结晶",
+			"item": "flammpfeil.slashblade:proudsoul:4{TextureName:\"named/sange/white\",SpecialAttackType:0,WrapItem:{id:\"minecraft:wooden_sword\",Count:1b,Damage:0s},ModelName:\"named/sange/sange\",TrueItemName:\"flammpfeil.slashblade.named.fox.white\",isDefaultBewitched:1b,CurrentItemName:\"flammpfeil.slashblade.named.fox.white\",display:{Name:\"狐月刀「白狐」 soul\"},isBroken:0b,baseAttackModifier:4.0f,SB.SEffect:{},StandbyRenderType:1}",
+			"text": "缚铭结晶是一种特殊的刀魂结晶喵~$(br2)通过击杀boss和$(l:https://www.mcmod.cn/item/668563.html)Lottery of the Blades$()能够获得喵~"
+		},
+		{
+			"type": "craft_anvil_x",
+			"left_1": "flammpfeil.slashblade:slashbladeNamed",
+			"right_1": "flammpfeil.slashblade:proudsoul:4{TextureName:\"named/sange/white\",SpecialAttackType:0,WrapItem:{id:\"minecraft:wooden_sword\",Count:1b,Damage:0s},ModelName:\"named/sange/sange\",TrueItemName:\"flammpfeil.slashblade.named.fox.white\",isDefaultBewitched:1b,CurrentItemName:\"flammpfeil.slashblade.named.fox.white\",display:{Name:\"狐月刀「白狐」 soul\"},isBroken:0b,baseAttackModifier:4.0f,SB.SEffect:{},StandbyRenderType:1}",
+			"output_1": "flammpfeil.slashblade:slashbladeNamed{SlashBlade:{},ModelName:\"named/sange/sange\",isDefaultBewitched:1b,CurrentItemName:\"flammpfeil.slashblade.named.fox.white\",AttackAmplifier:0.01f,TextureName:\"named/sange/white\",SpecialAttackType:0,TrueItemName:\"flammpfeil.slashblade.named.fox.white\",RepairCounter:1,isBroken:0b,SB.SEffect:{},AttributeModifiers:[{UUIDMost:-3801225194067177672L,UUIDLeast:-6586624321849018929L,Amount:2.0d,Slot:\"mainhand\",AttributeName:\"generic.attackDamage\",Operation:0,Name:\"Weapon modifier\"},{UUIDMost:-422425648963762075L,UUIDLeast:-5756800103171642205L,Amount:-2.4000000953674316d,Slot:\"mainhand\",AttributeName:\"generic.attackSpeed\",Operation:0,Name:\"Weapon modifier\"}],baseAttackModifier:4.0f,StandbyRenderType:1}",
+			"text": "与一般的刀魂结晶不同,缚铭结晶带有某些刀的刀铭等属性(即部分NBT)喵~$(br2)将其与无铭「无名」共置于铁砧中可以将无铭转化为对应刀喵~"
+		},
+		{
+			"type": "spotlight",
+			"item": "flammpfeil.slashblade:slashbladeWrapper{ench:[{id:19s,lvl:2s},{id:18s,lvl:2s},{id:34s,lvl:3s},{id:21s,lvl:3s},{id:20s,lvl:2s}],ModelName:\"named/sange/sange\",isDefaultBewitched:1b,CurrentItemName:\"flammpfeil.slashblade.named.fox.white\",TextureName:\"named/sange/white\",TrueItemName:\"flammpfeil.slashblade.named.fox.white\",baseAttackModifier:4.0f,StandbyRenderType:1,WrapItem:{id:\"minecraft:wooden_sword\",Count:1b,Damage:0s}}",
+			"text": "不过这样的刀与正常的刀有一定差距,只会继承以下nbt喵~$(li)CustomMaxDamage$(li)TextureName$(li)ModelName$(li)SpecialAttackType$(li)StandbyRenderType$(li)IsDefaultBewitched$(li)TrueItemName$(li)SummonedSwordColor$(li)IsDestructable$(li)IsBroken"
+		}
+    ]
+}

@@ -1,0 +1,30 @@
+{
+  "parent": "flammpfeil.slashblade:slashblade",
+  "display": {
+    "title": {
+      "translate": "achievement.flammpfeil.slashblade.muramasa"
+    },
+    "description": {
+      "translate": "achievement.flammpfeil.slashblade.muramasa.desc",
+      "with": [ "\n" ]
+    },
+    "icon": {
+      "item": "flammpfeil.slashblade:slashbladeNamed",
+      "nbt": "{TextureName:\"named/muramasa/muramasa\",ModelName:\"named/muramasa/muramasa\"}"
+    },
+    "frame": "challenge"
+  },
+  "criteria": {
+    "get": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "flammpfeil.slashblade:slashbladeNamed",
+            "nbt": "{CurrentItemName:\"flammpfeil.slashblade.named.muramasa\"}"
+          }
+        ]
+      }
+    }
+  }
+}

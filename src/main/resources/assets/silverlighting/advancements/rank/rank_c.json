@@ -1,0 +1,22 @@
+{
+  "parent": "silverlighting:rank/rank_d",
+  "display": {
+    "title": {
+      "translate": "achievement.flammpfeil.slashblade.rankC"
+    },
+    "description": {
+      "translate": "achievement.flammpfeil.slashblade.rankC.desc",
+      "with": [ "\n" ]
+    },
+    "icon": {
+      "item": "silverlighting:brokenbamboo",
+      "data": 2
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "update": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

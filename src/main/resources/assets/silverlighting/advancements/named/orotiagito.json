@@ -1,0 +1,30 @@
+{
+  "parent": "silverlighting:named/orotiagitosealed",
+  "display": {
+    "title": {
+      "translate": "achievement.flammpfeil.slashblade.orotiagito"
+    },
+    "description": {
+      "translate": "achievement.flammpfeil.slashblade.orotiagito.desc",
+      "with": [ "\n" ]
+    },
+    "icon": {
+      "item": "flammpfeil.slashblade:slashbladeNamed",
+      "nbt": "{TextureName:\"named/orotiagito\",ModelName:\"named/agito\"}"
+    },
+    "frame": "challenge"
+  },
+  "criteria": {
+    "get": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "flammpfeil.slashblade:slashbladeNamed",
+            "nbt": "{CurrentItemName:\"flammpfeil.slashblade.named.orotiagito\"}"
+          }
+        ]
+      }
+    }
+  }
+}

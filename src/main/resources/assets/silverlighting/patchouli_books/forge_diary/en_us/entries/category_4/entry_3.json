@@ -1,0 +1,70 @@
+{
+	"category": "category_4",
+	"sortnum": 3,
+	"name": "暮光灼魂",
+	"icon": "flammpfeil.slashblade:slashbladeNamed{TextureName:\"named/orotiagito\",ModelName:\"named/agito\"}",
+	"advancement": "twilightforest:progress_naga",
+	"pages":[
+		{
+			"type" : "text",
+			"text" : "在那片森林有名字之前，众星之刃的传说就已传开。"
+		},
+		{
+			"advancement": "silverlighting:named/agitorust",
+			"type" : "text",
+			"title" : "蛇取",
+			"text" : "从巨蛇的尸骸中，你取出了一把锈蚀严重的刀剑。$(br2)所幸，她的刀铭尚可辨认，从刀铭里，你能找到修复她的方法。"
+		},
+		{
+			"advancement": "silverlighting:named/agitorust",
+			"type": "crafting",
+			"recipe": "flammpfeil.slashblade:agito"
+		},
+		{
+			"advancement": "silverlighting:named/agitorust",
+			"type" : "text",
+			"title" : "仿作",
+			"text" : "大蛇鄂门出世以来，其仿作多如牛毛。你手中的，正是众多仿作之一。$(br2)但是她为何会被保存在娜迦的身体里…这个疑问，我想迟早会解开的。"
+		},
+        {
+			"advancement": "silverlighting:named/agitorust",
+			"advancement": "silverlighting:named/agito",
+            "type": "text",
+            "title": "蛇梦",
+            "text": "巨蛇梦寐以求的，是一所庭院，以及人们的供奉。$(br2)于是，天启魔方建造了庭院，哄骗了凡人，将她连同凡人一同作为祭品，供奉给了那条巨蛇。$(br2)大蛇鄂门是为了抵抗天启魔方所作的刀剑。仿品尚且如此，真品如今又在何方？"
+        },
+		{
+			"advancement": "twilightforest:progress_hydra",
+			"type": "text",
+			"title": "巨影",
+			"text": "九头的暴君是你见过最强的敌人。$(br2)但，最终获胜的是你。$(br2)在取血的过程中，你有幸见到了那把传说中的大蛇鄂门。尽管她如今也锈蚀的不成样子，但从你手中仿作的反应来看，她绝对是那把唯一的真品。"
+		},
+		{
+			"advancement": "twilightforest:progress_hydra",
+			"type": "crafting",
+			"recipe": "flammpfeil.slashblade:agito2"
+		},
+		{
+			"advancement": "silverlighting:named/orotiagitosealed",
+			"type": "text",
+			"title": "鄂门",
+			"text": "她是众星锻铸之刃。$(br2)那个时代也许比你想的要更加辉煌。至少，以你的技术，只能将她修复到能用的程度。$(br2)星辰浸润着她的躯体，以一种你难以理解的方式，继续修复着她。$(br2)知晓真相只是时间问题了。"
+		},
+		{
+			"advancement": "silverlighting:named/orotiagitosealed",
+			"type": "crafting",
+			"recipe": "flammpfeil.slashblade:agito_ex"
+		},
+		{
+			"advancement": "silverlighting:named/orotiagito",
+			"type": "text",
+			"title": "吞星",
+			"text": "天启降临之日，群星陨落。$(br2)“鄂门”，取自传闻中的吞星巨蛇。$(br2)那个时代的锻刀人预言了暮色的结界，并将大蛇鄂门作为抵抗天启魔方的最后手段……$(br2)可惜，无人有能力直面天启。失去了使用者的利刃，化为了宿敌的藏品。$(br2)在天启与九头蛇的终末一战后，九头蛇吞下了群星所锻之刃，化作了虚伪的吞星巨蛇。"	
+		},
+		{
+			"advancement": "silverlighting:named/orotiagito",
+			"type": "text",
+			"text": "于是，吞星巨蛇死在了你的手中。$(br2)你的前路畅通无阻。"
+		}
+	]
+}

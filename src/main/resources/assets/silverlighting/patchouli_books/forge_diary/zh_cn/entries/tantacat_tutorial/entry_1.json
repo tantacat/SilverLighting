@@ -1,0 +1,48 @@
+{
+    "category": "tantacat_tutorial",
+    "sortnum": 1,
+    "name": "起步喵~",
+    "icon": "minecraft:wooden_sword",
+    "pages":[
+        {
+            "type" : "text",
+            "text" : "拔刀剑的起步自然是制作第一把拔刀剑喵~！$(br2)同时会讲解制作第一把拔刀剑以后可能会遇到的情况喵~！"
+        },
+        {
+            "type": "empty"  
+        },
+        {
+            "type" : "spotlight",
+            "title" : "制作木剑",
+            "item": "minecraft:log",
+            "text" : "首先要挖点木头喵~！$(br2)然后制作工作台喵~！$(br2)然后就可以准备制作木剑了喵~！"
+        },
+        {
+            "type" : "crafting",
+            "recipe" : "minecraft:wooden_sword",
+            "text" : "在工作台里面这样摆就能做出木剑了喵~！"
+        },
+        {
+            "type": "spotlight",
+            "title": "断面之意",
+            "item": "silverlighting:brokenbamboo:12{display:{Name:\"§r断面之意\"}}",
+            "text": "断面之意即切断一切的信念喵~！$(br2)使用木剑一击制敌吧，这是掌握拔刀剑的第一步喵~！$(br2)虽然1.12.2制作第一把拔刀剑所需的木剑已经不需要一击制敌了喵~（"
+        },
+        {
+            "type": "crafting",
+            "title": "无铭刀「木偶」",
+            "recipe": "flammpfeil.slashblade:recipexes",
+            "text": "准备工作完成了喵~！$(br2)制作第一把拔刀剑吧喵~！"
+        },
+        {
+            "type": "text",
+            "title": "额外说明",
+            "text": "如果你按照教程中所说的做了，那么可能会获得右边展示的这种物品喵~！$(br2)这个我们留到以后再讲喵~$(br)因为有一点复杂喵~！$(br)总之妥善保管吧喵~！"
+        },
+        {
+            "type": "spotlight",
+            "title": "附魔的耀魂宝珠",
+            "item": "flammpfeil.slashblade:proudsoul:2{ench:[{id:7s,lvl:1s}]}"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+	"category": "category_1",
+	"sortnum": 1,
+	"name": "华章启木",
+	"icon": "minecraft:log",
+	"pages":[
+		{
+			"type" : "text",
+			"text" : "于你而言，你一无所有。$(br2)于世界而言，你应有尽有。"
+		},
+		{
+			"type" : "text",
+			"title" : "原木",
+			"text" : "木头…是很有用的东西。$(br2)拆解它，拼凑它，用它填满你的需求…你能做到。"
+		},
+		{
+			"type" : "crafting",
+			"recipe" : "minecraft:wooden_sword"
+		},
+		{
+			"type": "text",
+			"title": "木剑",
+			"text": "就是这样。剑刃破开空气的声音令你欣喜，剑身沉重的质量令你安心…但还不够，还远远不够。不该是这样……你能做到的，再想想。"
+		},
+		{
+			"type": "crafting",
+			"recipe": "flammpfeil.slashblade:recipexes"
+		}
+	]
+}

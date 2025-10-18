@@ -1,0 +1,35 @@
+{
+	"category": "category_4",
+	"sortnum": 2,
+	"name": "刻铁铭心",
+	"icon": "flammpfeil.slashblade:slashblade{ench:[{id:1,lvl:1}]}",
+	"advancement": "flammpfeil.slashblade:brokenwhite",
+	"pages":[
+		{
+			"type" : "text",
+			"text" : "她将你的名字作为刀铭。以此宣告，她将为你而生。"
+		},
+		{
+			"type" : "text",
+			"title" : "预案",
+			"text" : "记忆里出现了让她变强的方法，但要做的准备也相当之多。$(br2)在你向她描述之后，她似乎对其中一样材料需要进入下界感到相当担忧。$(br2)但是为了她，再怎么复杂，再怎么危险也无所谓，对吧？"
+		},
+		{
+			"advancement": "flammpfeil.slashblade:slashblade",
+			"type" : "text",
+			"title" : "铸刃",
+			"text" : "锻造，精炼，组装…这是你手中第一把真正的刀，你在各个步骤上都做的相当认真。$(br2)哪怕只是预先的演练都花费了不少时间，好在实操的时候没出差错。$(br2)有了刀铭的，真正的大太刀，无论在力量还是性格方面都是一次巨大的飞跃。$(br2)不过首先，为了让她不再那么担心你，先去休息一下吧。"
+		},
+        {
+			"advancement": "flammpfeil.slashblade:slashblade",
+            "type": "text",
+            "title": "初学",
+            "text": "恭喜。$(br2)时至今日，你终于入门了锻刀法，有足够的资本自称为“刀匠”。$(br2)以大太刀为蓝本，更多的灵感在你的脑中迸发，由此延伸的无数个发展方向让你一时间不知所措……$(br2)不过，从来没有人说过只能有一条路可走，不是吗？"
+        },
+		{
+			"type": "crafting",
+			"recipe": "flammpfeil.slashblade:tukumo",
+			"recipe2": "flammpfeil.slashblade:muramasa"
+		}
+	]
+}

@@ -1,0 +1,30 @@
+{
+  "parent": "flammpfeil.slashblade:slashblade",
+  "display": {
+    "title": {
+      "translate": "achievement.flammpfeil.slashblade.tukumo"
+    },
+    "description": {
+      "translate": "achievement.flammpfeil.slashblade.tukumo.desc",
+      "with": [ "\n" ]
+    },
+    "icon": {
+      "item": "flammpfeil.slashblade:slashbladeNamed",
+      "nbt": "{ench: [{lvl:1,id:35}],TextureName:\"named/a_tukumo\",ModelName:\"named/agito\"}"
+    },
+    "frame": "challenge"
+  },
+  "criteria": {
+    "get": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "flammpfeil.slashblade:slashbladeNamed",
+            "nbt": "{CurrentItemName:\"flammpfeil.slashblade.named.yuzukitukumo\"}"
+          }
+        ]
+      }
+    }
+  }
+}

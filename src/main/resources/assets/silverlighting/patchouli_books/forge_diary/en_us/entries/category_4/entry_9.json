@@ -1,0 +1,31 @@
+{
+	"category": "category_4",
+	"sortnum": 9,
+	"name": "千鹤尘俗",
+	"icon": "flammpfeil.slashblade:slashbladeNamed{TextureName:\"named/muramasa/muramasa\",ModelName:\"named/muramasa/muramasa\"}",
+	"advancement": "flammpfeil.slashblade:slashblade",
+	"pages":[
+		{
+			"type" : "text",
+			"text" : "再波澜壮阔的故事，也要有一处风平浪静的安身之所。"
+		},
+		{
+			"advancement": "silverlighting:enchanted",
+			"type" : "text",
+			"title" : "落尽",
+			"text" : "好像并没有什么值得记述的故事。$(br2)只是和平时一样，生存，探索，战斗，带着她一起，过着平平淡淡的生活。$(br2)也许，确实没有什么冒险的必要。没有危机主动找上门来，你也没有必须要冒险的理由。$(br2)就这样继续生活下去吧，冒险那么久，也该休息休息了。"
+		},
+		{
+			"advancement": "silverlighting:named/muramasa",
+			"type" : "text",
+			"title" : "千鹤",
+			"text" : "即使是如此平淡的生活，也偶尔会有灵光一现。$(br2)只需千锤百炼，即可迎来蜕变…这不是刚好符合现在不想冒险的你嘛。$(br2)就这样，你手中的大太刀蜕变为了千鹤。$(br2)好像，就这样下去也没什么不好？"
+		},
+        {
+			"advancement": "silverlighting:named/muramasa",
+            "type": "text",
+            "title": "间章",
+            "text": "就这样，你和她过上了平淡的生活。如果她有身体，也许你们就像是故事里隐居的夫妻。$(br2)也许会一直这样下去，也许很快你会开始厌倦这样的平淡…谁知道呢。$(br2)反正她会一直陪着你，这就够了。"
+        }
+	]
+}

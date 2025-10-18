@@ -1,0 +1,127 @@
+{
+	"category": "category_3",
+	"sortnum": 1,
+	"name": "通用剑技",
+	"icon": "",
+	"pages":[
+		{
+			"type" : "text",
+			"text" : " "
+		},
+        {
+            "type": "empty"
+        },
+		
+		{
+			"type" : "text",
+			"title" : "上挑斩击",
+			"text" : "立足地面，$(l)挑飞敌人$()，方便后续连招。"
+		},
+		{
+			"type" : "image",
+			"images": [
+				"silverlighting:textures/image/3-1-上挑斩击.png"
+			],
+			"text" : "在无动作时，左键攻击敌人，将其挑飞"
+		},
+        
+        {
+            "type": "text",
+            "title": "劈斩/缠刃劈斩",
+            "text": "在上挑斩击后，可以发动劈斩将空中的敌人$(l)拖下地面$()。通过不同的发动方式，劈斩/缠刃劈斩分别可以攻击1个目标/攻击范围内的所有目标。"
+        },
+        {
+            "type": "image",
+            "images": [
+				"silverlighting:textures/image/3-1-劈斩.png"
+			],
+            "text": "在上挑斩击后，衔接左/右键，发动劈斩/缠刃劈斩"
+        },
+        
+		{
+            "type": "text",
+            "title": "挑刃/撤步挑刃（Upper Slash）",
+            "text": "立足地面，改变架势$(l)击飞敌人$()。如果顺势后撤，可以让自身也起跳到$(l)同等高度$()。"
+        },
+        {
+            "type": "image",
+            "images": [
+				"silverlighting:textures/image/3-1-挑刃-1.png",
+				"silverlighting:textures/image/3-1-挑刃-2.png",
+				"silverlighting:textures/image/3-1-挑刃-3.png",
+				"silverlighting:textures/image/3-1-挑刃-4.png"
+			],
+            "text": "按住后退时，进行右键发动挑刃，长按右键发动撤步挑刃。"
+        },
+		
+        {
+            "type": "text",
+            "title": "浮空剑舞/风中剑舞",
+            "text": "位于空中，有节奏的发起斩击，可以带起身体让自己$(l)保持滞空$()。如果经过蓄力，还可以大幅度的提高自身的高度。剑舞的节奏一旦被打乱，就必须落地休整，才能再次发起剑舞。"
+        },
+        {
+            "type": "image",
+            "images": [
+				"silverlighting:textures/image/3-1-浮空剑舞-1.png",
+				"silverlighting:textures/image/3-1-浮空剑舞-2.png",
+				"silverlighting:textures/image/3-1-浮空剑舞-3.png",
+				"silverlighting:textures/image/3-1-浮空剑舞-4.png",
+				"silverlighting:textures/image/3-1-浮空剑舞-5.png"
+			],
+            "text": "在空中有节奏的挥刀，前三刀大幅提升高度，第四刀进行下劈。若空过第四刀，可以从第一刀重新循环。"
+        },
+        
+        {
+            "type": "text",
+            "title": "剑锐藏锋（Taunt）",
+            "text": "在拔刀后站定收刀，细细感悟挥刀的动作，可以迅速$(l)让刀变得趁手$()。但与此同时，这也会卖给敌人很大的破绽。"
+        },
+        {
+            "type": "image",
+            "images": [
+				"silverlighting:textures/image/3-1-剑锐藏锋-1.png",
+				"silverlighting:textures/image/3-1-剑锐藏锋-2.png",
+				"silverlighting:textures/image/3-1-剑锐藏锋-3.png"
+			],
+            "text": "在进行挥刀的斩击后停止操作，直到收刀动作完成。"
+        },
+        
+        {
+            "type": "text",
+            "title": "空坠斩（Helm Braker）",
+            "text": "位于空中，全力发起下坠劈斩，可以迅速降低高度并且$(l)不受摔落伤害$()。"
+        },
+        {
+            "type": "image",
+            "images": [
+				"silverlighting:textures/image/3-1-空坠斩-1.png",
+				"silverlighting:textures/image/3-1-空坠斩-2.png",
+				"silverlighting:textures/image/3-1-空坠斩-3.png"
+			],
+            "text": "在空中按住前进和潜行时按下右键。"
+        },
+        {
+            "type": "text",
+            "title": "凶狠利刃",
+            "text": "不同于剑技，这是被动性让刀更加趁手的能力，可以理解为$(l)刀的状态$()。$(br2)杀敌超过一千时，解锁。"
+        },
+		{
+			"type": "empty"
+		},
+        {
+            "type": "text",
+            "title": "护身旋斩（Projectile Barrier）",
+            "text": "迅速挥刀，$(l)格挡$()袭来的弹射物的剑技。这个专注防御的剑技$(l)无法造成伤害$()。"
+        },
+        {
+            "type": "image",
+            "images": [
+				"silverlighting:textures/image/3-1-护身旋斩-1.png",
+				"silverlighting:textures/image/3-1-护身旋斩-2.png",
+				"silverlighting:textures/image/3-1-护身旋斩-3.png",
+				"silverlighting:textures/image/3-1-护身旋斩-4.png"
+			],
+            "text": "刀上带有荆棘时，长按潜行右键持续触发"
+        }
+	]
+}

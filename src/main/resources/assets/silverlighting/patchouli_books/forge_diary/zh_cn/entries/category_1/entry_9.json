@@ -1,0 +1,117 @@
+{
+    "category": "category_1",
+    "sortnum": 9,
+    "name": "荣耀之魂",
+    "icon": "flammpfeil.slashblade:proudsoul",
+	"advancement": "flammpfeil.slashblade:root",
+    "pages":[
+        {
+            "type" : "text",
+            "text" : "杀敌的荣耀笼罩着你们。$(br2)这矜持的火焰，将点亮你们的灵魂。"
+        },
+		{
+			"type": "empty"
+		},
+        {
+            "type" : "text",
+            "title" : "摄魂",
+            "text" : "你察觉到她的身上凝聚出了一股独特的力量，这股力量似乎正在随着杀敌而逐渐增强。$(br2)你将这份力量区分为了“杀敌数”和“荣耀值”。每当她杀死了敌人，杀敌数都会增加1，而荣耀值则会随着当前评分和敌人掉落的经验数量而大幅增长。$(br2)这些数据并未给她带来实质上的力量增长…也许还需要更多的研究。"
+        },
+		{
+			"type": "image",
+			"images": ["silverlighting:textures/image/1-9-摄魂.png"]
+		},
+        {
+            "type" : "text",
+            "title" : "铸身",
+            "text" : "以荣耀值为燃料燃起的紫色火焰，可以熔铸任何物品以修补刀刃。$(br2)平均算下来，可以消耗2点荣耀值和1格物品来修复刀剑的1点耐久。$(br2)这是一个很有用的发现。至少现在，在她碎裂之前，你有了可以补救的方法。"
+        },
+		{
+			"type": "image",
+			"images": ["silverlighting:textures/image/1-9-铸身.png"]
+		},
+        {
+            "type" : "text",
+            "title" : "传火",
+            "text" : "耀魂值与击杀数，似乎也和她的成长息息相关。$(br2)如果没有足够的耀魂值和击杀数，也许就算收集够了材料，也无法将她锻造为接下来的形态……"
+        },
+		{
+			"type": "empty"
+		},
+        {
+			"advancement": "silverlighting:proudsoul/proudsoul",
+            "type" : "text",
+            "title" : "留痕",
+            "text" : "在她碎裂的瞬间，格外炽烈的火焰燃起，并最终留下了维持着火焰形状的，璀璨的紫色晶体。$(br2)触摸上去，还能感觉到些许压抑的温度。也许作为燃料会很高效。"
+        },
+		{
+			"advancement": "silverlighting:proudsoul/proudsoul",
+			"type": "spotlight",
+			"item": "flammpfeil.slashblade:proudsoul"
+		},
+        {
+			"advancement": "silverlighting:proudsoul/proudsoul",
+            "type": "text",
+            "title": "碎耀",
+            "text": "这些晶体并非坚不可摧，但无论如何敲打，碾碎，它们都会回到固体火焰的形态。虽然每一个都变小了一些，但数量也变得更多。$(br2)你称呼它们为耀魂碎片。更小的那些，就叫做破碎的耀魂吧。"
+        },
+        {
+			"advancement": "silverlighting:proudsoul/proudsoul",
+            "type": "crafting",
+            "recipe": "flammpfeil.slashblade:ps_soul2tiny",
+            "recipe2": "flammpfeil.slashblade:ps_tiny2soul"
+        },
+        {
+			"advancement": "silverlighting:proudsoul/tinysoul",
+            "type": "text",
+            "title": "熔锋",
+            "text": "耀魂碎片的粉末是优秀的修刀材料，但鉴于它们会恢复晶体状态，整个过程需要相当迅速，在铁砧上一次完成是个不错的选择。$(br)如果使用这些本就是荣耀值的碎片进行修刀，在恢复大量耐久的同时，荣耀值不仅不会被消耗，反而会增加不少。$(br2)也许这些耀魂碎片还有更多用处。"
+        },
+		{
+			"advancement": "silverlighting:proudsoul/tinysoul",
+			"type": "craft_anvil",
+			"left_1": "flammpfeil.slashblade:slashblade:30",
+			"right_1": "flammpfeil.slashblade:proudsoul",
+			"output_1": "flammpfeil.slashblade:slashblade:10{ProudSoul:200,RepairCounter:1}",
+		
+			"left_2": "flammpfeil.slashblade:slashblade:30",
+			"right_2": "flammpfeil.slashblade:proudsoul:3",
+			"output_2": "flammpfeil.slashblade:slashblade:20{ProudSoul:100,RepairCounter:1}",
+			
+			"left_3": "flammpfeil.slashblade:slashblade:50",
+			"right_3": "flammpfeil.slashblade:proudsoul:1",
+			"output_3": "flammpfeil.slashblade:slashblade:20{ProudSoul:400,RepairCounter:1}",
+			
+			"left_4": "flammpfeil.slashblade:slashblade:50",
+			"right_4": "flammpfeil.slashblade:proudsoul:2",
+			"output_4": "flammpfeil.slashblade:slashblade:15{ProudSoul:400,RepairCounter:1}",
+			
+			"left_5": "flammpfeil.slashblade:slashblade:50",
+			"right_5": "flammpfeil.slashblade:proudsoul:4",
+			"output_5": "flammpfeil.slashblade:slashblade{ProudSoul:500,RepairCounter:1}",
+			
+			"left_6": "flammpfeil.slashblade:slashblade:50",
+			"right_6": "flammpfeil.slashblade:proudsoul:5",
+			"output_6": "flammpfeil.slashblade:slashblade{ProudSoul:500,RepairCounter:1}"
+		},
+        {
+			"advancement": "silverlighting:proudsoul/tinysoul",
+            "type": "text",
+            "title": "铸铁",
+            "text": "在合适的条件下，耀魂碎片可以被融化为液态，但这个状态的耀魂碎片会迅速挥发。$(br2)不过，只要有一个引子，就能让耀魂碎片的根本性质发生变化……$(br2)你向其中投入了精炼的铁锭。铁锭吸收了液态的耀魂，获得了与耀魂碎片相似但不完全相同的性质。$(br2)就叫它耀魂铁锭吧。"
+        },
+        {
+			"advancement": "silverlighting:proudsoul/tinysoul",
+            "type": "crafting",
+            "recipe": "flammpfeil.slashblade:ps_soul2ingot",
+            "recipe2": "flammpfeil.slashblade:ps_tiny2ingot"
+        },
+        {
+			"advancement": "silverlighting:proudsoul/soulsphere",
+            "type": "smelting",
+            "title": "宝珠",
+            "recipe": "flammpfeil.slashblade:proudsoul:1",
+            "text": "将耀魂铁锭再度精炼，最终呈现在你手中的是一枚小巧的宝珠。你能感受到这其中蕴含的巨大力量，但你还难以将其引出。$(br2)你将耀魂宝珠收起。假以时日，它一定会发挥出它应有的作用。"
+        }
+    ]
+}

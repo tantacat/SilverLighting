@@ -1,0 +1,120 @@
+key.silverlighting.specialboost=boost
+
+itemGroup.silverlighting=SilverLighting
+
+item.silverlighting.brokenbamboo.name=brokenbamboo
+item.silverlighting.anticrystal.name=anticrystal
+item.silverlighting.animasheath.name=animasheath
+item.silverlighting.dokkaebisheath.name=dokkaebisheath
+item.silverlighting.silverlighting.name=silverlighting
+item.silverlighting.puresilver.name=puresilver
+item.silverlighting.animasheath_wood.name=animasheath_wood
+item.silverlighting.animasheath_stone.name=animasheath_stone
+item.silverlighting.animasheath_iron.name=animasheath_iron
+item.silverlighting.animasheath_gold.name=animasheath_gold
+item.silverlighting.animasheath_diamond.name=animasheath_diamond
+item.silverlighting.animasheath_drape.name=animasheath_drape
+item.silverlighting.animasheath_spite.name=animasheath_spite
+item.silverlighting.animasheath_edge.name=animasheath_edge
+item.silverlighting.animasheath_gleam.name=animasheath_gleam
+item.silverlighting.animasheath_phos.name=animasheath_phos
+item.silverlighting.forgerheart.name=forgerheart
+
+advancement.silverlighting.silverlighting=silverlighting
+advancement.silverlighting.silverlighting.desc=A miracle born from your heart. Still lacking a sturdy blade, but enough to never be separated
+advancement.silverlighting.puresilver=puresilver
+advancement.silverlighting.puresilver.desc=The former bamboo sword now possesses a true blade name. This new body shall become your sharpest sword
+
+advancement.silverlighting.animasheath=animasheath
+advancement.silverlighting.animasheath.desc=Broken, but far from over. Can be easily forged back to its original form
+advancement.silverlighting.animasheath_wood=animasheath_wood
+advancement.silverlighting.animasheath_wood.desc=A blade with only form. Seems to possess power over wind and detection
+advancement.silverlighting.animasheath_stone=animasheath_stone
+advancement.silverlighting.animasheath_stone.desc=A blade with only form. Contains uncontrollable destructive power
+advancement.silverlighting.animasheath_iron=animasheath_iron
+advancement.silverlighting.animasheath_iron.desc=A blade with only form. Becomes sharper through slaughter
+advancement.silverlighting.animasheath_gold=animasheath_gold
+advancement.silverlighting.animasheath_gold.desc=A blade with only form. Enchantment power is infinitely amplified on the blade
+advancement.silverlighting.animasheath_diamond=animasheath_diamond
+advancement.silverlighting.animasheath_diamond.desc=A blade with only form. Like awakening from a dream
+
+advancement.silverlighting.animasheath_drape=animasheath_drape
+advancement.silverlighting.animasheath_drape.desc=Wind whispers and leaf rustles intertwine. All battles should end before they begin.
+advancement.silverlighting.animasheath_spite=animasheath_spite
+advancement.silverlighting.animasheath_spite.desc=The world trembles in your hands. Nothing can hinder your steps.
+advancement.silverlighting.animasheath_edge=animasheath_edge
+advancement.silverlighting.animasheath_edge.desc=Pure killing intent radiates. Your enemies die for being your foes.
+advancement.silverlighting.animasheath_gleam=animasheath_gleam
+advancement.silverlighting.animasheath_gleam.desc=Brilliant magic patterns surge. This resilience and glory submit to you.
+advancement.silverlighting.animasheath_phos=animasheath_phos
+advancement.silverlighting.animasheath_phos.desc=Shimmering crystal dust sparkles. Now, face the power you already possess.
+
+advancement.silverlighting.dokkaebisheath=dokkaebisheath
+advancement.silverlighting.dokkaebisheath.desc=An extreme point of iaido. Gather all power in an instant§8§l§oBodiless blade, soul as edge
+
+advancement.silverlighting.brokenbamboo=brokenbamboo
+advancement.silverlighting.brokenbamboo.desc=Burning bamboo fragments. Pieces that spill when defending with a forged sheath. Can be used as forging material§8§l§oWho calls?
+advancement.silverlighting.forgerheart=forgerheart
+advancement.silverlighting.forgerheart.desc=The purest substance refined from summarizing blade-forging techniques. Strike it on a blade to witness miracles§8§l§oA great creation of utmost effort
+advancement.silverlighting.anticrystal=anticrystal
+advancement.silverlighting.anticrystal.desc=You are their master they cannot defy. Whatever you desire, they obey without complaint§4§l§oIf you insist...
+
+advancement.silverlighting.broken_sealedblade=Rusted Blade Shattered
+advancement.silverlighting.broken_sealedblade.desc=The already damaged blade breaks again§8§l§oEven you cannot easily repair it
+advancement.silverlighting.enchant_simpleblade=Enchantment Faded
+advancement.silverlighting.enchant_simpleblade.desc=Your enchantment failed§8§l§oRefrain from such meaningless acts before engraving the blade name
+advancement.silverlighting.unenchant_soulsphere=Refinement?
+advancement.silverlighting.unenchant_soulsphere.desc=After high-temperature forging, all impurities within the spirit iron are removed§8§l§oLearn from this
+advancement.silverlighting.unhundredkill_silverbamboo=Damaged Sheath
+advancement.silverlighting.unhundredkill_silverbamboo.desc=Glory and slaughter are not enough to preserve it§8§l§oYou must use it to exorcise a hundred demons
+
+achievement.flammpfeil.slashblade.saheresoulsphere=saheresoulsphere
+achievement.flammpfeil.slashblade.saheresoulsphere.desc=A Soul Sphere carrying SA. Strike it on a blade to grant the corresponding SA§8§l§oSpirit iron emitting dazzling radiance
+achievement.flammpfeil.slashblade.namedbladeSoul=namedbladeSoul
+achievement.flammpfeil.slashblade.namedbladeSoul.desc=Obtained by striking Soul Chips on a burning blade. Records the blade's name. Combine with a nameless sword to give it a new name§8§l§oA crystal entwined with restrained flames
+achievement.flammpfeil.slashblade.soulCrystal=soulCrystal
+achievement.flammpfeil.slashblade.soulCrystal.desc=Obtained by striking Soul Chips on a burning blade. Fixed cost of 5 levels as repair material§8§l§oCrystal formed from restrained flames
+achievement.flammpfeil.slashblade.soulTrapezohedron=soulTrapezohedron
+achievement.flammpfeil.slashblade.soulTrapezohedron.desc=Obtained by striking Soul Crystals on a burning blade. A unique crystal containing the blade's will§8§l§oThe key to a spirit sword's allegiance
+achievement.flammpfeil.slashblade.phantomBlade=phantomBlade
+achievement.flammpfeil.slashblade.phantomBlade.desc=Designed to pursue living beings§8§l§oToggle by striking with Soul Sphere
+
+achievement.silverlighting.wrap.BalkonWood.desc=A wooden katana sheathed. Using the sheath's power, it becomes a vessel for iaido
+achievement.silverlighting.wrap.BalkonStone.desc=A stone katana sheathed. Possesses a stronger blade body, bearing greater power
+achievement.silverlighting.wrap.BalkonIron.desc=An iron katana sheathed. Already sharp, now even better at slaying enemies
+achievement.silverlighting.wrap.BalkonGold.desc=A golden katana sheathed. Loses strong blade body but gains more unique power
+achievement.silverlighting.wrap.BalkonDiamond.desc=A diamond katana sheathed. This unbreakable blade will show you what iaido truly is
+
+flammpfeil.slashblade.specialattack.dedication=dedication
+flammpfeil.slashblade.specialattack.hope=hope
+flammpfeil.slashblade.specialattack.dress=dress
+flammpfeil.slashblade.specialattack.leafswim=leafswim
+flammpfeil.slashblade.specialattack.destory=destory
+flammpfeil.slashblade.specialattack.murderous=murderous
+flammpfeil.slashblade.specialattack.spell=spell
+flammpfeil.slashblade.specialattack.despell=despell
+flammpfeil.slashblade.specialattack.recrystal=recrystal
+
+slashblade.seffect.name.SoulForge=SoulForge
+slashblade.seffect.name.Pneuma=Pneuma
+slashblade.seffect.name.Tremor=Tremor
+slashblade.seffect.name.Blooded=Blooded
+slashblade.seffect.name.SpellWeave=SpellWeave
+slashblade.seffect.name.SpellWeak=SpellWeak
+slashblade.seffect.name.PseudoForm=PseudoForm
+
+silverlighting.boost.name.Pureclear=Pureclear
+silverlighting.boost.name.Sound=Sound
+silverlighting.boost.name.Break=Break
+silverlighting.boost.name.Pressure=Pressure
+silverlighting.boost.name.Spelling=Spelling
+silverlighting.boost.name.Shardstorm=Shardstorm
+
+config.silverlighting.general.canAttackPlayer=canAttackPlayer
+config.silverlighting.general.canAttackAllMob=canAttackAllMob
+config.silverlighting.general.canUseAntiCrystal=canUseAntiCrystal
+config.silverlighting.general.isUnswervingEnable=isUnswervingEnable
+config.silverlighting.general.canReciveVoice=canReciveVoice
+
+silverlighting.patchouli.forge_diary.title=ForgeDiary
+silverlighting.patchouli.forge_diary.landing_text=You compile stories into a book.$(br2)Perhaps one day, you too will become a figure in history.$(br2)But for now, you only wish to walk into the future with her.

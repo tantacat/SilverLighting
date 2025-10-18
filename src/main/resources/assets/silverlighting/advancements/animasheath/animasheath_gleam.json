@@ -1,0 +1,30 @@
+{
+  "parent": "silverlighting:animasheath/animasheath_gold",
+  "display": {
+    "title": {
+      "translate": "advancement.silverlighting.animasheath_gleam"
+    },
+    "description": {
+      "translate": "advancement.silverlighting.animasheath_gleam.desc",
+      "with": [ "\n" ]
+    },
+    "icon": {
+      "item": "silverlighting:animasheath",
+      "nbt": "{ench: [{lvl:1,id:35}],TextureName:\"minecraft/gleam\",ModelName:\"minecraft/gleam\"}"
+    },
+    "frame": "challenge"
+  },
+  "criteria": {
+    "get": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "silverlighting:animasheath",
+            "nbt": "{CurrentItemName:\"silverlighting.animasheath_gleam\"}"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "parent": "silverlighting:named/sabigatana",
+  "display": {
+    "title": {
+      "translate": "advancement.silverlighting.broken_sealedblade"
+    },
+    "description": {
+      "translate": "advancement.silverlighting.broken_sealedblade.desc"
+    },
+    "icon": {
+      "item": "flammpfeil.slashblade:proudsoul",
+      "data": 1
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "smelt": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "flammpfeil.slashblade:slashbladeNamed",
+            "nbt": "{isBroken:true, isSealed:true}"
+          }
+        ]
+      }
+    }
+  }
+}

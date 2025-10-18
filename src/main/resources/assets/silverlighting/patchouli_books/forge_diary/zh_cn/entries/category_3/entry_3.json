@@ -1,0 +1,49 @@
+{
+	"category": "category_3",
+	"sortnum": 3,
+	"name": "双刀剑技",
+	"icon": "",
+	"pages":[
+		{
+			"type" : "text",
+			"text" : " "
+		},
+        {
+            "type": "empty"
+        },
+        
+		{
+			"type" : "text",
+			"title" : "势连斩/戮尽斩",
+			"text" : "立足地面，挥动双刀发起连续的六次斩击，最后一击甚至可以$(l)挥出剑气$()。如果刀足够趁手，最后两刀都会$(l)挥出剑气$()。"
+		},
+		{
+			"type" : "image",
+			"images": [
+				"silverlighting:textures/image/3-3-势连斩-1.png",
+				"silverlighting:textures/image/3-3-势连斩-2.png",
+				"silverlighting:textures/image/3-3-势连斩-3.png",
+				"silverlighting:textures/image/3-3-势连斩-4.png",
+				"silverlighting:textures/image/3-3-势连斩-5.png",
+				"silverlighting:textures/image/3-3-势连斩-6.png",
+				"silverlighting:textures/image/3-3-势连斩-7.png",
+				"silverlighting:textures/image/3-3-势连斩-8.png"
+			],
+			"text" : "评级较低/较高时，连续右键释放势连斩/戮尽斩。"
+		},
+        
+        {
+            "type": "text",
+            "title": "破杀斩",
+            "text": "立足地面，使用$(l)副手刀$()发起一次迅猛的突刺。"
+        },
+        {
+            "type": "image",
+            "images": [
+				"silverlighting:textures/image/3-3-破杀斩-1.png",
+				"silverlighting:textures/image/3-3-破杀斩-2.png"
+			],
+            "text": "在地面按住前进和潜行时，按下右键"
+        }
+	]
+}

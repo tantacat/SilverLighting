@@ -1,0 +1,108 @@
+{
+	"category": "category_3",
+	"sortnum": 6,
+	"name": "魂焰永燃",
+	"icon": "",
+	"advancement": "silverlighting:proudsoul/proudsoul",
+	"pages":[
+		{
+			"type" : "text",
+			"text" : " "
+		},
+        {
+            "type": "empty"
+        },
+		{
+			"advancement": "silverlighting:bladestand",
+			"type" : "text",
+			"title" : "灼起",
+			"text" : "似乎有一个办法让耀魂的火焰以另一种方式呈现。$(br2)以外来的持续高温或者破碎的耀魂为引，可以让刀剑身上燃起紫色的耀魂火焰。这种类似$(l)激活$()的状态可以对耀魂进行更多操作。"
+		},
+        {
+			"advancement": "silverlighting:proudsoul/enchantmentsoul",
+            "type": "text",
+            "title": "印燃",
+            "text": "带有附魔的刀剑折断后，有一小撮火焰并没有和其他的火焰一同凝固结晶，而是独立了出来，变成了一个单独的破碎耀魂。$(br2)你注意到，这个小耀魂身上流转着不同于荣耀的力量。从你对它的感知来看…更像是$(l)附魔$()的力量？$(br2)带有附魔的耀魂碎片？有点意思。叫它印魂碎片吧。"
+        },   
+        {
+			"advancement": "silverlighting:proudsoul/enchantmentsoul",
+            "type": "text",
+            "title": "刻印",
+            "text": "印魂碎片可以像普通的破碎耀魂一样，合成耀魂碎片或者耀魂铁锭，但必须要参与合成的印魂碎片带有$(l)相同$()的附魔。$(br2)此外，你还发现，印魂碎片似乎可以$(l)给刀剑附魔$()。尽管概率不算高，但可以通过合成更高级的耀魂素材来大幅提高附魔的成功率。"
+        },
+		{
+			"advancement": "silverlighting:bladestand",
+			"type": "image",
+			"images": ["silverlighting:textures/image/3-6-刻印.png"],
+			"text": "使用印魂碎片附魔成功"
+		},
+        {
+			"advancement": "silverlighting:proudsoul/enchantmentsoul",
+            "type": "text",
+            "title": "刀魂结晶",
+            "text": "当耀魂碎片接触到耀魂火焰的瞬间，耀魂碎片也燃起了同样的火焰，并迅速坍缩凝结成了更精炼的$(l)结晶$()状态。$(br2)这种精炼结晶似乎可以更好的修复刀剑。用刀魂结晶来称呼它似乎很合适。"
+        },
+        {
+			"advancement": "silverlighting:proudsoul/soulcrystal",
+            "type": "text",
+            "title": "缚铭刀晶",
+            "text": "由印魂碎片合成的耀魂碎片，在接触耀魂火焰的时候会发生相似的转变，但产物似乎有着细微的不同。$(br2)与普通的刀魂结晶不同的是，这么获取的刀魂结晶上，似乎可以看到$(l)刀铭$()的印记…$(br2)本就无铭的刀肯定无法刻上刀铭，所以需要一把$(l)原本有刀铭，但是失去了刀铭的刀$()来测试这个特殊的刀魂结晶…$(br2)暂且将其命名为缚铭刀晶。"
+        },
+        {
+			"advancement": "silverlighting:proudsoul/namedsoulcrystal",
+            "type": "text",
+            "title": "缚铭刻录",
+            "text": "你的猜想并无错误。$(br2)当无铭无名与特殊的刀魂结晶结合之后，刀魂结晶上的刀铭被刻进了无铭无名的身上，让她拥有了刀铭，以及其对应的能力。$(br2)但是，尽管刀铭相同，但身体的不同也让她相当不适应。这样锻出来的刀$(l)不会$()拥有身体的很多特性，只有$(l)攻击力和特殊攻击$()不会改变。"
+        },
+		{
+			"advancement": "silverlighting:proudsoul/namedsoulcrystal",
+			"type": "craft_anvil_x",
+			"left_1": "flammpfeil.slashblade:slashbladeNamed",
+			"right_1": "flammpfeil.slashblade:proudsoul:4{TextureName:\"named/sange/white\",SpecialAttackType:0,WrapItem:{id:\"minecraft:wooden_sword\",Count:1b,Damage:0s},ModelName:\"named/sange/sange\",TrueItemName:\"flammpfeil.slashblade.named.fox.white\",isDefaultBewitched:1b,CurrentItemName:\"flammpfeil.slashblade.named.fox.white\",display:{Name:\"狐月刀「白狐」 soul\"},isBroken:0b,baseAttackModifier:4.0f,SB.SEffect:{},StandbyRenderType:1}",
+			"output_1": "flammpfeil.slashblade:slashbladeNamed{SlashBlade:{},ModelName:\"named/sange/sange\",isDefaultBewitched:1b,CurrentItemName:\"flammpfeil.slashblade.named.fox.white\",AttackAmplifier:0.01f,TextureName:\"named/sange/white\",SpecialAttackType:0,TrueItemName:\"flammpfeil.slashblade.named.fox.white\",RepairCounter:1,isBroken:0b,SB.SEffect:{},AttributeModifiers:[{UUIDMost:-3801225194067177672L,UUIDLeast:-6586624321849018929L,Amount:2.0d,Slot:\"mainhand\",AttributeName:\"generic.attackDamage\",Operation:0,Name:\"Weapon modifier\"},{UUIDMost:-422425648963762075L,UUIDLeast:-5756800103171642205L,Amount:-2.4000000953674316d,Slot:\"mainhand\",AttributeName:\"generic.attackSpeed\",Operation:0,Name:\"Weapon modifier\"}],baseAttackModifier:4.0f,StandbyRenderType:1}",
+			
+			"text": "不要沉迷于这种取巧的技术。这对她们来说是一种伤害。"
+		},
+        {
+			"advancement": "silverlighting:proudsoul/soulcrystal",
+            "type": "text",
+            "title": "技术载体",
+            "text": "刀魂结晶还有着更有趣的用法。$(br2)刀魂结晶可以$(l)复制$()一些刀剑所拥有的技巧，并将其传授给其他的刀剑。$(br2)但是，有些技巧无法复刻，而有些技巧则具有唯一性，一旦被复刻，那么其原本的刀剑也会遗忘这份技巧。"
+        },
+		{
+			"advancement": "silverlighting:proudsoul/soulcrystal",
+			"type": "spotlight",
+			"item": "flammpfeil.slashblade:proudsoul:4{SB.SEffect:{BlastEdge:5}}",
+			"text": "似乎可以从某种$(l)会爆炸的怪物$()身上学到一些技巧。"
+		},
+        {
+            "type": "text",
+            "title": "戮魂铸晶",
+            "text": "拔刀剑有办法利用强大的灵魂。$(br2)击杀数和耀魂值只是一部分，对于过于强大的灵魂，拔刀剑无法将其全部吸收，就可以将其点燃，最终化为$(l)耀魂$()。$(br2)杀死有名有姓的敌人，可以将其灵魂燃烧为印魂碎片。而对于boss，甚至可以直接从中提炼出$(l)缚铭刀晶$()这种高级素材。"
+        },
+        {
+			"advancement": "silverlighting:proudsoul/soulcrystal",
+            "type": "text",
+            "title": "耀偏方三八面体",
+            "text": "将冷却的刀魂结晶$(l)再次投入$()耀魂之火，可以让它再次发生转变。$(br2)从结构复杂的晶体，变成了颜色深邃的多面体，其上缭绕的固态火焰似乎也变得更多了。$(br2)你数了数，它总共有38个面，那便称呼其为三八面体吧。"
+        },
+        {
+			"advancement": "silverlighting:proudsoul/soultrapezohedron",
+            "type": "text",
+            "title": "荣耀之匙",
+            "text": "握紧三八面体，你能感受到它和你的灵魂产生了紧密的$(l)联系$()。如果好好利用这一特性，也许可以用来加深你和刀剑的联系。$(br2)于是，你成功了。三八面体在你接近刀剑时融化为了液体，镀上了刀剑的表面，与此同时，你感受到你和三八面体的联系变为了你和刀剑的联系。"
+        },
+		{
+			"advancement": "silverlighting:proudsoul/soultrapezohedron",
+			"type": "spotlight",
+			"item": "flammpfeil.slashblade:slashbladeNamed{SpecialAttackType:1,isDefaultBewitched:true,CurrentItemName:\"flammpfeil.slashblade.named.muramasa\",ench:[{id:7s,lvl:1s}],TextureName:\"named/muramasa/muramasa\",ModelName:\"named/muramasa/muramasa\",OwnerMost:0L,OwnerLeast:0L}",
+			"text": "镀上三八面体的刀剑会增加不少的耀魂值，而$(l)她的灵魂也变得只能与你共鸣，外人甚至连接触她都不被允许$()。$(br2)也许这个状态可以被称为认主。"
+		},
+        {
+			"advancement": "silverlighting:proudsoul/soultrapezohedron",
+            "type": "text",
+            "title": "剑技复刻",
+            "text": "由印魂碎片制成的耀魂铁锭，有着类似刀魂结晶的载体性质。这样的载体不能复刻se，取而代之的，是能$(l)复制并转移$()任何sa的能力。$(br2)如果刀剑上某一附魔的力量达到巅峰，那么使用这一附魔的耀魂铁锭，就可以复刻sa的力量，耀魂铁锭在这一过程中也会$(l)失去附魔$()，变成带有sa的耀魂宝珠。"
+        }
+	]
+}

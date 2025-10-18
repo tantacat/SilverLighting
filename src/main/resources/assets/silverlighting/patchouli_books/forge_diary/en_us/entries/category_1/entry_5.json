@@ -1,0 +1,74 @@
+{
+    "category": "category_1",
+    "sortnum": 5,
+    "name": "鞘",
+    "icon": "flammpfeil.slashblade:slashbladeWrapper",
+	"advancement": "silverlighting:wrape/saya",
+    "pages":[
+        {
+            "type" : "text",
+            "text" : "无论你如何祈祷，这个世界上没有神明。$(br2)你能依靠的，会回应你的，只有你自已。"
+        },
+        {
+            "type" : "text",
+            "title" : "重振",
+            "text" : "你当然会振作起来。这里远远不是故事的终点。$(br)你再次握紧手中的鞘。如她所说的，只要这把鞘还在，她就从未离开你的身边。$(br2)该继续向前走了。别忘了带上她。"
+        },
+        {
+            "type" : "text",
+            "title" : "抉择",
+            "text" : "她为你留下了她。$(br)无貌的鞘无法战斗，但你依稀感受得到，在她的躯体内，她还给你留下了更多东西。$(br2)去使用她。这是她的愿望，是她们共同的愿望。"
+        },
+		{
+			"type": "craft_table",
+			"flag": "mod:reforged",
+			"item_9": "flammpfeil.slashblade:proudsoul",
+			"item_5": "flammpfeil.slashblade:slashbladewrapper",
+			"item_1": "reforged:wooden_katana",
+			"output": "flammpfeil.slashblade:slashbladewrapper{CurrentItemName:\"wrap.reforged.wooden_katana\",TextureName:\"BalkonWood\"}"
+		},
+		{
+			"type": "craft_table",
+			"flag": "mod:reforged",
+			"item_9": "flammpfeil.slashblade:proudsoul",
+			"item_5": "flammpfeil.slashblade:slashbladewrapper",
+			"item_1": "reforged:stone_katana",
+			"output": "flammpfeil.slashblade:slashbladewrapper{CurrentItemName:\"wrap.reforged.stone_katana\",TextureName:\"BalkonStone\"}"
+		},
+		{
+			"type": "craft_table",
+			"flag": "mod:reforged",
+			"item_9": "flammpfeil.slashblade:proudsoul",
+			"item_5": "flammpfeil.slashblade:slashbladewrapper",
+			"item_1": "reforged:iron_katana",
+			"output": "flammpfeil.slashblade:slashbladewrapper{CurrentItemName:\"wrap.reforged.iron_katana\",TextureName:\"BalkonIron\"}"
+		},
+		{
+			"type": "craft_table",
+			"flag": "mod:reforged",
+			"item_9": "flammpfeil.slashblade:proudsoul",
+			"item_5": "flammpfeil.slashblade:slashbladewrapper",
+			"item_1": "reforged:golden_katana",
+			"output": "flammpfeil.slashblade:slashbladewrapper{CurrentItemName:\"wrap.reforged.golden_katana\",TextureName:\"BalkonGold\"}"
+		},
+		{
+			"type": "craft_table",
+			"flag": "mod:reforged",
+			"item_9": "flammpfeil.slashblade:proudsoul",
+			"item_5": "flammpfeil.slashblade:slashbladewrapper",
+			"item_1": "reforged:diamond_katana",
+			"output": "flammpfeil.slashblade:slashbladewrapper{CurrentItemName:\"wrap.reforged.diamond_katana\",TextureName:\"BalkonDiamond\"}"
+		},
+		{
+			"type": "crafting",
+			"flag": "&mod:sakura,mod:slashblade_addon",
+			"recipe": "flammpfeil.slashblade:wrap.BambooMod.katana"
+		},
+        {
+			"advancement": "silverlighting:item/brokenbamboo",
+            "type" : "text",
+            "title" : "奇迹？",
+            "text" : "故事在此处产生了分歧。$(br)……她还在这里。在这具失去了形貌的躯体之外，她在挣扎。$(br2)她想回来。她想继续为你而战。$(br)去回应她。哪怕这注定是一条艰难的道路……但，一路走来克服过的困难，难道还少吗？"
+        }
+    ]
+}

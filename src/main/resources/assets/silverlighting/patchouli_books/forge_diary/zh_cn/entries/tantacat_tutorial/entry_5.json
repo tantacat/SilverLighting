@@ -1,0 +1,80 @@
+{
+    "category": "tantacat_tutorial",
+    "sortnum": 5,
+    "name": "刀的修复喵~",
+    "icon": "minecraft:anvil",
+    "pages":[
+        {
+            "type" : "text",
+            "text" : "如果你的刀耐久耗尽了,你的刀会面临三种可能的结局:消失,变成鞘,断刀喵~$(br2)那么,如何补充刀的耐久就是一个值得讨论的话题了喵~"
+        },
+        {
+            "type": "text",
+            "text": "给刀恢复耐久大致上有4种方法喵~$(li)$(l:tantacat_tutorial/entry_5#合成修复)合成修复$()$(li)$(l:tantacat_tutorial/entry_5#锻造修复)锻造修复$()$(li)$(l:tantacat_tutorial/entry_5#纳刀修复)纳刀修复$()$(li)$(l:tantacat_tutorial/entry_5#吸精修复)吸精修复$()"
+        },
+		{
+			"anchor": "合成修复",
+			"type": "crafting",
+			"title": "合成修复",
+			"recipe": "flammpfeil.slashblade:recipexxsx",
+			"text": "将任意刀置于左下角,右上角放任意物品,消耗2点耀魂值和1个物品修复1耐久喵~"
+		},
+		{
+			"type": "empty"
+		},
+		{
+			"anchor": "锻造修复",
+			"type": "text",
+			"title": "锻造修复",
+			"text": "将任意刀置于铁砧合成界面的左槽,将任意耀魂材料置于右槽,能消耗经验和耀魂材料给刀恢复耐久喵~$(li)耀魂碎片:40%$(li)破碎的耀魂:20%$(li)耀魂铁锭:60%$(li)耀魂宝珠:70%$(li)刀魂结晶:100%$(li)耀偏方三八面魂:100%"
+		},
+		{
+			"type": "craft_anvil",
+			"left_1": "flammpfeil.slashblade:slashbladeNamed:100{CustomMaxDamage:100}",
+			"right_1": "flammpfeil.slashblade:proudsoul",
+			"output_1": "flammpfeil.slashblade:slashbladeNamed:60{CustomMaxDamage:100,ProudSoul:200,RepairCounter:1}",
+		
+			"left_2": "flammpfeil.slashblade:slashbladeNamed:100{CustomMaxDamage:100}",
+			"right_2": "flammpfeil.slashblade:proudsoul:3",
+			"output_2": "flammpfeil.slashblade:slashbladeNamed:80{CustomMaxDamage:100,ProudSoul:100,RepairCounter:1}",
+			
+			"left_3": "flammpfeil.slashblade:slashbladeNamed:100{CustomMaxDamage:100}",
+			"right_3": "flammpfeil.slashblade:proudsoul:1",
+			"output_3": "flammpfeil.slashblade:slashbladeNamed:40{CustomMaxDamage:100,ProudSoul:400,RepairCounter:1}",
+			
+			"left_4": "flammpfeil.slashblade:slashbladeNamed:100{CustomMaxDamage:100}",
+			"right_4": "flammpfeil.slashblade:proudsoul:2",
+			"output_4": "flammpfeil.slashblade:slashbladeNamed:30{CustomMaxDamage:100,ProudSoul:400,RepairCounter:1}",
+			
+			"left_5": "flammpfeil.slashblade:slashbladeNamed:100{CustomMaxDamage:100}",
+			"right_5": "flammpfeil.slashblade:proudsoul:4",
+			"output_5": "flammpfeil.slashblade:slashbladeNamed{CustomMaxDamage:100,ProudSoul:500,RepairCounter:1}",
+			
+			"left_6": "flammpfeil.slashblade:slashbladeNamed:100{CustomMaxDamage:100}",
+			"right_6": "flammpfeil.slashblade:proudsoul:5",
+			"output_6": "flammpfeil.slashblade:slashbladeNamed{CustomMaxDamage:100,ProudSoul:500,RepairCounter:1}"
+		},
+		{
+			"anchor": "纳刀修复",
+			"type": "text",
+			"title": "纳刀修复",
+			"text": "当刀处于SoulEeater状态时,我们先前说过可以使用SoulEater的特殊能力,这个能力的一部分效果就是可以恢复刀的耐久喵~$(br2)设击杀敌人掉落的经验值为exp,玩家评级数值为rank(0~6)$(br)则恢复exp*(1+0.1*rank)耐久$(br2)顺带一提,击杀敌人获取的耀魂值也是这么计算的"
+		},
+		{
+			"anchor": "吸精修复",
+			"type": "text",
+			"title": "吸精修复",
+			"text": "需求刀处于Bewitched状态喵~$(br2)处于此状态的刀在闲置(置于快捷栏但不在主副手)时,根据刀的状态不同,会消耗玩家经验值和背包中的破碎的耀魂来回复自身的耐久喵~$(br2)由于bug,消耗破碎的耀魂回复耐久的功能并没有生效喵~$(br2)但是mod发布前的几个小时我找到了修复的方法喵,所以已经修好了喵~"
+		},
+		{
+			"type": "text",
+			"title": "消耗经验修复",
+			"text": "对于消耗玩家经验修复的行为,具体判定如下：$(li)当刀处于Broken状态时,每次消耗玩家1级,回复10%的最大耐久并增加20点耀魂值$(li)当刀不处于Broken状态时,每次消耗玩家经验值10点,回复1点耐久并增加10点耀魂值"
+		},
+		{
+			"type": "text",
+			"title": "消耗破碎的耀魂修复",
+			"text": "若消耗破碎的耀魂回复耐久的情况正常发生,那么它应该是这样的喵~$(br2)每次消耗一个破碎的耀魂,回复10%的最大耐久,不消耗经验值,也不增加耀魂值,且优先级高于吸收经验回复耐久"
+		}
+    ]
+}
