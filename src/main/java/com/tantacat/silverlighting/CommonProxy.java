@@ -1,5 +1,6 @@
 package com.tantacat.silverlighting;
 
+import com.tantacat.silverlighting.client.gui.GUIHandler;
 import com.tantacat.silverlighting.registers.RegisterAdvancements;
 import com.tantacat.silverlighting.registers.RegisterBlades;
 import com.tantacat.silverlighting.registers.RegisterBoosts;
@@ -13,6 +14,7 @@ import com.tantacat.silverlighting.registers.RegisterVoices;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 public class CommonProxy {
 
@@ -31,6 +33,8 @@ public class CommonProxy {
     	RegisterEvents.instance.init();
     	RegisterAdvancements.instance.init();
     	RegisterVoices.instance.init();
+    	
+    	NetworkRegistry.INSTANCE.registerGuiHandler(SilverLightingMain.instance, GUIHandler.instance);
     }
     
     public void postInit(FMLPostInitializationEvent event)

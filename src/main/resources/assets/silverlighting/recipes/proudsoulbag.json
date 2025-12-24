@@ -1,0 +1,16 @@
+{
+    "type": "forge:ore_shaped",
+    "group": "silverlighting:proudsoulbag",
+    "result": { "item": "silverlighting:proudsoulbag" },
+    "pattern": [
+        "PTP",
+        "PCP",
+        "PIP"
+    ],
+    "key": {
+        "P": { "item": "flammpfeil.slashblade:proudsoul", "data": 3},
+        "T": { "item": "flammpfeil.slashblade:proudsoul", "data": 5},
+        "I": { "item": "minecraft:iron_ingot" },
+        "C": { "item": "minecraft:chest" }
+    }
+}

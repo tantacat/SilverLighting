@@ -77,8 +77,7 @@ public class SpecialBoostShardstorm implements IOnBoostSwitch
 	}
 
 	@Override
-	public void onBoostOpen(EntityPlayer player) {
-		ItemStack blade = player.getHeldItemMainhand();
+	public void onBoostOpen(ItemStack blade, EntityPlayer player) {
 		if (blade.getItem() instanceof ItemSlashBladeWrapper)
 		{
 			ItemStack innerblade = new ItemStack(SlashBlade.bladeNamed);
@@ -96,7 +95,7 @@ public class SpecialBoostShardstorm implements IOnBoostSwitch
 	}
 
 	@Override
-	public void onBoostClose(EntityPlayer player) {
+	public void onBoostClose(ItemStack blade, EntityPlayer player) {
 		
 	}
 	

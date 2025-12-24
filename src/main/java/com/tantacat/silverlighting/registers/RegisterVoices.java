@@ -182,11 +182,25 @@ public class RegisterVoices {
 		
 		if (!lastCharged && nowCharged)
 		{
-			if (canSendMessage(player))
+			if (canSendMessage(player) && player.getRNG().nextFloat() < 0.5f)
 				sendMessage(player, "charged", blade);
 		}
 		
 		voiceNBT.setBoolean("LastCharged", nowCharged);
+	}
+	
+	@SubscribeEvent
+	public void onBladeAttack(SlashBladeEvent.ImpactEffectEvent event)
+	{
+		if (!(event.user instanceof EntityPlayer)) return;
+		
+		EntityPlayer player = (EntityPlayer)event.user;
+		if (player.world.isRemote) return;
+		
+		ItemStack blade = event.blade;
+		if (player.getRNG().nextFloat() < 0.2f)
+			sendMessage(player, "charged", blade);
+		
 	}
 	
 	@SubscribeEvent
@@ -246,7 +260,7 @@ public class RegisterVoices {
 	public static void sendMessage(EntityPlayer player, String type, ItemStack blade)
 	{	
 		
-		if (type.equals("badnight")) return;
+		//if (type.equals("badnight")) return;
 		
 		if (!blade.hasTagCompound()) return;
 		

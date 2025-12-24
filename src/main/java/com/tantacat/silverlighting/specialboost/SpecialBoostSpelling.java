@@ -1,40 +1,41 @@
 package com.tantacat.silverlighting.specialboost;
 
+import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 
-import com.google.common.base.Predicate;
-import com.tantacat.silverlighting.SilverLightingMain;
-import com.tantacat.silverlighting.common.Item.ItemAnimaSheath;
-import com.tantacat.silverlighting.common.entity.EntitySpelling;
 import com.tantacat.silverlighting.network.PacketSpecialBoostHandler;
-import com.tantacat.silverlighting.network.PacketSpecialShowSpell;
 import com.tantacat.silverlighting.registers.RegisterBoosts;
+import com.tantacat.silverlighting.registers.RegisterSEs;
 import com.tantacat.silverlighting.util.BoostProfile;
 import com.tantacat.silverlighting.util.BoostProfile.BoostType;
 import com.tantacat.silverlighting.util.BoostProfileHelper;
+import com.tantacat.silverlighting.util.DamageProfile;
+import com.tantacat.silverlighting.util.DamageProfileHelper;
 import com.tantacat.silverlighting.util.OtherUtills;
 
-import mods.flammpfeil.slashblade.SlashBlade;
+import mods.flammpfeil.slashblade.item.ItemSlashBlade;
+import mods.flammpfeil.slashblade.specialeffect.ISpecialEffect;
+import mods.flammpfeil.slashblade.specialeffect.SpecialEffects;
+import mods.flammpfeil.slashblade.specialeffect.SpecialEffects.State;
 import mods.flammpfeil.slashblade.util.SlashBladeEvent;
 import mods.flammpfeil.slashblade.util.SlashBladeHooks;
 import net.minecraft.enchantment.Enchantment;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.math.AxisAlignedBB;
-import net.minecraft.util.math.Vec3d;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.living.LivingDamageEvent;
+import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class SpecialBoostSpelling implements IOnBoostSwitch 
 {
-public BoostProfile profile = new BoostProfile(getId(), false, BoostType.fight);
+	public BoostProfile profile = new BoostProfile(getId(), false, BoostType.fight);
+	
+	public static final String active_count = "SL.ActiveCount";
+	public static final String loot_count = "SL.LootCount";
 	
 	@SubscribeEvent
 	public void onSlashBladeUpdate(SlashBladeEvent.OnUpdateEvent event)
@@ -45,107 +46,84 @@ public BoostProfile profile = new BoostProfile(getId(), false, BoostType.fight);
 		ItemStack blade = event.blade;
 		if (!BoostProfileHelper.isBoostEffective(blade, getId())) return;
 		
-		Random random = player.getRNG();
-		if (random.nextFloat() < 0.05)
+		int sum_level = 0;
+		for (ItemStack item : player.inventoryContainer.inventoryItemStacks)
 		{
-			int need_exp = 0;
-			for (NBTBase n : blade.getEnchantmentTagList())
-				need_exp += ((NBTTagCompound)n).getShort("lvl");
-			if (!OtherUtills.consumePlayerXP(player, need_exp))
-			{
-				BoostProfile boost = BoostProfileHelper.getBoostProfiles(blade).get(0);
-				PacketSpecialBoostHandler.switchBoost(blade, boost, player);	
-			}
+			sum_level += OtherUtills.getSumEnchantmentLevel(item);
 		}
+		DamageProfile spelling = new DamageProfile(getId(), sum_level, 0, 0, 0);
+		DamageProfileHelper.replaceDamageProfile(blade, getId(), spelling);
 		
-		if (random.nextFloat() < 0.001)
+		if (SpecialEffects.isEffective(player, blade, RegisterSEs.instance.SpellWeak) == State.None) return;
+		if (player.ticksExisted % 20 == 0)
 		{
-			// 获取 Tooltip
-			ItemStack last_blade = blade.copy();
-			
-			//抽取附魔
-			Enchantment enchant = Enchantment.REGISTRY.getRandomObject(random);
-			while (enchant.isCurse())
-				enchant = Enchantment.REGISTRY.getRandomObject(random);
-			NBTTagCompound tag_stack = blade.getTagCompound();
-			NBTTagList stack_enchants = blade.getEnchantmentTagList();
-			
-			//具有附魔时提升等级
-			boolean has_enchant = false;
-			boolean up_success = false;
-			int max_lvl = enchant.getMaxLevel(); 
-			if (ItemAnimaSheath.CurrentItemName.get(tag_stack).equals("silverlighting.animasheath_gleam"))
-			{
-				int repair_lvl = 0;
-				int repaircount = ItemAnimaSheath.RepairCount.get(tag_stack, 0);
-				while (repaircount / 10 >= 1)
-				{
-					repair_lvl ++;
-					repaircount /= 10;
-				}
-				max_lvl += stack_enchants.tagCount() / 5 + repair_lvl;
-				max_lvl += tag_stack.getInteger("SpellLove");
-			}
-			for (NBTBase n_ : stack_enchants)
-			{
-				NBTTagCompound n = (NBTTagCompound)n_;
-				if (n.getShort("id") ==  enchant.getEnchantmentID(enchant))
-				{
-					has_enchant = true;
-					if (n.getShort("lvl") + 1 <= max_lvl)
-					{
-						//具有附魔且能升级
-						n.setShort("lvl", (short)(n.getShort("lvl") + 1));
-						up_success = true;
-						break;
-					}
-				}
-			}	
-			//不具有附魔则添加附魔，具有附魔且不能升级则掉落附魔耀魂碎片，具有附魔且能升级时升级
-			if (!has_enchant)
-				blade.addEnchantment(enchant, 1);
-			else if (!up_success)
-			{
-				ItemStack ProudSoul = SlashBlade.findItemStack(SlashBlade.modid, SlashBlade.ProudSoulStr, 1);
-				ProudSoul.addEnchantment(enchant, max_lvl - 1);
-				player.entityDropItem(ProudSoul, 0);
-			}
-			else
-				tag_stack.setTag("ench", stack_enchants);
-			
-			ItemStack now_blade = blade.copy();
-			SilverLightingMain.network.sendTo(new PacketSpecialShowSpell(last_blade, now_blade), (EntityPlayerMP)player);
+			NBTTagCompound tag = blade.getTagCompound();
+			tag.setInteger(active_count, Math.min(350, tag.getInteger(active_count) + 1));
 		}
 	}
 	
 	@SubscribeEvent
-	public void onPlayerHurt(LivingDamageEvent event)
+	public void onSlashBladeImpact(SlashBladeEvent.ImpactEffectEvent event)
 	{
-		if (!(event.getEntityLiving() instanceof EntityPlayer)) return;
-		EntityPlayer player = (EntityPlayer)event.getEntityLiving();
+		if (!(event.user instanceof EntityPlayer)) return;
+		EntityPlayer player = (EntityPlayer)event.user;
 		if (player.world.isRemote) return;
-		ItemStack blade = ItemStack.EMPTY;
-		if (BoostProfileHelper.isBoostEffective(player.getHeldItemMainhand(), "Spelling"))
-			blade = player.getHeldItemMainhand();
-		else if (BoostProfileHelper.isBoostEffective(player.getHeldItemOffhand(), "Spelling"))
-			blade = player.getHeldItemOffhand();
-		if (blade.isEmpty()) return;
+		ItemStack blade = event.blade;
+		if (!BoostProfileHelper.isBoostEffective(blade, getId())) return;
 		
-		String type = event.getSource().getDamageType();
-		if (!type.equals(DamageSource.DROWN.damageType) &&
-			!type.equals(DamageSource.STARVE.damageType) &&
-			!type.equals(DamageSource.OUT_OF_WORLD.damageType))
+		
+		NBTTagCompound bladetag = blade.getTagCompound();
+		int active = bladetag.getInteger(active_count);
+		float chance = 0.01f * (5 + active / 10);
+		
+		if (player.getRNG().nextFloat() < chance)
 		{
-			player.heal(ItemAnimaSheath.AttackAmplifier.get(blade.getTagCompound(), 0) * 0.2f);
-			event.setAmount(event.getAmount() * 0.5f);
+			EntityLivingBase target = event.target;
+			Enchantment unbreaking = Enchantment.getEnchantmentByID(34);
+			List<ItemStack> items = unbreaking.getEntityEquipment(target);
+			Collections.shuffle(items);
+			int target_sum_level = 0;
+			for (ItemStack n : items)
+			{
+				NBTTagList enchants = n.getEnchantmentTagList();
+				for (NBTBase nbt : enchants)
+				{
+					NBTTagCompound ench = (NBTTagCompound)nbt;
+					target_sum_level += ench.getShort("lvl");
+				}
+			}
+			
+			for (ItemStack n : items)
+			{
+				if (!n.isItemEnchanted()) continue;
+				
+				NBTTagList enchants = n.getEnchantmentTagList();
+				int index = player.getRNG().nextInt(enchants.tagCount());
+				int ench_id = enchants.getCompoundTagAt(index).getShort("id");
+				Enchantment ench = Enchantment.getEnchantmentByID(ench_id);
+				
+				OtherUtills.addEnchantment(blade, ench, 0, true);
+				player.sendMessage(new TextComponentString(new TextComponentTranslation("silverlighting.newline").getFormattedText()
+						+ ":" + ench.getTranslatedName(1)));
+				
+				enchants.removeTag(index);
+				n.getTagCompound().setTag("ench", enchants);
+				break;
+			}
+			
+			int add_level = 1 + (int)(target_sum_level / 25) + (int)(active / 100);
+			player.addExperienceLevel(add_level);
+			
+			bladetag.setInteger(loot_count, bladetag.getInteger(loot_count) + 1);
+			bladetag.setInteger(active_count, Math.max(0, bladetag.getInteger(active_count) - 15));
 		}
+		
 	}
 	
 	public void register()
 	{
 		RegisterBoosts.instance.BoostsHasSwitch.put(getId(), this);
 		SlashBladeHooks.EventBus.register(this);
-		MinecraftForge.EVENT_BUS.register(this);
 	}
 	
 	public String getId()
@@ -154,61 +132,58 @@ public BoostProfile profile = new BoostProfile(getId(), false, BoostType.fight);
 	}
 
 	@Override
-	public void onBoostOpen(EntityPlayer player) {
-		Vec3d pos = player.getPositionVector();
-		AxisAlignedBB bb = new AxisAlignedBB(pos.x - 10, pos.y - 10, pos.z - 10,
-				pos.x + 10, pos.y + 10, pos.z + 10);
-		List<EntitySpelling> entitys = player.world.getEntitiesWithinAABB(EntitySpelling.class, bb, new Predicate<EntitySpelling>() {
-			@Override
-			public boolean apply(EntitySpelling input) {
-				return input.getPlayerID() == player.getUniqueID();
-			}
-		});
-		for (EntitySpelling n : entitys)
-			n.setDead();
+	public void onBoostOpen(ItemStack blade, EntityPlayer player) {
 		
-		NBTTagCompound nbt = new NBTTagCompound();
-		nbt.setTag("ench", player.getHeldItemMainhand().getEnchantmentTagList().copy());
-		EntitySpelling Spelling = new EntitySpelling(player.world, player.getUniqueID(), nbt);
-		Spelling.setPosition(player.posX, player.posY, player.posZ);
-		player.world.spawnEntity(Spelling);		
-	}
-
-	@Override
-	public void onBoostClose(EntityPlayer player) {
-		Vec3d pos = player.getPositionVector();
-		AxisAlignedBB bb = new AxisAlignedBB(pos.x - 10, pos.y - 10, pos.z - 10,
-				pos.x + 10, pos.y + 10, pos.z + 10);
-		List<EntitySpelling> entitys = player.world.getEntitiesWithinAABB(EntitySpelling.class, bb, new Predicate<EntitySpelling>() {
-			@Override
-			public boolean apply(EntitySpelling input) {
-				return input.getPlayerID() == player.getUniqueID();
-			}
-		});		
-		for (EntitySpelling n : entitys)
-			n.setDead();
-	}
-	
-	private boolean tryAddExperience(int amount, EntityPlayer player)
-	{
-		if (amount > 0)
+		if (player.world.isRemote) return;
+				
+		ISpecialEffect spellweak = RegisterSEs.instance.SpellWeak;
+		if (SpecialEffects.isEffective(player, blade, spellweak) == State.None)
 		{
-			player.addExperience(amount);
-			return true;
+			SpecialEffects.addEffect(blade, spellweak);
+			player.sendMessage(new TextComponentString(new TextComponentTranslation("silverlighting.newline").getFormattedText()
+					+ ": "
+					+ new TextComponentTranslation("slashblade.seffect.name." + spellweak.getEffectKey()).getFormattedText()
+					+ "§r " + (spellweak.getDefaultRequiredLevel() <= player.experienceLevel ? "§c" : "§8") 
+					+ spellweak.getDefaultRequiredLevel()));
 		}
 		else
 		{
-			if (player.experienceTotal < -amount)
-				return false;
-			
-			player.experienceTotal += amount;
-			while (player.experience * player.xpBarCap() < amount)
+			BoostProfile boost = BoostProfileHelper.getBoostProfiles(blade).get(0);
+			PacketSpecialBoostHandler.switchBoost(blade, boost, player);
+			return;
+		}
+		NBTTagCompound tag = blade.getTagCompound();
+		tag.setInteger(active_count, 0);
+		tag.setInteger(loot_count, 0);
+				
+	}
+
+	@Override
+	public void onBoostClose(ItemStack blade, EntityPlayer player) {
+		
+		if (player.world.isRemote) return;
+				
+		NBTTagCompound tag = blade.getTagCompound();
+		int loot = tag.getInteger(active_count);
+		int active = tag.getInteger(loot_count);
+		tag.removeTag(active_count);
+		tag.removeTag(loot_count);
+		DamageProfileHelper.removeDamageProfile(blade, getId());
+		float chance = 0.01f * (50 + loot * 5 - active * 0.1f);
+		if (player.getRNG().nextFloat() < chance)
+		{
+			ISpecialEffect spellweak = RegisterSEs.instance.SpellWeak;
+			NBTTagCompound se = ItemSlashBlade.getSpecialEffect(blade);
+			if (se.hasKey(spellweak.getEffectKey()))
 			{
-				amount += player.experience * player.xpBarCap();
-				player.addExperienceLevel(-1);
+				se.removeTag(spellweak.getEffectKey());
+				player.sendMessage(new TextComponentString(new TextComponentTranslation("silverlighting.loseline").getFormattedText()
+						+ ": "
+						+ new TextComponentTranslation("slashblade.seffect.name." + spellweak.getEffectKey()).getFormattedText()
+						+ "§r " + (spellweak.getDefaultRequiredLevel() <= player.experienceLevel ? "§c" : "§8") 
+						+ spellweak.getDefaultRequiredLevel()));
+			
 			}
-			player.experience += amount / player.xpBarCap();
-			return true;
 		}
 	}
 	

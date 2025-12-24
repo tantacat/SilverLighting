@@ -1,5 +1,7 @@
 package com.tantacat.silverlighting.util;
 
+import mods.flammpfeil.slashblade.item.ItemSlashBlade;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 
 public class DamageProfile {
@@ -9,6 +11,7 @@ public class DamageProfile {
     private float extra;           // 额外伤害
     private float multiplier;      // 伤害倍率
     private float fit;             // 伤害修正
+    private IExtraDamageFuction function = DamageProfileHelper.defualtFuction;
 
     public DamageProfile(String id, float base, float extra, float multiplier, float fit) {
         this.id = id;
@@ -43,8 +46,16 @@ public class DamageProfile {
     // Getter 方法
     public String getId() { return id; }
     public float getBase() { return base; }
-    public float getExtra() {return extra; }
+    public float getExtra() {return this.function.applayFuction(this.extra); }
     public float getMultiplier( ) {return multiplier; }
     public float getFit() {return fit; }
+    public float getSum(ItemStack blade) 
+    {
+    	return (this.base + this.getExtra() + ItemSlashBlade.BaseAttackModifier.get(blade.getTagCompound(), 4.0f)) * this.multiplier + this.fit;
+    }
     
+    public void setFuction(IExtraDamageFuction fuc)
+    {
+    	this.function = fuc;
+    }
 }

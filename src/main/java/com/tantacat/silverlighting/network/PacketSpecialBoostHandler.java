@@ -100,9 +100,9 @@ public class PacketSpecialBoostHandler implements IMessageHandler<PacketSpecialB
         if (RegisterBoosts.instance.BoostsHasSwitch.containsKey(old_boost.getId()))
         {
         	if (enable)
-        		RegisterBoosts.instance.BoostsHasSwitch.get(old_boost.getId()).onBoostClose(player);
+        		RegisterBoosts.instance.BoostsHasSwitch.get(old_boost.getId()).onBoostClose(blade, player);
         	else
-        		RegisterBoosts.instance.BoostsHasSwitch.get(old_boost.getId()).onBoostOpen(player);
+        		RegisterBoosts.instance.BoostsHasSwitch.get(old_boost.getId()).onBoostOpen(blade, player);
         }
 	}
 	

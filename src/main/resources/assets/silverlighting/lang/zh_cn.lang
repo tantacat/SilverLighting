@@ -3,6 +3,9 @@ key.silverlighting.specialboost=增幅
 itemGroup.silverlighting=未尽之事
 
 silverlighting.newline=新词条
+silverlighting.loseline=失去词条
+silverlighting.proudsoulbag=耀魂袋
+silverlighting.flag.SpellGift=赋礼
 
 item.silverlighting.brokenbamboo.name=竹光残片
 item.silverlighting.anticrystal.name=逆质耀魂
@@ -21,6 +24,7 @@ item.silverlighting.animasheath_edge.name=灵鞘「铁刃」露台
 item.silverlighting.animasheath_gleam.name=灵鞘「刹明」露台
 item.silverlighting.animasheath_phos.name=灵鞘「仿钻」露台
 item.silverlighting.forgerheart.name=锻铸者之心
+item.silverlighting.proudsoulbag.name=耀魂袋
 
 advancement.silverlighting.silverlighting=灵鞘「银纸竹光」
 advancement.silverlighting.silverlighting.desc=自你心中诞生的奇迹。仍然没有强韧的剑体，但足以永不分离

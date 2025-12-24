@@ -2,39 +2,89 @@ package com.tantacat.silverlighting.util;
 
 import java.util.Random;
 
+import mods.flammpfeil.slashblade.ItemSlashBladeNamed;
 import net.minecraft.advancements.Advancement;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTBase;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.stats.StatList;
 import net.minecraft.util.ResourceLocation;
 
 public class OtherUtills {
-
-	public static boolean consumePlayerXP(EntityPlayer el, int descExp) 
+		
+	public static void removePlayerXP(EntityPlayer player, int expT)
 	{
-		boolean result = true;
-		if(0 < descExp){
-            for(;descExp > 0;descExp--){
-                if(((EntityPlayer)el).experienceLevel <= 0) {result = false; break;}
-
-                if( 0 < ((EntityPlayer)el).experienceTotal)
-                    ((EntityPlayer)el).addExperience(-1);
-
-                if(((EntityPlayer)el).experience < 0){
-                    if(((EntityPlayer)el).experienceLevel <= 0){
-                        ((EntityPlayer)el).experience = 0;
-                    }else{
-                        //el.experienceLevel--;
-                        ((EntityPlayer)el).addExperienceLevel(-1);
-                        ((EntityPlayer)el).experience = 1.0f - (0.9f/((EntityPlayer)el).xpBarCap());
-                    }
-                }
-            }
-        }
-		return result;
+		int exp = player.experienceTotal - expT;
+		
+		player.setScore(0);
+		player.experienceTotal = 0;
+		player.experienceLevel = 0;
+		player.experience = 0.0f;
+		
+		if (exp > 0)
+			player.addExperience(exp);
+		
+	}
+	
+	public static ItemStack addEnchantment(ItemStack item, Enchantment ench, int gift_level, boolean force)
+	{
+		gift_level /= 10;
+		
+		NBTTagCompound enchantments = new NBTTagCompound();
+		NBTTagList list = new NBTTagList();
+		NBTTagCompound enchantment = new NBTTagCompound();
+		enchantment.setShort("id", (short)Enchantment.getEnchantmentID(ench));
+		enchantment.setShort("lvl", (short)1);
+		list.appendTag(enchantment);
+		enchantments.setTag("ench", list);
+		
+		ItemStack mainitem = ItemStack.EMPTY;
+		if (item.getCount() == 1)
+		{
+			mainitem = item;
+			if (!mainitem.hasTagCompound())
+				mainitem.setTagCompound(new NBTTagCompound());
+			if (force)
+				NBTHelper.instance.addEnchantment(mainitem.getTagCompound(), enchantments);
+			else
+				NBTHelper.instance.enhanceEnchantment(gift_level, mainitem.getTagCompound(), enchantments);
+			return ItemStack.EMPTY;
+		}
+		else
+		{
+			mainitem = item.splitStack(1);
+			if (!mainitem.hasTagCompound())
+				mainitem.setTagCompound(new NBTTagCompound());
+			if (force)
+				NBTHelper.instance.addEnchantment(mainitem.getTagCompound(), enchantments);
+			else
+				NBTHelper.instance.enhanceEnchantment(gift_level, mainitem.getTagCompound(), enchantments);
+			return mainitem;
+		}
+	}
+	
+	public static boolean isNamedBlade(ItemStack blade, String name)
+	{
+		String bladename = ItemSlashBladeNamed.CurrentItemName.get(blade.getTagCompound(), "");
+		return name.equals(bladename);
+	}
+	
+	public static int getSumEnchantmentLevel(ItemStack item)
+	{
+		int sum = 0;
+		NBTTagList enchants = item.getEnchantmentTagList();
+		for (NBTBase n : enchants)
+		{
+			NBTTagCompound enchant = (NBTTagCompound)n;
+			sum += enchant.getShort("lvl");
+		}
+		return sum;
 	}
 	
 	public static int getSlotFor(EntityPlayer player, ItemStack stack)

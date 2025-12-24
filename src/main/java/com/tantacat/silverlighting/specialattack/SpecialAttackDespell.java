@@ -6,6 +6,7 @@ import com.tantacat.silverlighting.common.Item.ItemAnimaSheath;
 import com.tantacat.silverlighting.registers.RegisterSAs;
 
 import mods.flammpfeil.slashblade.SlashBlade;
+import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.specialattack.ISuperSpecialAttack;
 import mods.flammpfeil.slashblade.specialattack.SpecialAttackBase;
 import net.minecraft.enchantment.Enchantment;
@@ -52,7 +53,9 @@ public class SpecialAttackDespell extends SpecialAttackBase implements ISuperSpe
 
 	@Override
 	public void doSuperSpecialAttack(ItemStack stack, EntityPlayer player) {
-		ItemAnimaSheath.SpecialAttackType.set(stack.getTagCompound(), RegisterSAs.instance.spell.id);
+		int SA_id = ItemSlashBlade.SpecialAttackType.get(stack.getTagCompound(), 0);
+		if (SA_id == this.id)
+			ItemAnimaSheath.SpecialAttackType.set(stack.getTagCompound(), RegisterSAs.instance.spell.id);
 	}
 
 }

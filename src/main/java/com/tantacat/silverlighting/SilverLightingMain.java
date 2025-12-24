@@ -1,5 +1,6 @@
 package com.tantacat.silverlighting;
 
+import com.tantacat.silverlighting.network.PacketGuiButtonPressed;
 import com.tantacat.silverlighting.network.PacketSendVoice;
 import com.tantacat.silverlighting.network.PacketShardstorm;
 import com.tantacat.silverlighting.network.PacketSpecialBoost;
@@ -42,6 +43,7 @@ public class SilverLightingMain
     	network.registerMessage(new PacketShardstorm.Handler(), PacketShardstorm.class, 3, Side.SERVER);
     	network.registerMessage(new PacketSwitchVoice.Handler(), PacketSwitchVoice.class, 4, Side.SERVER);
     	network.registerMessage(new PacketSendVoice.Handler(), PacketSendVoice.class, 5, Side.CLIENT);
+    	network.registerMessage(new PacketGuiButtonPressed.Handler(), PacketGuiButtonPressed.class, 6, Side.SERVER);
     	proxy.preInit(event);
     	
     }

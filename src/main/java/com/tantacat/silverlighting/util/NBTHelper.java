@@ -2,6 +2,7 @@ package com.tantacat.silverlighting.util;
 
 import com.tantacat.silverlighting.common.Item.ItemAnimaSheath;
 
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
@@ -26,7 +27,7 @@ public class NBTHelper {
 		int proudsoul_sub = 0;
 		for (NBTTagCompound n : sub)
 			proudsoul_sub += ItemAnimaSheath.ProudSoul.get(n, 0);
-		NBTTagCompound result = main.copy();
+		NBTTagCompound result = main;
 		ItemAnimaSheath.ProudSoul.set(result, proudsoul_main + proudsoul_sub);
 		return result;
 	}
@@ -37,7 +38,7 @@ public class NBTHelper {
 		int killcount_sub = 0;
 		for (NBTTagCompound n : sub)
 			killcount_sub += ItemAnimaSheath.KillCount.get(n, 0);
-		NBTTagCompound result = main.copy();
+		NBTTagCompound result = main;
 		ItemAnimaSheath.KillCount.set(result, killcount_main + killcount_sub);
 		return result;
 	}
@@ -48,7 +49,7 @@ public class NBTHelper {
 		int repaircount_sub = 0;
 		for (NBTTagCompound n : sub)
 			repaircount_sub += ItemAnimaSheath.RepairCount.get(n, 0);
-		NBTTagCompound result = main.copy();
+		NBTTagCompound result = main;
 		ItemAnimaSheath.RepairCount.set(result, repaircount_main + repaircount_sub);
 		return result;
 	}
@@ -61,7 +62,7 @@ public class NBTHelper {
 			NBTTagCompound SE_sub = n.getCompoundTag("SB.SEffect");
 			SE_main.merge(SE_sub);
 		}
-		NBTTagCompound result = main.copy();
+		NBTTagCompound result = main;
 		result.setTag("SB.SEffect", SE_main);
 		return result;
 	}
@@ -107,12 +108,12 @@ public class NBTHelper {
 					enchants_main.appendTag(enchant);
 			}
 		}
-		NBTTagCompound result = main.copy();
+		NBTTagCompound result = main;
 		result.setTag("ench", enchants_main);
 		return result;
 	}
 	
-	public NBTTagCompound enhanceEnchantment(NBTTagCompound main, NBTTagCompound... sub)
+	public NBTTagCompound enhanceEnchantment(int gift_level, NBTTagCompound main, NBTTagCompound... sub)
 	{
 		NBTTagList enchants_main = main.getTagList("ench", 10);//main{...{"id":short, "lvl":short}};
 		for (NBTTagCompound n : sub)
@@ -129,16 +130,22 @@ public class NBTHelper {
 					NBTTagCompound enchant_main = enchants_main.getCompoundTagAt(j);//main{"id":short, "lvl":short}
 					if (enchant_main.getShort("id") == id)
 					{
-						enchant_main.setShort("lvl", lvl == enchant_main.getShort("lvl") ?
-								(short)(lvl + 1) : (short)Math.max(lvl, enchant_main.getShort("lvl")));
 						has_enchant = true;
+						if (gift_level < 0)
+							enchant_main.setShort("lvl", lvl == enchant_main.getShort("lvl") ?
+									(short)(lvl + 1) : (short)Math.max(lvl, enchant_main.getShort("lvl")));
+						else
+						{
+							Enchantment enchantment = Enchantment.getEnchantmentByID(id);
+							enchant_main.setShort("lvl", (short)(Math.min(enchant_main.getShort("lvl") + 1, enchantment.getMaxLevel() + gift_level)));
+						}
 					}
 				}
 				if (!has_enchant)
 					enchants_main.appendTag(enchant);
 			}
 		}
-		NBTTagCompound result = main.copy();
+		NBTTagCompound result = main;
 		result.setTag("ench", enchants_main);
 		return result;
 	}
@@ -155,39 +162,39 @@ public class NBTHelper {
 				enchants_main.appendTag(enchant);
 			}
 		}
-		NBTTagCompound result = main.copy();
+		NBTTagCompound result = main;
 		result.setTag("ench", enchants_main);
 		return result;
 	}
 	
 	public NBTTagCompound mergeNBTTagCompound(EnchantMode mode, NBTTagCompound main, NBTTagCompound... sub)
 	{
-		NBTTagCompound result;
-		result = mergeProudSoul(main, sub);
-		result = mergeKillCount(result, sub);
-		result = mergeRepairCount(result, sub);
-		result = mergeSE(result, sub);
-		result = mergeOthers(result, sub);
+		
+		mergeProudSoul(main, sub);
+		mergeKillCount(main, sub);
+		mergeRepairCount(main, sub);
+		mergeSE(main, sub);
+		mergeOthers(main, sub);
 		switch(mode)
 		{
 		case enhance:
 		{
-			result = enhanceEnchantment(result, sub);
+			enhanceEnchantment(-1, main, sub);
 			break;
 		}
 		case add:
 		{
-			result = addEnchantment(result, sub);
+			addEnchantment(main, sub);
 			break;
 		}
 		case merge:
 		default:
 		{
-			result = mergeEnchantment(result, sub);
+			mergeEnchantment(main, sub);
 			break;
 		}
 		}
-		return result;
+		return main;
 	}
 	
 	public boolean fitCurrentItemName(NBTTagCompound main, NBTTagCompound sub)

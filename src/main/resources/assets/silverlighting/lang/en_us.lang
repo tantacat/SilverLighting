@@ -3,6 +3,9 @@ key.silverlighting.specialboost=boost
 itemGroup.silverlighting=SilverLighting
 
 silverlighting.newline=NewLine
+silverlighting.loseline=LostLine
+silverlighting.proudsoulbag=ProudSoulBag
+silverlighting.flag.SpellGift=SpellGift
 
 item.silverlighting.brokenbamboo.name=brokenbamboo
 item.silverlighting.anticrystal.name=anticrystal
@@ -21,6 +24,7 @@ item.silverlighting.animasheath_edge.name=animasheath_edge
 item.silverlighting.animasheath_gleam.name=animasheath_gleam
 item.silverlighting.animasheath_phos.name=animasheath_phos
 item.silverlighting.forgerheart.name=forgerheart
+item.silverlighting.proudsoulbag.name=proudsoulbag
 
 advancement.silverlighting.silverlighting=silverlighting
 advancement.silverlighting.silverlighting.desc=A miracle born from your heart. Still lacking a sturdy blade, but enough to never be separated

@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import com.tantacat.silverlighting.SilverLightingMain;
+import com.tantacat.silverlighting.client.gui.ContainerProudSoulBag;
 import com.tantacat.silverlighting.common.Item.ItemAnimaSheath;
 import com.tantacat.silverlighting.common.entity.EntityUnswerving;
 import com.tantacat.silverlighting.config.ConfigGeneral;
@@ -21,7 +22,6 @@ import mods.flammpfeil.slashblade.entity.selector.EntitySelectorAttackable;
 import mods.flammpfeil.slashblade.item.ItemProudSoul;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.util.ReflectionAccessHelper;
-import mods.flammpfeil.slashblade.util.ResourceLocationRaw;
 import mods.flammpfeil.slashblade.util.SlashBladeHooks;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.Entity;
@@ -34,8 +34,11 @@ import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
+import net.minecraft.network.play.server.SPacketCollectItem;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -46,7 +49,7 @@ import net.minecraftforge.common.config.ConfigManager;
 import net.minecraftforge.event.AnvilUpdateEvent;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
-import net.minecraftforge.event.entity.player.ItemTooltipEvent;
+import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
 import net.minecraftforge.event.entity.player.PlayerDropsEvent;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.FMLCommonHandler;
@@ -56,7 +59,6 @@ import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
 import net.minecraftforge.fml.common.registry.EntityEntry;
 import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.registries.GameData;
 
 public class RegisterEvents {
@@ -390,5 +392,88 @@ public class RegisterEvents {
 		ItemStack right_tiny_soul = SlashBlade.findItemStack(SlashBlade.modid, SlashBlade.TinyBladeSoulStr, 1);
 		ItemSlashBlade.getSpecialEffect(right_tiny_soul);
 		SlashBlade.registerCustomItemStack(SlashBlade.TinyBladeSoulStr, right_tiny_soul);
+	}
+	
+	@SubscribeEvent
+	public void onTinyProudSoulPickUp(EntityItemPickupEvent event)
+	{
+		if (event.getEntityPlayer().openContainer instanceof ContainerProudSoulBag)
+			return;
+		
+		ItemStack item = event.getItem().getItem();
+		if (item.isItemEnchanted() && item.isItemEqual(SlashBlade.findItemStack(SlashBlade.modid, SlashBlade.TinyBladeSoulStr, 1)))
+		{
+			if (item.getEnchantmentTagList().tagCount() > 1) return;
+			
+			for (int i = 0; i < event.getEntityPlayer().inventory.getSizeInventory(); i++)
+			{
+				ItemStack bag = event.getEntityPlayer().inventory.getStackInSlot(i);
+				if (bag.getItem() == RegisterItems.instance.proudsoulbag)
+				{
+					
+					NBTTagCompound nbt_bag = bag.getTagCompound();
+					short ench = ((NBTTagCompound)item.getEnchantmentTagList().get(0)).getShort("id");
+					short lvl = ((NBTTagCompound)item.getEnchantmentTagList().get(0)).getShort("lvl");
+					if (lvl != 1) return;
+					
+					int max_page = nbt_bag.getInteger("max_page");
+					for (int j = 1; j <= max_page; j++)
+					{
+						NBTTagList page = nbt_bag.getTagList("page"+j, 10);
+						for (int k = 0; k < page.tagCount(); k++)
+						{
+							ItemStack soul = new ItemStack(page.getCompoundTagAt(k));
+							short id = ((NBTTagCompound)soul.getEnchantmentTagList().get(0)).getShort("id");
+							if (id != ench) continue;
+							
+							int pickup_count = (item.getCount() + soul.getCount() > 64) ? 64 - soul.getCount() : item.getCount();
+							
+							page.getCompoundTagAt(k).setByte("Count", (byte)(soul.getCount() + pickup_count));
+							
+							item.setCount(item.getCount() - pickup_count);
+							event.getItem().setItem(item);
+							
+							if(pickup_count > 0) {
+								event.setCanceled(true);
+								if (!event.getItem().isSilent()) {
+									event.getItem().world.playSound(null, event.getEntityPlayer().posX, event.getEntityPlayer().posY, event.getEntityPlayer().posZ,
+											SoundEvents.ENTITY_ITEM_PICKUP, SoundCategory.PLAYERS, 0.2F,
+											((event.getItem().world.rand.nextFloat() - event.getItem().world.rand.nextFloat()) * 0.7F + 1.0F) * 2.0F);
+								}
+								((EntityPlayerMP) event.getEntityPlayer()).connection.sendPacket(new SPacketCollectItem(event.getItem().getEntityId(), event.getEntityPlayer().getEntityId(), pickup_count));
+								event.getEntityPlayer().openContainer.detectAndSendChanges();
+
+								return;
+							}
+							
+						}						
+					}
+					
+					for (int j = 1; j <= max_page; j++)
+					{
+						NBTTagList page = nbt_bag.getTagList("page"+j, 10);
+						if (page.tagCount() < 3 * 9)//此页满
+						{
+							int pickup_count = item.getCount();
+							page.appendTag(item.writeToNBT(new NBTTagCompound()));
+							
+							
+							item.setCount(item.getCount() - pickup_count);
+							event.getItem().setItem(item);
+							event.setCanceled(true);
+							if (!event.getItem().isSilent()) {
+								event.getItem().world.playSound(null, event.getEntityPlayer().posX, event.getEntityPlayer().posY, event.getEntityPlayer().posZ,
+										SoundEvents.ENTITY_ITEM_PICKUP, SoundCategory.PLAYERS, 0.2F,
+										((event.getItem().world.rand.nextFloat() - event.getItem().world.rand.nextFloat()) * 0.7F + 1.0F) * 2.0F);
+							}
+							((EntityPlayerMP) event.getEntityPlayer()).connection.sendPacket(new SPacketCollectItem(event.getItem().getEntityId(), event.getEntityPlayer().getEntityId(), pickup_count));
+							event.getEntityPlayer().openContainer.detectAndSendChanges();
+							
+							break;
+						}
+					}
+				}
+			}
+		}
 	}
 }

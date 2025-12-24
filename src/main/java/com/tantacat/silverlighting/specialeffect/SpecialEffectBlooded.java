@@ -31,8 +31,9 @@ public class SpecialEffectBlooded implements ISpecialEffect, IRemovable{
 		{
 			int killcount = ItemSlashBlade.KillCount.get(blade.getTagCompound(), 0);
 			float extra = ((int)(killcount / 1000)) * 0.5f;
+			float multiplier = ((int)(killcount / 1000)) * 0.05f;
 			DamageProfileHelper.replaceDamageProfile(blade, getEffectKey(),
-						new DamageProfile(getEffectKey(), 0, extra, 0.5f, 0));
+						new DamageProfile(getEffectKey(), 0, extra, multiplier, 0));
 		}
 		else
 			DamageProfileHelper.removeDamageProfile(blade, getEffectKey());

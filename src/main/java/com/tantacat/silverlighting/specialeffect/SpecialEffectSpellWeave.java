@@ -2,10 +2,11 @@ package com.tantacat.silverlighting.specialeffect;
 
 import com.tantacat.silverlighting.common.Item.ItemAnimaSheath;
 import com.tantacat.silverlighting.registers.RegisterSEs;
-import com.tantacat.silverlighting.util.BoostProfileHelper;
 import com.tantacat.silverlighting.util.DamageProfile;
 import com.tantacat.silverlighting.util.DamageProfileHelper;
+import com.tantacat.silverlighting.util.OtherUtills;
 
+import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.specialeffect.IRemovable;
 import mods.flammpfeil.slashblade.specialeffect.ISpecialEffect;
 import mods.flammpfeil.slashblade.specialeffect.SpecialEffects;
@@ -16,7 +17,6 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Enchantments;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.world.World;
@@ -34,16 +34,9 @@ public class SpecialEffectSpellWeave implements ISpecialEffect, IRemovable{
 		{
 			if (SpecialEffects.isEffective(player, blade, RegisterSEs.instance.SpellWeave) == State.Effective)
 			{
-				boolean has_SpellLove = player.getEntityData().hasKey("SpellLove");
-				boolean is_Spellling = BoostProfileHelper.isBoostEffective(blade, "Spelling");
-				float multipler = 0;
-				float num_enchant = is_Spellling ? 0.1f : 0.05f;
-				float num_player = 0;
-				num_player += has_SpellLove ? 0.25f : 0;
-				num_player += is_Spellling && has_SpellLove ? 0.1f : 0;
-				for (NBTBase n : blade.getEnchantmentTagList())
-					multipler += ((NBTTagCompound)n).getShort("lvl") * num_enchant;
-				multipler += num_player;
+				int sum_ench_level = OtherUtills.getSumEnchantmentLevel(blade);
+				int gift_level = blade.getTagCompound().getInteger("SL.Gift");
+				float multipler = 0.05f * (sum_ench_level + 0.1f * gift_level);
 				DamageProfileHelper.replaceDamageProfile(blade, getEffectKey(),
 						new DamageProfile(getEffectKey(), 0, 0, multipler, 0));
 			}
@@ -66,6 +59,24 @@ public class SpecialEffectSpellWeave implements ISpecialEffect, IRemovable{
 	                    0, 0.1, 0);
 	            }
 	        }
+		}
+	}
+	
+	@SubscribeEvent
+	public void onSlashBladeAttack(SlashBladeEvent.ImpactEffectEvent event)
+	{
+		if (!(event.user instanceof EntityPlayer)) return;
+		ItemStack blade = event.blade;
+		EntityPlayer player = (EntityPlayer)event.user;
+		if (!OtherUtills.isNamedBlade(blade, "silverlighting.animasheath_gleam")) return;
+		if (blade.getTagCompound().getInteger("SL.Gift") < 50) return;
+		
+		if (player.world.isRemote) return;
+		if (player.getRNG().nextFloat() < 0.2)
+		{
+			int sum_ench_level = OtherUtills.getSumEnchantmentLevel(blade);
+			ItemSlashBlade.ProudSoul.add(blade.getTagCompound(), sum_ench_level * 10);
+			player.addExperience(sum_ench_level);
 		}
 	}
 	

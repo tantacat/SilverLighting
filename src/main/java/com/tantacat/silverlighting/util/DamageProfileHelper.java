@@ -10,6 +10,15 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 
 public class DamageProfileHelper {
+	
+	public static final IExtraDamageFuction defualtFuction = new IExtraDamageFuction() {
+		@Override
+		public float applayFuction(float extra) {
+			return 1.5f * extra * (float)Math.exp(-0.1f * extra) 
+	                 + 5.0f * (float)Math.log(1 + 0.3f * extra);
+		}
+	};
+	
     // 存储伤害配置列表
     public static void setDamageProfiles(ItemStack stack, List<DamageProfile> profiles) {
         NBTTagCompound root = stack.getTagCompound();

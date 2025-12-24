@@ -162,6 +162,10 @@ public class RegisterRenders {
 		
 		ModelLoader.setCustomModelResourceLocation(RegisterItems.instance.forgerheart, 0,
 				new ModelResourceLocation("silverlighting:forgerheart.obj"));
+		
+		ModelLoader.setCustomModelResourceLocation(RegisterItems.instance.proudsoulbag, 0,
+				new ModelResourceLocation(RegisterItems.instance.proudsoulbag.getRegistryName(), "inventory"));
+		
 	
 	}
 	

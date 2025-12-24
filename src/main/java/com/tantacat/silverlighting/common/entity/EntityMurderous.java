@@ -132,8 +132,9 @@ public class EntityMurderous extends Entity{
         Vec3d pos = hit_pos;
 		AxisAlignedBB hit_bb = new AxisAlignedBB(pos.x - dAmbit, pos.y - dAmbit, pos.z - dAmbit,
 				pos.x + dAmbit, pos.y + dAmbit, pos.z + dAmbit);
-        float damage = ItemAnimaSheath.KillCount.get(blade.getTagCompound(), 0) * 0.01f + 1;
+        float damage = ItemAnimaSheath.KillCount.get(blade.getTagCompound(), 0) * 0.0005f + 1;
 		List<Entity> entitys = this.world.getEntitiesInAABBexcluding(player, hit_bb, EntitySelectorAttackable.getInstance());
+		boolean isNoLeft = true;
 		for (Entity n : entitys)
 		{		
 			n.hurtResistantTime = 0;
@@ -141,9 +142,13 @@ public class EntityMurderous extends Entity{
 			ItemSlashBlade itemBlade = (ItemSlashBlade)blade.getItem();
             itemBlade.attackTargetEntity(blade, n, player, true);
             ReflectionAccessHelper.setVelocity(n, 0, 0, 0);
+            if (n.isEntityAlive())
+            	isNoLeft = false;
 		}
 	
-		if (ticksExisted >= getlifetime())
+		
+		
+		if (ticksExisted >= getlifetime() || isNoLeft)
 		{
 			if (isJustSA)
 				player.setGameType(game_type);

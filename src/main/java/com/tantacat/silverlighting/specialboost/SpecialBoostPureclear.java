@@ -4,7 +4,6 @@ import java.lang.reflect.Field;
 
 import com.tantacat.silverlighting.common.Item.ItemAnimaSheath;
 import com.tantacat.silverlighting.common.entity.EntityHealingSummonSword;
-import com.tantacat.silverlighting.registers.RegisterBoosts;
 import com.tantacat.silverlighting.registers.RegisterSAs;
 import com.tantacat.silverlighting.util.BoostProfile;
 import com.tantacat.silverlighting.util.BoostProfile.BoostType;
@@ -26,7 +25,7 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-public class SpecialBoostPureclear implements IOnBoostSwitch 
+public class SpecialBoostPureclear
 {
 
 	public BoostProfile profile = new BoostProfile(getId(), false, BoostType.help);
@@ -165,19 +164,8 @@ public class SpecialBoostPureclear implements IOnBoostSwitch
 		
 	}
 	
-	@Override
-	public void onBoostOpen(EntityPlayer player) {
-		
-	}
-
-	@Override
-	public void onBoostClose(EntityPlayer player) {
-		
-	}
-	
 	public void register()
 	{
-		RegisterBoosts.instance.BoostsHasSwitch.put(getId(), this);
 		SlashBladeHooks.EventBus.register(this);
 	}
 			

@@ -758,6 +758,13 @@ public class ItemAnimaSheath extends ItemSlashBladeWrapper{
 
         addInformationSpecialEffec(par1ItemStack, par2EntityPlayer, par3List, par4);
 
+        if (par1ItemStack.getTagCompound().hasKey("SL.Gift"))
+        {
+        	int level = par1ItemStack.getTagCompound().getInteger("SL.Gift");
+        	par3List.add(I18n.format("silverlighting.flag.SpellGift") 
+        			+ (50 <= level ? "§r§2 " : " ") + level);
+        }
+        
         addInformationMaxAttack(par1ItemStack, par2EntityPlayer, par3List, par4);
 
 		NBTTagCompound tag = getItemTagCompound(par1ItemStack);
@@ -793,7 +800,7 @@ public class ItemAnimaSheath extends ItemSlashBladeWrapper{
         String name = (ItemAnimaSheath.CurrentItemName.get(tag).equals("silverlighting.silverlighting") && 
     			ItemSlashBlade.KillCount.get(tag, 0) >= 1000) ? "dokkaebisheath" : "animasheath";
         stack.setTagCompound(NBTHelper.instance.mergeNBTTagCompound(EnchantMode.merge, 
-        		RegisterBlades.instance.getCustomBlade("animasheath").getTagCompound(), tag));
+        		RegisterBlades.instance.getCustomBlade(name).getTagCompound(), tag));
         stack.setItemDamage(0);
         ItemSlashBlade.IsCharged.set(stack.getTagCompound(), false);
     }

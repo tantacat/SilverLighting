@@ -1,6 +1,5 @@
 package com.tantacat.silverlighting.network;
 
-import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.List;
 import java.util.Set;
@@ -10,6 +9,7 @@ import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade.SwordType;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.I18n;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -55,10 +55,8 @@ public class PacketSpecialShowSpell implements IMessage{
 		
 		private void showToolTips(ItemStack last_blade, ItemStack now_blade, EntityPlayer player)
 		{
-			List<String> last_tooltips = new ArrayList<String>();
-			List<String> now_tooltips = new ArrayList<String>();
-			addInformation(last_blade, player, last_tooltips);
-			addInformation(now_blade, player, now_tooltips);
+			List<String> last_tooltips = last_blade.getTooltip(player, ITooltipFlag.TooltipFlags.NORMAL);
+			List<String> now_tooltips = now_blade.getTooltip(player, ITooltipFlag.TooltipFlags.NORMAL);
 			
 			int j = 0;
 			int i = 0;
@@ -77,17 +75,16 @@ public class PacketSpecialShowSpell implements IMessage{
 					j++;
 				}
 				else
-					player.sendMessage(new TextComponentString(last_line + "->" + now_line));
+					player.sendMessage(new TextComponentString(last_line + "§r -> " + now_line));
 					
 			}
 			
+			
 			for (int k = i + j; i < now_tooltips.size(); k++)
 				player.sendMessage(new TextComponentString(new TextComponentTranslation("silverlighting.newline").getFormattedText() + ": " + now_tooltips.get(k)));  
+
 			
 		}
-		
-		
-		
 		
 		private void addInformationKillCount(ItemStack stack, List par3List) {
 	    	EnumSet<SwordType> swordType = ((ItemSlashBlade)stack.getItem()).getSwordType(stack);

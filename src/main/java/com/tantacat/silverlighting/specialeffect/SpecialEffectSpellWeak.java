@@ -109,7 +109,7 @@ public class SpecialEffectSpellWeak implements ISpecialEffect, IRemovable{
 		ItemStack off = player.getHeldItemOffhand();
 		for (Enchantment n : EnchantmentHelper.getEnchantments(off).keySet())
 		{
-			if (EnchantmentHelper.getEnchantments(off).get(n).intValue() >= 5)
+			if (EnchantmentHelper.getEnchantments(off).get(n).intValue() < 5)
 			{
 				result = true;
 				break;
@@ -124,13 +124,12 @@ public class SpecialEffectSpellWeak implements ISpecialEffect, IRemovable{
 					ItemAnimaSheath.getSpecialEffect(stack).removeTag("SpellWeak");
                     player.getHeldItemOffhand().shrink(1);
                     player.addExperienceLevel(-30);
-                    player.getEntityData().setBoolean("SpellLove", true);
                    
                     NBTTagCompound bladetag = stack.getTagCompound();
-                    if (!bladetag.hasKey("SpellLove"))
-                    	bladetag.setInteger("SpellLove", 1);
+                    if (!bladetag.hasKey("SL.Gift"))
+                    	bladetag.setInteger("SL.Gift", 1);
                     else
-                    	bladetag.setInteger("SpellLove", bladetag.getInteger("SpellLove")+1);
+                    	bladetag.setInteger("SL.Gift", bladetag.getInteger("SL.Gift") + 10);
 				}
 			});
 		}

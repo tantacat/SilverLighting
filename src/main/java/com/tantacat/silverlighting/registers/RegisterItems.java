@@ -3,6 +3,7 @@ package com.tantacat.silverlighting.registers;
 import com.tantacat.silverlighting.SilverLightingMain;
 import com.tantacat.silverlighting.common.Item.ItemAnimaSheath;
 import com.tantacat.silverlighting.common.Item.ItemAntiProudSoul;
+import com.tantacat.silverlighting.common.Item.ItemProudSoulBag;
 import com.tantacat.silverlighting.util.RecipeForForgerHeart;
 
 import mods.flammpfeil.slashblade.SlashBlade;
@@ -30,6 +31,7 @@ public class RegisterItems {
 	public ItemAntiProudSoul anticrystal = new ItemAntiProudSoul();
 	public ItemAnimaSheath sl_blade = new ItemAnimaSheath(ToolMaterial.WOOD);
 	public Item forgerheart = new Item();
+	public ItemProudSoulBag proudsoulbag = new ItemProudSoulBag();
 	
 	@SubscribeEvent
 	public void regist_items(RegistryEvent.Register<Item> event)
@@ -49,8 +51,13 @@ public class RegisterItems {
 		forgerheart.setUnlocalizedName("silverlighting.forgerheart")
 				   .setRegistryName(SilverLightingMain.MODID, "forgerheart")
 				   .setCreativeTab(creativetab_silverlighting);
+		
+		proudsoulbag.setUnlocalizedName("silverlighting.proudsoulbag")
+					.setRegistryName(SilverLightingMain.MODID, "proudsoulbag")
+					.setMaxStackSize(1)
+					.setCreativeTab(creativetab_silverlighting);
 				   
-		event.getRegistry().registerAll(brokenbamboo, anticrystal, sl_blade, forgerheart);
+		event.getRegistry().registerAll(brokenbamboo, anticrystal, forgerheart, proudsoulbag, sl_blade);
 	}
 	
 	public void init()

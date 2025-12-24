@@ -10,6 +10,7 @@ import com.tantacat.silverlighting.util.BoostProfile;
 import com.tantacat.silverlighting.util.BoostProfile.BoostType;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.Vec3d;
 
@@ -18,7 +19,7 @@ public class SpecialBoostBreak implements IOnBoostSwitch
 	public BoostProfile profile = new BoostProfile(getId(), false, BoostType.fight);
 	
 	@Override
-	public void onBoostOpen(EntityPlayer player)
+	public void onBoostOpen(ItemStack blade, EntityPlayer player)
 	{
 		//获取玩家附近的EntityBreak并清除
 		Vec3d pos = player.getPositionVector();
@@ -40,7 +41,7 @@ public class SpecialBoostBreak implements IOnBoostSwitch
 	}
 
 	@Override
-	public void onBoostClose(EntityPlayer player)
+	public void onBoostClose(ItemStack blade, EntityPlayer player)
 	{
 		//获取玩家附近的EntityBreak触发方块破坏效果并清除
 		Vec3d pos = player.getPositionVector();
