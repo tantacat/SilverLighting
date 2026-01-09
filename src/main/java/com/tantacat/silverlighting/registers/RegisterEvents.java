@@ -183,12 +183,9 @@ public class RegisterEvents {
 			SilverLightingMain.network.sendToServer(new PacketSwitchVoice(ConfigGeneral.canReciveVoice));
 		else 
 		{
-			if (!SlashBlade.manager.attackableTargets.containsKey("player"))
-			{
-				EntityEntry playerentry = new EntityEntry(EntityLiving.class, "player");
-				GameData.getEntityClassMap().put(EntityPlayerMP.class, playerentry);
-				SlashBlade.manager.attackableTargets.put("player", ConfigGeneral.canAttackPlayer);
-			}
+			EntityEntry playerentry = new EntityEntry(EntityLiving.class, "player");
+			GameData.getEntityClassMap().put(EntityPlayerMP.class, playerentry);
+			SlashBlade.manager.attackableTargets.put("player", ConfigGeneral.canAttackPlayer);
 				
 			if (ConfigGeneral.canAttackAllMob)
 			{

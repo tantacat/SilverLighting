@@ -12,6 +12,8 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.SoundEvents;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
@@ -33,7 +35,8 @@ public class EntityHealingSummonSword extends EntityHeavyRainSwords{
     }
 	
 	@Override
-	protected RayTraceResult getRayTraceResult(){
+	public RayTraceResult getRayTraceResult()
+	{
         Vec3d Vec3d = new Vec3d(this.posX, this.posY, this.posZ);
         Vec3d Vec3d1 = new Vec3d(this.posX + this.motionX, this.posY + this.motionY, this.posZ + this.motionZ);
         RayTraceResult movingobjectposition = this.world.rayTraceBlocks(Vec3d, Vec3d1);
@@ -113,30 +116,31 @@ public class EntityHealingSummonSword extends EntityHeavyRainSwords{
     }
 	
 	@Override
-    protected boolean onImpact(RayTraceResult mop)
+    public boolean onImpact(RayTraceResult mop)
     {
 		boolean result = true;
 
-        if (mop.entityHit != null){
+        if (mop.entityHit != null)
+        {
             Entity target = mop.entityHit;
 
-            if (target == getThrower())
+            if (target.getEntityId() == getThrower().getEntityId())
             {
             	EntityLivingBase player = (EntityLivingBase) getThrower();
             	player.heal(1);
             	alreadyHitEntity.add(player);
             }
-            else if(mop.hitInfo.equals(EntitySelectorAttackable.getInstance())){
-
-                attackEntity(target);
-
-            }else{ //(mop.hitInfo.equals(ItemSlashBlade.getInstance)){
-
+            else if(mop.hitInfo.equals(EntitySelectorAttackable.getInstance()))
+            {
+            	attackEntity(target);
+            }
+            else
+            { 
                 destructEntity(target);
             }
-        }else{
-
-
+        }
+        else
+        {
             if(!world.getCollisionBoxes(this,this.getEntityBoundingBox()).isEmpty())
             {
                 if(this.getThrower() != null && this.getThrower() instanceof EntityPlayer)
@@ -148,4 +152,29 @@ public class EntityHealingSummonSword extends EntityHeavyRainSwords{
 
         return result;
     }
+	
+	@Override
+    public void setDead() {
+        if(this.thrower != null && this.thrower instanceof EntityPlayer)
+            ((EntityPlayer)thrower).onCriticalHit(this);
+        /*
+        if(!this.world.isRemote)
+            System.out.println("dead" + this.ticksExisted);
+            */
+
+        this.world.playSound(null, this.prevPosX, this.prevPosY, this.prevPosZ, SoundEvents.BLOCK_GLASS_BREAK, SoundCategory.NEUTRAL, 0.25F, 1.6F);
+
+        AxisAlignedBB bb = this.getEntityBoundingBox().grow(1.0D, 1.0D, 1.0D);
+        List<Entity> list = this.world.getEntitiesInAABBexcluding(this, bb, EntitySelectorAttackable.getInstance());
+        list.removeAll(alreadyHitEntity);
+        for(Entity target : list){
+            if(blade.isEmpty()) break;
+            if(target == null) continue;
+            if(target == getThrower()) continue;
+            blastAttackEntity(target);
+        }
+
+        this.isDead = true;
+    }
+	
 }

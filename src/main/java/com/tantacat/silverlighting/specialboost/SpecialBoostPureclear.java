@@ -10,7 +10,6 @@ import com.tantacat.silverlighting.util.BoostProfile.BoostType;
 import com.tantacat.silverlighting.util.BoostProfileHelper;
 
 import mods.flammpfeil.slashblade.entity.EntitySummonedBlade;
-import mods.flammpfeil.slashblade.entity.EntitySummonedSwordBase;
 import mods.flammpfeil.slashblade.event.ScheduleEntitySpawner;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.util.SlashBladeEvent;
@@ -65,12 +64,12 @@ public class SpecialBoostPureclear
 			
 			for (int i = 0; i < num_per; i++)
 			{
-				EntityHealingSummonSword pho_sword = new EntityHealingSummonSword(world, player, damage_rain, player.getRNG().nextFloat() * 360.0f, i , player.getEntityId());
+				EntityHealingSummonSword pho_sword = new EntityHealingSummonSword(world, (EntityLivingBase)player, damage_rain, player.getRNG().nextFloat() * 360.0f, i , player.getEntityId());
 				if (pho_sword != null)
 				{		
 					Field field_blade;
 					try {
-						field_blade = EntitySummonedSwordBase.class.getDeclaredField("blade");
+						field_blade = pho_sword.getClass().getDeclaredField("blade");
 						field_blade.setAccessible(true);
 						field_blade.set(pho_sword, blade);
 					} catch(Exception e) {}
@@ -102,7 +101,7 @@ public class SpecialBoostPureclear
 				{	
 					Field field_blade;
 					try {
-						field_blade = EntitySummonedSwordBase.class.getDeclaredField("blade");
+						field_blade = pho_blade.getClass().getDeclaredField("blade");
 						field_blade.setAccessible(true);
 						field_blade.set(pho_blade, blade);
 					} catch(Exception e) {}

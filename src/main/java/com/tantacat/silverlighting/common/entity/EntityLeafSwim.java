@@ -61,7 +61,7 @@ public class EntityLeafSwim extends Entity{
 		
 	} 
 	
-	static DataParameter<Optional<UUID>> player_id = EntityDataManager.createKey(EntitySpelling.class, DataSerializers.OPTIONAL_UNIQUE_ID);
+	static DataParameter<Optional<UUID>> player_id = EntityDataManager.createKey(EntityLeafSwim.class, DataSerializers.OPTIONAL_UNIQUE_ID);
 	
 	@Override
 	protected void entityInit() {

@@ -198,7 +198,7 @@ public class RegisterVoices {
 		if (player.world.isRemote) return;
 		
 		ItemStack blade = event.blade;
-		if (player.getRNG().nextFloat() < 0.2f)
+		if (canSendMessage(player) && player.getRNG().nextFloat() < 0.2f)
 			sendMessage(player, "charged", blade);
 		
 	}

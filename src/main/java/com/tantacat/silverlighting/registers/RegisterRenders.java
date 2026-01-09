@@ -11,7 +11,6 @@ import com.tantacat.silverlighting.common.entity.EntityBreak;
 import com.tantacat.silverlighting.common.entity.EntityDestory;
 import com.tantacat.silverlighting.common.entity.EntityLeafSwim;
 import com.tantacat.silverlighting.common.entity.EntityMurderous;
-import com.tantacat.silverlighting.common.entity.EntitySpelling;
 import com.tantacat.silverlighting.common.entity.EntityUnswerving;
 
 import mods.flammpfeil.slashblade.client.model.BladeModel;
@@ -82,15 +81,6 @@ public class RegisterRenders {
                 new IRenderFactory<EntityMurderous>() {
                     @Override
                     public Render<? super EntityMurderous> createRenderFor(RenderManager manager)
-                    {
-                        return new InvisibleRender(manager);
-                    }
-                });
-		RenderingRegistry.registerEntityRenderingHandler(
-				EntitySpelling.class,
-                new IRenderFactory<EntitySpelling>() {
-                    @Override
-                    public Render<? super EntitySpelling> createRenderFor(RenderManager manager)
                     {
                         return new InvisibleRender(manager);
                     }

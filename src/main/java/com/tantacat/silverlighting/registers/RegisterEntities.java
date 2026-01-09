@@ -8,7 +8,6 @@ import com.tantacat.silverlighting.common.entity.EntityHealingSummonSword;
 import com.tantacat.silverlighting.common.entity.EntityHope;
 import com.tantacat.silverlighting.common.entity.EntityLeafSwim;
 import com.tantacat.silverlighting.common.entity.EntityMurderous;
-import com.tantacat.silverlighting.common.entity.EntitySpelling;
 import com.tantacat.silverlighting.common.entity.EntityUnswerving;
 
 import net.minecraft.util.ResourceLocation;
@@ -68,19 +67,10 @@ public class RegisterEntities {
 	                1,
 	                true);
 		 EntityRegistry.registerModEntity(
-	                new ResourceLocation(SilverLightingMain.MODID, "entityspelling"),
-	                EntitySpelling.class,
-	                "EntitySpelling",
-	                6,
-	                SilverLightingMain.instance,
-	                64,
-	                1,
-	                true);
-		 EntityRegistry.registerModEntity(
 	                new ResourceLocation(SilverLightingMain.MODID, "entityhope"),
 	                EntityHope.class,
 	                "EntityHope",
-	                7,
+	                6,
 	                SilverLightingMain.instance,
 	                64,
 	                1,
@@ -89,7 +79,7 @@ public class RegisterEntities {
 	                new ResourceLocation(SilverLightingMain.MODID, "entityhealingsummonsword"),
 	                EntityHealingSummonSword.class,
 	                "EntityHealingSummonSword",
-	                8,
+	                7,
 	                SilverLightingMain.instance,
 	                64,
 	                1,
@@ -98,7 +88,7 @@ public class RegisterEntities {
 	                new ResourceLocation(SilverLightingMain.MODID, "entityunswerving"),
 	                EntityUnswerving.class,
 	                "EntityUnswerving",
-	                9,
+	                8,
 	                SilverLightingMain.instance,
 	                64,
 	                1,
