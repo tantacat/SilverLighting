@@ -109,7 +109,7 @@ public class SpecialEffectSpellWeak implements ISpecialEffect, IRemovable{
 		ItemStack off = player.getHeldItemOffhand();
 		for (Enchantment n : EnchantmentHelper.getEnchantments(off).keySet())
 		{
-			if (EnchantmentHelper.getEnchantments(off).get(n).intValue() < 5)
+			if (EnchantmentHelper.getEnchantments(off).get(n).intValue() >= 5)
 			{
 				result = true;
 				break;
@@ -127,7 +127,7 @@ public class SpecialEffectSpellWeak implements ISpecialEffect, IRemovable{
                    
                     NBTTagCompound bladetag = stack.getTagCompound();
                     if (!bladetag.hasKey("SL.Gift"))
-                    	bladetag.setInteger("SL.Gift", 1);
+                    	bladetag.setInteger("SL.Gift", 10);
                     else
                     	bladetag.setInteger("SL.Gift", bladetag.getInteger("SL.Gift") + 10);
 				}

@@ -20,17 +20,46 @@ public class OtherUtills {
 		
 	public static void removePlayerXP(EntityPlayer player, int expT)
 	{
-		int exp = player.experienceTotal - expT;
+		int exp = getXPTotal(player) - expT;
 		
-		player.setScore(0);
+		if (exp < 0) return;
+		
 		player.experienceTotal = 0;
 		player.experienceLevel = 0;
 		player.experience = 0.0f;
 		
-		if (exp > 0)
-			player.addExperience(exp);
-		
+		player.addExperience(exp);
+				
 	}
+
+    public static int getXPTotal(EntityPlayer player) {
+        return (int) (getXPValueFromLevel(player.experienceLevel) + getXPValueToNextLevel(player.experienceLevel) * player.experience);
+    }
+
+    public static int getXPValueFromLevel(int xpLevel) {
+        int val;
+        if (xpLevel > 31) {
+            val = (int) (4.5d * Math.pow(xpLevel, 2d) - 162.5d * xpLevel + 2220d);
+        } else if (xpLevel > 16) {
+            val = (int) (2.5d * Math.pow(xpLevel, 2d) - 40.5d * xpLevel + 360d);
+        } else {
+            val = (int) (Math.pow(xpLevel, 2d) + 6d * xpLevel);
+        }
+        return val;
+    }
+
+    public static int getXPValueToNextLevel(int xpLevel) {
+        int val;
+        if (xpLevel > 30) {
+            val = 9 * xpLevel - 158;
+        } else if (xpLevel > 15) {
+            val = 5 * xpLevel - 38;
+        } else {
+            val = 2 * xpLevel + 7;
+        }
+
+        return val;
+    }
 	
 	public static ItemStack addEnchantment(ItemStack item, Enchantment ench, int gift_level, boolean force)
 	{

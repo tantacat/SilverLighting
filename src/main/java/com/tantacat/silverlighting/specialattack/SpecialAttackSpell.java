@@ -13,6 +13,7 @@ import com.tantacat.silverlighting.util.OtherUtills;
 
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.ability.StunManager;
+import mods.flammpfeil.slashblade.ability.StylishRankManager;
 import mods.flammpfeil.slashblade.ability.UntouchableTime;
 import mods.flammpfeil.slashblade.entity.selector.EntitySelectorAttackable;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
@@ -68,24 +69,26 @@ public class SpecialAttackSpell extends SpecialAttackBase implements IJustSpecia
 				return;
 			}
 			
-			if (player.world.isRemote) return;
+			if (!player.world.isRemote)
+			{
+				ItemStack last_blade = stack.copy();
 
-			ItemStack last_blade = stack.copy();
-
-			List<Enchantment> sword = Lists.newArrayList();
-			sword.addAll(EnchantHelper.normal);
-			sword.removeAll(EnchantHelper.rare);
-			Enchantment ench = sword.get(player.getRNG().nextInt(sword.size()));
-			while(ench.isCurse())
-				ench = sword.get(player.getRNG().nextInt(sword.size()));
-			int gift_level = isGleam ? bladetag.getInteger("SL.Gift") : 0;
-			OtherUtills.addEnchantment(stack, ench, gift_level, false);
+				List<Enchantment> sword = Lists.newArrayList();
+				sword.addAll(EnchantHelper.normal);
+				sword.removeAll(EnchantHelper.rare);
+				Enchantment ench = sword.get(player.getRNG().nextInt(sword.size()));
+				while(ench.isCurse())
+					ench = sword.get(player.getRNG().nextInt(sword.size()));
+				int gift_level = isGleam ? bladetag.getInteger("SL.Gift") : 0;
+				OtherUtills.addEnchantment(stack, ench, gift_level, false);
+			
+				ItemStack now_blade = stack.copy();
+				SilverLightingMain.network.sendTo(new PacketSpecialShowSpell(last_blade, now_blade), (EntityPlayerMP)player);
+			}
 			
 			OtherUtills.removePlayerXP(player, 500);
 			ItemSlashBlade.ProudSoul.add(bladetag, -50);	
 			
-			ItemStack now_blade = stack.copy();
-			SilverLightingMain.network.sendTo(new PacketSpecialShowSpell(last_blade, now_blade), (EntityPlayerMP)player);
 		}
 	}
 
@@ -175,6 +178,7 @@ public class SpecialAttackSpell extends SpecialAttackBase implements IJustSpecia
 			ItemStack last_blade = stack.copy();
 			
 			UntouchableTime.setUntouchableTime(player, 30, true);
+			StylishRankManager.addRankPoint(player, 7 * StylishRankManager.RankRange);
 			for (Entity n : targets)
 			{
 				if (!(n instanceof EntityLivingBase)) continue;
