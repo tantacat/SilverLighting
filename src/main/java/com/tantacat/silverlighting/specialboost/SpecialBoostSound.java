@@ -52,7 +52,7 @@ public class SpecialBoostSound {
 				for (Entity n : entity)
 				{
 					if (n instanceof EntityPlayer)
-						((EntityPlayer) n).addPotionEffect(new PotionEffect(MobEffects.BLINDNESS, 0, 2 * 20));
+						((EntityPlayer) n).addPotionEffect(new PotionEffect(MobEffects.BLINDNESS, 2 * 20, 0));
 					else if (n instanceof EntityLivingBase)
 						StunManager.setStun((EntityLivingBase)n, 20);
 				}

@@ -22,6 +22,7 @@ import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class PacketSpecialShowSpell implements IMessage{
 	
@@ -53,6 +54,7 @@ public class PacketSpecialShowSpell implements IMessage{
 			return null;
 		}
 		
+		@SideOnly(Side.CLIENT)
 		private void showToolTips(ItemStack last_blade, ItemStack now_blade, EntityPlayer player)
 		{
 			List<String> last_tooltips = last_blade.getTooltip(player, ITooltipFlag.TooltipFlags.NORMAL);

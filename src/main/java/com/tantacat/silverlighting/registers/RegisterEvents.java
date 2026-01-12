@@ -201,7 +201,7 @@ public class RegisterEvents {
 	}
 	
 	//鞘和灵鞘的自动格挡
-	@SubscribeEvent(priority = EventPriority.HIGHEST)
+	@SubscribeEvent(priority = EventPriority.LOWEST)
 	public void onPlayerHurtEvent(LivingHurtEvent event)
 	{
 		
@@ -216,14 +216,14 @@ public class RegisterEvents {
 		for (int i = 0; i < 9; i++)
 		{
 			blade = player.inventory.getStackInSlot(i);
-			if (blade.getUnlocalizedName().equals(
-					RegisterBlades.instance.getCustomBlade("silverlighting.dokkaebisheath")
-					.getUnlocalizedName()))
+			if (!(blade.getItem() instanceof ItemSlashBlade)) continue;
+			String name = ItemAnimaSheath.CurrentItemName.get(blade.getTagCompound(),"");	
+			if (name.equals("silverlighting.dokkaebisheath"))
 				continue;
 			if (blade == player.getHeldItemMainhand())
 			{
 				if (blade.getUnlocalizedName().equals(SlashBlade.wrapBlade.getUnlocalizedName()) ||
-					blade.getItem() instanceof ItemAnimaSheath)
+					name.equals("silverlighting.animasheath"))
 				{
 					repaircount = ItemSlashBlade.RepairCount.get(blade.getTagCompound(), 0);
 					if (repaircount == 0) continue;
@@ -233,7 +233,7 @@ public class RegisterEvents {
 			}
 			else
 			{
-				if (blade.getItem() instanceof ItemAnimaSheath)
+				if (name.equals("silverlighting.animasheath"))
 				{
 					repaircount = ItemSlashBlade.RepairCount.get(blade.getTagCompound(), 0);
 					if (repaircount == 0) continue;
@@ -286,7 +286,7 @@ public class RegisterEvents {
 	                }
 				}
 				
-				player.inventory.addItemStackToInventory(new ItemStack(RegisterItems.instance.brokenbamboo));
+				player.entityDropItem(new ItemStack(RegisterItems.instance.brokenbamboo), 0);
 			}
 		}	
 	}

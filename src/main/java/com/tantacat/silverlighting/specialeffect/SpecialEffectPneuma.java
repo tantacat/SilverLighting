@@ -69,7 +69,7 @@ public class SpecialEffectPneuma implements ISpecialEffect, IRemovable{
 			String damageType = event.getSource().damageType;
 			if (damageType.equals(DamageSource.IN_WALL.damageType) || damageType.equals(DamageSource.DROWN.damageType) ||
 					damageType.equals(DamageSource.FALL.damageType))
-				event.setCanceled(false);
+				event.setCanceled(true);
 		}
 	}
 	
