@@ -28,6 +28,9 @@ public class ItemProudSoulBag extends Item {
 	 public void onUpdate(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected)
 	{
 		super.onUpdate(stack, worldIn, entityIn, itemSlot, isSelected);
+		
+		if (!(stack.getItem() instanceof ItemProudSoulBag)) return;
+		
 		if (!stack.hasTagCompound())
 		{
 			NBTTagCompound nbt = new NBTTagCompound();

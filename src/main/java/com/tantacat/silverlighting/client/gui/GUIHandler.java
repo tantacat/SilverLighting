@@ -2,6 +2,8 @@ package com.tantacat.silverlighting.client.gui;
 
 import javax.annotation.Nullable;
 
+import com.tantacat.silverlighting.common.Item.ItemProudSoulBag;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -23,7 +25,7 @@ public class GUIHandler implements IGuiHandler{
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
 		EnumHand hand = x == 0 ? EnumHand.OFF_HAND : EnumHand.MAIN_HAND;
 		ItemStack stack = player.getHeldItem(hand);
-		if (!stack.hasTagCompound())
+		if (!stack.hasTagCompound() && stack.getItem() instanceof ItemProudSoulBag)
 			stack.setTagCompound(new NBTTagCompound());
 		
 		Object Gui = null;
@@ -43,7 +45,7 @@ public class GUIHandler implements IGuiHandler{
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
 		EnumHand hand = x == 0 ? EnumHand.OFF_HAND : EnumHand.MAIN_HAND;
 		ItemStack stack = player.getHeldItem(hand);
-		if (!stack.hasTagCompound())
+		if (!stack.hasTagCompound() && stack.getItem() instanceof ItemProudSoulBag)
 			stack.setTagCompound(new NBTTagCompound());
 		
 		Object Gui = null;

@@ -42,15 +42,12 @@ public class RecipeWithNBTHelper extends ShapedOreRecipe
 	}
 	
 	@Override
-	public ItemStack getRecipeOutput() //通过Recipe得到的产物
+	public ItemStack getRecipeOutput() //通过Recipe得到产物
 	{
 		ItemStack result = this.result.copy();
 		NBTTagCompound tag_result = result.getTagCompound();
 		for (ItemStack item : items)
-		{
-			if (!item.hasTagCompound())
-				item.setTagCompound(new NBTTagCompound());
-			
+		{	
 			if (item.getItem() instanceof ItemSlashBlade)
 				tag_result = NBTHelper.instance.mergeNBTTagCompound(EnchantMode.merge, tag_result, item.getTagCompound());
 		}
@@ -72,6 +69,8 @@ public class RecipeWithNBTHelper extends ShapedOreRecipe
 	@Override
 	public boolean matches(InventoryCrafting inv, World worldIn)
 	{
+		if (inv.getWidth() != 3 || inv.getHeight() != 3) return false;
+		
 		boolean result = true;
 		for (int i = 0; i < inv.getSizeInventory(); i++)
 		{
@@ -119,17 +118,13 @@ public class RecipeWithNBTHelper extends ShapedOreRecipe
 	}
 
 	@Override
-	public ItemStack getCraftingResult(InventoryCrafting inv) //通过inv得到的产物
+	public ItemStack getCraftingResult(InventoryCrafting inv) //通过inv得到产物
 	{
 		ItemStack result = this.result.copy();
 		NBTTagCompound tag_result = result.getTagCompound();
 		for (int i = 0; i < inv.getSizeInventory(); i++)
 		{
-			ItemStack item = inv.getStackInSlot(i);
-			
-			if (!item.hasTagCompound())
-				item.setTagCompound(new NBTTagCompound());
-			
+			ItemStack item = inv.getStackInSlot(i);			
 			if (item.getItem() instanceof ItemSlashBlade)
 				tag_result = NBTHelper.instance.mergeNBTTagCompound(EnchantMode.merge, tag_result, item.getTagCompound());
 		}

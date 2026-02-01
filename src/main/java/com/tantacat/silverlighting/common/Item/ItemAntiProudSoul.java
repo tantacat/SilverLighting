@@ -95,6 +95,8 @@ public class ItemAntiProudSoul extends Item{
 		
 		super.addInformation(stack, world, par3List, inFlag);
 		
+		if (!(stack.getItem() instanceof ItemAntiProudSoul)) return;
+		
 	    NBTTagCompound tag;
 	    if (stack.hasTagCompound())
 	    	tag = stack.getTagCompound();
