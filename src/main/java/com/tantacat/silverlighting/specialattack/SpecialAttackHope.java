@@ -46,6 +46,7 @@ public class SpecialAttackHope extends SpecialAttackBase implements ISuperSpecia
 		hope.player_id = player.getUniqueID();
 		hope.setStandType((int)-1);
 		hope.setFlip((int)2);
+		hope.setGlowing(true);
 		world.spawnEntity(hope);
 		stack.setCount(0);
 	}

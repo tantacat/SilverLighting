@@ -54,6 +54,16 @@
 			"right_6": "flammpfeil.slashblade:proudsoul:5",
 			"output_6": "flammpfeil.slashblade:slashbladeNamed{CustomMaxDamage:100,ProudSoul:500,RepairCounter:1}"
 		},
+        {
+            "type": "text",
+            "title": "关于锻造修复的补充说明",
+            "text": "关于锻造修复时消耗的玩家等级的计算公式如下：cost = soulcost + (basecost * level)$(br2)soulcost为不计算附魔时的消耗(根据耀魂材料变动),level为对应附魔的等级,basecost根据附魔的稀有度不同而不同$(li)COMMON(常见):1$(li)UNCOMMON(罕见):2$(li)RARE(稀有):3$(li)VERY_RARE(非常稀有):4"
+        },
+        {
+            "type": "text",
+            "title": "关于锻造修复的补充说明",
+            "text": "此外，不同耀魂材料能不同程度的减少这个过程的等级消耗,但是由于bug,实际效果与代码不一致$(br2)前为soulcost,中为代码效果,后为实际效果$(li)耀魂碎片:2 | 10 | 0$(li)破碎的耀魂:1 | 0 | 0$(li)耀魂铁锭:3 | 25 | 25$(li)耀魂宝珠:4 | 50 | 50$(li)刀魂结晶:5 | 65 | 80$(li)耀偏方三八面魂:5 | 80 | 0$(br)减少消耗不会使消耗少于soulcost"
+        },
 		{
 			"anchor": "纳刀修复",
 			"type": "text",

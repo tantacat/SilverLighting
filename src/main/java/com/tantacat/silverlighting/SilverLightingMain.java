@@ -24,7 +24,7 @@ public class SilverLightingMain
 {
     public static final String MODID = "silverlighting";
     public static final String NAME = "SilverLighting";
-    public static final String VERSION = "1.12.2-r4";
+    public static final String VERSION = "1.12.2-2.0.0";
     
     @Mod.Instance
     public static SilverLightingMain instance;

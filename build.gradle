@@ -1,7 +1,7 @@
 buildscript {
     repositories {
         jcenter()
-	maven { url = 'https://maven.aliyun.com/repository/public' }
+	    maven { url = 'https://maven.aliyun.com/repository/public' }
         maven { url = 'https://maven.aliyun.com/repository/central' }
         maven { url = "https://files.minecraftforge.net/maven" }
     }
@@ -13,7 +13,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
 
-version = "1.12.2-final"
+version = "1.12.2-2.0.0"
 group = "com.tantacat.silverlighting" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "silverlighting"
 
@@ -58,7 +58,7 @@ dependencies {
     // for more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
-
+    
 }
 
 
@@ -88,6 +88,7 @@ task sourceZip(type: Zip) {
 
 task deobfJar(type: Jar) {
     from sourceSets.main.output
+    from sourceSets.main.allSource
     classifier = 'deobf'
 }
 
