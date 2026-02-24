@@ -13,6 +13,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
@@ -124,7 +125,7 @@ public class EntityHealingSummonSword extends EntityHeavyRainSwords{
         {
             Entity target = mop.entityHit;
 
-            if (target.getEntityId() == getThrower().getEntityId())
+            if (getThrower() != null && target.getEntityId() == getThrower().getEntityId())
             {
             	EntityLivingBase player = (EntityLivingBase) getThrower();
             	player.heal(1);
@@ -175,6 +176,20 @@ public class EntityHealingSummonSword extends EntityHeavyRainSwords{
         }
 
         this.isDead = true;
+    }
+	
+	@Override
+    protected void readEntityFromNBT(NBTTagCompound compound) 
+	{
+		if (compound.hasUniqueId("playerid"))
+			setThrower(this.world.getPlayerEntityByUUID(compound.getUniqueId("playerid")));
+	}
+
+    @Override
+    protected void writeEntityToNBT(NBTTagCompound compound) 
+    {
+    	if (getThrower() instanceof EntityPlayer)
+    		compound.setUniqueId("playerid", ((EntityPlayer)getThrower()).getUniqueID());
     }
 	
 }
