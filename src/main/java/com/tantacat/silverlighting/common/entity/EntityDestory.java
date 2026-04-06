@@ -4,7 +4,7 @@ import java.util.List;
 
 import mods.flammpfeil.slashblade.entity.selector.EntitySelectorAttackable;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumParticleTypes;
@@ -174,7 +174,8 @@ public class EntityDestory extends Entity implements IThrowableEntity{
             List<Entity> entity = world.getEntitiesInAABBexcluding(thower, bb, EntitySelectorAttackable.getInstance());
             for (Entity n : entity)
             {
-            	((EntityLiving)n).addVelocity(central.x, central.y, central.z);
+            	if (n instanceof EntityLivingBase)
+            		((EntityLivingBase)n).addVelocity(central.x, central.y, central.z);
             }
             
             for (int x = 0; x < 2; x ++)
