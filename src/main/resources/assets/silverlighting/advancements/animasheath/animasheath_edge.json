@@ -1,0 +1,30 @@
+{
+  "parent": "silverlighting:animasheath/animasheath_iron",
+  "display": {
+    "title": {
+      "translate": "advancement.silverlighting.animasheath_edge"
+    },
+    "description": {
+      "translate": "advancement.silverlighting.animasheath_edge.desc",
+      "with": [ "\n" ]
+    },
+    "icon": {
+      "item": "silverlighting:animasheath",
+      "nbt": "{ench: [{lvl:1,id:35}],TextureName:\"minecraft/edge\",ModelName:\"minecraft/edge\"}"
+    },
+    "frame": "challenge"
+  },
+  "criteria": {
+    "get": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "silverlighting:animasheath",
+            "nbt": "{CurrentItemName:\"silverlighting.animasheath_edge\"}"
+          }
+        ]
+      }
+    }
+  }
+}

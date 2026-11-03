@@ -1,0 +1,31 @@
+{
+  "parent": "flammpfeil.slashblade:root",
+  "display": {
+    "title": {
+      "translate": "achievement.flammpfeil.slashblade.sange"
+    },
+    "description": {
+      "translate": "achievement.flammpfeil.slashblade.sange.desc",
+      "with": [ "\n" ]
+    },
+    "icon": {
+      "item": "flammpfeil.slashblade:slashbladeNamed",
+      "nbt": "{TextureName:\"named/sange/sange\",ModelName:\"named/sange/sange\"}"
+    },
+    "frame": "goal",
+    "hidden": true
+  },
+  "criteria": {
+    "get": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "flammpfeil.slashblade:slashbladeNamed",
+            "nbt": "{CurrentItemName:\"flammpfeil.slashblade.named.sange\"}"
+          }
+        ]
+      }
+    }
+  }
+}

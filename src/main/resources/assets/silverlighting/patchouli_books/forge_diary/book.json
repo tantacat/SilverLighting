@@ -1,0 +1,7 @@
+{
+  "name": "silverlighting.patchouli.forge_diary.title",
+  "landing_text": "silverlighting.patchouli.forge_diary.landing_text",
+  "version": 1,
+  "creative_tab": "silverlighting",
+  "advancement_namespaces": ["flammpfeil.slashblade", "silverlighting", "minecraft", "twilightforest"]
+}

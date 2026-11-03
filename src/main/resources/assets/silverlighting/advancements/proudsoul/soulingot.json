@@ -1,0 +1,30 @@
+{
+  "parent": "silverlighting:proudsoul/proudsoul",
+  "display": {
+    "title": {
+      "translate": "achievement.flammpfeil.slashblade.soulIngot"
+    },
+    "description": {
+      "translate": "achievement.flammpfeil.slashblade.soulIngot.desc",
+      "with": [ "\n" ]
+    },
+    "icon": {
+      "item": "flammpfeil.slashblade:proudsoul",
+      "data": 1
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "get": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "flammpfeil.slashblade:proudsoul",
+            "data": 1
+          }
+        ]
+      }
+    }
+  }
+}

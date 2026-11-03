@@ -1,0 +1,31 @@
+{
+    "category": "category_1",
+    "sortnum": 4,
+    "name": "名刀「银纸竹光」",
+    "icon": "flammpfeil.slashblade:slashbladeSilverBambooLight",
+	"advancement": "silverlighting:silverbamboolight",
+    "pages":[
+        {
+            "type" : "text",
+            "text" : "故事的中间总有很多波折。$(br2)对你而言，这只是刚刚开始。"
+        },
+        {
+			"advancement": "silverlighting:silverbamboolight",
+            "type" : "text",
+            "title" : "覆刃",
+            "text" : "银色的纸裹住了刀刃，对着恰好升起的太阳，她看起来就像一把真正的名刀。$(br2)当然，你们都清楚，只是看起来而已。$(br)明明已经知道没有未来，却依旧走了下去……你在想什么，她又在怎么想，只有你们自己知道。$(br2)“我”在这里献上祝福。"
+        },
+        {
+			"advancement": "silverlighting:silverbamboolight",
+            "type" : "text",
+            "title" : "无间",
+            "text" : "有时候你会四下寻找某个身影，即使你知道她并无躯体。$(br)她越发与你相似了。有时候甚至不需要开口，她就已经开始配合着你的动作。$(br2)与她的相处令你极度放松，她带给了你陌生的温暖，她让你明白了什么是家，什么是住所。$(br2)你沉溺于此。$(br)你不敢睁开双眼。"
+        },
+        {
+			"advancement": "silverlighting:wrape/saya",
+            "type" : "text",
+            "title" : "终途",
+            "text" : "她从未迷茫。你终于意识到了这一点。$(br)脆弱的躯体必不可能永远陪伴你，而刚刚呈现在你眼前的，正是她所追求的终幕。$(br2)你当然可以为此悲伤，就像那些悲剧一样，所有的美好都为了此刻服务。$(br2)但是，握紧你手中那柄漆黑的鞘。$(br)你的脚步不能在此停歇。带着她，走下去。"
+        }
+    ]
+}

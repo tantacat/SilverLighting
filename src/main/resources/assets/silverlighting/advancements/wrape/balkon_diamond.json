@@ -1,0 +1,30 @@
+{
+  "parent": "silverlighting:wrape/saya",
+  "display": {
+    "title": {
+      "translate": "achievement.flammpfeil.slashblade.wrap.BalkonDiamond"
+    },
+    "description": {
+      "translate": "achievement.silverlighting.wrap.BalkonDiamond.desc",
+      "with": [ "\n" ]
+    },
+    "icon": {
+      "item": "flammpfeil.slashblade:slashbladeWrapper",
+      "nbt": "{TextureName:\"BalkonDiamond\"}"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "get": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "flammpfeil.slashblade:slashbladeWrapper",
+            "nbt": "{CurrentItemName:\"wrap.reforged.diamond_katana\"}"
+          }
+        ]
+      }
+    }
+  }
+}

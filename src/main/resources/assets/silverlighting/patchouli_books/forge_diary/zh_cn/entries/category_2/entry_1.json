@@ -1,0 +1,37 @@
+{
+	"category": "category_2",
+	"sortnum": 1,
+	"name": "锈刀",
+	"icon": "flammpfeil.slashblade:slashbladeNamed:100{isBroken:true,TextureName:\"named/muramasa/sabigatana\",ModelName:\"named/muramasa/muramasa\"}",
+	"advancement": "silverlighting:named/sabigatana",
+	"pages":[
+		{
+			"type" : "text",
+			"text" : "时间在她的身上留下了洗不掉的痕迹。$(br2)如此古老的剑娘，能否告诉你什么有用的信息？"
+		},
+		{
+			"type" : "text",
+			"title" : "失心",
+			"text" : "锈蚀到无法认清形体的剑娘在你的手中呼吸，你能察觉到她对你不加掩饰的情感。$(br2)她在和你对话，却被残破的心灵和躯体拖累，只有无尽的恐惧和依赖。$(br2)出于怜悯，出于贪婪，或者仅仅出于作为刀匠的责任，你决定修复她。$(br2)这样的形体，是对她自己的亵渎。"
+		},
+		{
+			"type": "crafting",
+			"recipe": "flammpfeil.slashblade:recipexx",
+			"recipe2": "flammpfeil.slashblade:recipex"
+		},
+		{
+			"type": "crafting",
+			"recipe": "flammpfeil.slashblade:doutanuki"
+		},
+		{
+			"type" : "text",
+			"title" : "旧幕",
+			"text" : "这几天以来，你做的梦可能比以往加起来都要多。$(br2)梦里是一个剑娘的黄金时代。无数像你一样的刀匠和像她一样的剑娘一同，拉起了这个时代的序幕。$(br2)随着你对她的研究深入，在逐步修复的过程中，你的梦也越来越长。黄金时代的故事长的像是整个世界的编年史，你有预感，这个故事快要结束了……"
+		},
+        {
+            "type": "text",
+            "title": "噩言",
+            "text": "刀枪不入的巨物伫立在面前，你向他挥刀，反而崩断了刀刃。$(br2)你不知第几次被这样的噩梦惊醒。$(br2)如黄金般璀璨的时代戛然而止，故事在怪物无休止的入侵中迎来终结，而她也即将褪尽锈蚀，迫不及待的想要向你阐述什么。"
+        }
+	]
+}

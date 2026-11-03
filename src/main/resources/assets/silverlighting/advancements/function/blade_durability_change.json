@@ -1,0 +1,17 @@
+{
+  "parent": "flammpfeil.slashblade:root",
+  "criteria": {
+    "damageblade": {
+      "trigger": "minecraft:item_durability_changed",
+      "conditions": {
+        "item": {
+          "item": "flammpfeil.slashblade:slashbladenamed"
+        },
+        "durability": {
+          "max": 0,
+          "min": -10086
+        }
+      }
+    }
+  }
+}

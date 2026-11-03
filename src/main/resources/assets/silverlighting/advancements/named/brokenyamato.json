@@ -1,0 +1,32 @@
+{
+  "parent": "flammpfeil.slashblade:root",
+  "display": {
+    "title": {
+      "translate": "achievement.flammpfeil.slashblade.brokenYamato"
+    },
+    "description": {
+        "translate": "achievement.flammpfeil.slashblade.brokenYamato.desc",
+        "with": [ "\n" ]
+      },
+    "icon": {
+      "item": "flammpfeil.slashblade:slashbladeNamed",
+      "nbt": "{isBroken:true,TextureName:\"named/yamato\",ModelName:\"named/yamato\"}",
+      "data": 1000
+    },
+    "frame": "goal",
+    "hidden": true
+  },
+  "criteria": {
+    "get": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "flammpfeil.slashblade:slashbladeNamed",
+            "nbt": "{isBroken:true,CurrentItemName:\"flammpfeil.slashblade.named.yamato.broken\"}"
+          }
+        ]
+      }
+    }
+  }
+}

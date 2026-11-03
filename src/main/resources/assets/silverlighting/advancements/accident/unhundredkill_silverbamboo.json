@@ -1,0 +1,22 @@
+{
+  "parent": "silverlighting:silverbamboolight",
+  "display": {
+    "title": {
+      "translate": "advancement.silverlighting.unhundredkill_silverbamboo"
+    },
+    "description": {
+      "translate": "advancement.silverlighting.unhundredkill_silverbamboo.desc",
+      "with": [ "\n" ]
+    },
+    "icon": {
+      "item": "minecraft:spawn_egg",
+      "nbt": "{EntityTag:{id:\"minecraft:zombie\"}}"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "smelt": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

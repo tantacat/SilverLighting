@@ -1,0 +1,28 @@
+{
+  "parent": "silverlighting:proudsoul/saheresoulsphere",
+  "display": {
+    "title": {
+      "translate": "advancement.silverlighting.forgerheart"
+    },
+    "description": {
+      "translate": "advancement.silverlighting.forgerheart.desc",
+      "with": [ "\n" ]
+    },
+    "icon": {
+      "item": "silverlighting:forgerheart"
+    },
+    "frame": "challenge"
+  },
+  "criteria": {
+    "get": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "silverlighting:forgerheart"
+          }
+        ]
+      }
+    }
+  }
+}

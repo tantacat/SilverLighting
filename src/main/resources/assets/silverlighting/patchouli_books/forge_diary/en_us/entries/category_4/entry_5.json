@@ -1,0 +1,34 @@
+{
+	"category": "category_4",
+	"sortnum": 5,
+	"name": "澄心澄明",
+	"icon": "silverlighting:animasheath{TextureName:\"silver/puresilver\",ModelName:\"silver/puresilver\"}",
+	"advancement": "silverlighting:animasheath/animasheath",
+	"pages":[
+		{
+			"type" : "text",
+			"text" : "透过她的灵魂，你看到了自己的眼睛。$(br2)这是只属于你的，极致澄净的一切。"
+		},
+		{
+			"type" : "text",
+			"title" : "澄澈",
+			"text" : "这是寻遍记忆也未曾有过的伟业。$(br2)灵鞘银纸拥有虚假的刀铭，假铭刻在刀鞘之上，拥有和真正的刀铭相似的功能，只是不能保证刀刃不碎。$(br2)她能使用的刀刃仍然是脆弱的竹刀，尽管被假铭和荣耀成倍的强化，仍然会时常碎裂……$(br2)你要做的，是为她锻造真正的剑体，然后将假铭变为真正的刀铭，刻在她新的身体上。"
+		},
+		{
+			"type" : "text",
+			"title" : "澄明",
+			"text" : "理所当然的，困难重重。$(br2)你锻出的铭刀也不在少数，但刻在刀鞘上的假铭，只有这一个例子。$(br2)你不可能冒着让她彻底消失的风险，拿假铭做实验。$(br2)在脑中模拟着一切可能的情况，你的心态愈加焦躁。"
+		},
+        {
+            "type": "text",
+            "title": "澄净",
+            "text": "在你们的共同努力下，脑海中的概念逐渐清晰。$(br2)以竹光残片作为刀铭的临时载体，将钻石用耀魂之火整体烧出刀身，辅以承载了银纸意志的耀魂宝珠……$(br2)但还不够。成功率，还不够。$(br2)你继续模拟着一切可能的情况。在确保成功之前，你担不起任何1%失败率所带来的结果。"
+        },
+		{
+			"advancement": "silverlighting:animasheath/puresilver",
+            "type": "text",
+            "title": "澄心",
+            "text": "理所当然的，你成功了。$(br2)现在，她是一把真正的妖刀了。$(br2)不用担心折断，不用担心死亡，甚至还获得了全新的力量…$(br2)不过比起尝试新的力量，现在，还是陪她好好休息一段时间吧。"
+        }
+	]
+}

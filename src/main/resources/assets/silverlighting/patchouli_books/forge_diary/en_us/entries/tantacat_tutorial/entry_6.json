@@ -1,0 +1,127 @@
+{
+    "category": "tantacat_tutorial",
+    "sortnum": 6,
+    "name": "刀的特殊能力喵~",
+    "icon": "minecraft:enchanted_book",
+    "pages":[
+        {
+            "type" : "text",
+            "text" : "拔刀剑作为相当特殊的武器,同样具有许多特殊的能力喵~$(br2)(话说前面提到那么多次终于要讲这个部分了吗ฅ(=`ω´=)ฅ♡)"
+        },
+        {
+            "type": "text",
+            "title": "刀的特殊能力",
+            "text": "拔刀剑的特殊能力包括以下喵~$(li)$(l:tantacat_tutorial/entry_6#SpecialAttack)SA SpecialAttack$()$(li)$(l:tantacat_tutorial/entry_6#SpecialEffect)SE SpecialEffect$(li)$(l:tantacat_tutorial/entry_6#RangeAttack)RangeAttack 幻影剑技$(li)$(l:tantacat_tutorial/entry_6#附魔效果)附魔效果 $(li)$(l:tantacat_tutorial/entry_6#其他)其他"
+        },
+		{
+			"anchor": "SpecialAttack",
+			"type": "craft_anvil_x",
+			"left_1": "flammpfeil.slashblade:slashblade{ench:[{lvl:1,id:1}]}",
+			"right_1": "flammpfeil.slashblade:slashblade{ench:[{lvl:1,id:1}],display:{Name:\"大太刀「妖」\"}}",
+			"output_1": "flammpfeil.slashblade:slashbladeNamed{SpecialAttackType:1,isDefaultBewitched:true,CurrentItemName:\"flammpfeil.slashblade.named.muramasa\",ench:[{id:7s,lvl:1s}],TextureName:\"named/muramasa/muramasa\",ModelName:\"named/muramasa/muramasa\"}",
+			"text": "印刀和妖刀能够使用SA,妖刀的tooltips中会显示SA的具体信息喵~$(br2)不同的刀具有的SA可能不同喵~$(br2)长按右键至刀身出现特殊纹路(约0.75秒),松开右键以释放SA喵~"
+		},
+		{
+			"type": "spotlight",
+			"title": "JustSA和SuperSA",
+			"item": "flammpfeil.slashblade:slashblade{killCount:1000,ench:[{lvl:1,id:1}],display:{Name:\"大太刀「妖」\"}}",
+			"text": "当右键蓄力时间在0.75~1秒之间时释放SA可以触发JustSA,原版的拔刀剑只有次元斩具有JustSA喵~$(br2)当刀同时具有Bewitched,Perfect,FiercerEdge状态时,长按特殊行动键(V)至散发紫色粒子,松开即可释放SuperSA,同样原版的拔刀剑只有次元斩具有SuperSA喵~"
+		},
+		{
+			"anchor": "SpecialEffect",
+			"type": "spotlight",
+			"title": "SpecialEffect",
+			"item": "flammpfeil.slashblade:slashbladeNamed{ench:[{lvl:1s,id:7s},{lvl:2s,id:48s}],SlashBlade:{},ModelName:\"named/dios/dios\",isDefaultBewitched:1b,CurrentItemName:\"flammpfeil.slashblade.named.koseki\",SummonedSwordColor:-1842204,AttackAmplifier:0.0f,TextureName:\"named/dios/koseki\",SpecialAttackType:6,comboSeq:0,CustomMaxDamage:70,isCharged:0b,baseAttackModifier:6.0f,SB.SEffect:{WitherEdge:20},AttributeModifiers:[{UUIDMost:-3801225194067177672L,UUIDLeast:-6586624321849018929L,Amount:6.0d,Slot:\"mainhand\",AttributeName:\"generic.attackDamage\",Operation:0,Name:\"Weapon modifier\"},{UUIDMost:-422425648963762075L,UUIDLeast:-5756800103171642205L,Amount:-2.4000000953674316d,Slot:\"mainhand\",AttributeName:\"generic.attackSpeed\",Operation:0,Name:\"Weapon modifier\"}],StandbyRenderType:3}",
+			"text": "观察上面这把刀的tooltips,你能看到有一行为\"凋零性: 20$()\"的字样喵~$(br2)这个凋零性就是一种SE喵~$(br2)如果把SA理解为主动技能,那么SE就是被动技能喵~"
+		},
+		{
+			"type": "text",
+			"title": "SpecialEffect的等级",
+			"text": "SE名字后面的数字表示要求等级,当玩家等级>=这个数字才能正常触发该SE的效果,否则无法触发或有副作用喵~$(br2)比如对于凋零性而言,其正常效果为攻击时50%概率给敌人附加1秒的凋零Ⅱ效果喵~$(br2)而等级不足时则是20%概率给敌人附加1秒的凋零Ⅱ效果且25%概率给自己附加相同的效果喵~"
+		},
+		{
+			"type": "text",
+			"title": "刀魂结晶对SE的操作",
+			"text": "使用刀魂结晶可以对SE进行去除,转移,复制等操作喵~$(br2)具体情况取决于SE的两个属性: canCopy 和 canRemove喵~$(li)去除: canRemove && !canCopy$(li)转移: canRemove && canCopy$(li)复制: !canRemove && canCopy$(li)不可操作:!Copy&&!Remove$(br2)将带有SE的刀置于刀挂台(非点燃)上,手持刀魂结晶左键,当玩家等级>=需求等级时可对SE进行相应操作喵~"
+		},
+		{
+			"type": "spotlight",
+			"title": "刀魂结晶对SE的操作",
+			"item": "flammpfeil.slashblade:proudsoul:4{SB.SEffect:{WitherEdge:20}}",
+			"text": "去除:刀上的SE会消失$(br2)转移:刀上的SE会消失并生成一个带有此SE的刀魂结晶$(br2)复制:刀上的SE不变且生成一个带有此SE的刀魂结晶$(br2)带有SE的刀魂结晶左键带刀刀挂台(非点燃)可以为刀附上此SE"
+		},
+		{
+			"anchor": "RangeAttack",
+			"type": "spotlight",
+			"title": "RangeAttack",
+			"item": "flammpfeil.slashblade:slashbladeNamed{ench:[{lvl:1s,id:7s},{lvl:2s,id:48s}],SlashBlade:{},ModelName:\"named/dios/dios\",isDefaultBewitched:1b,CurrentItemName:\"flammpfeil.slashblade.named.koseki\",SummonedSwordColor:-1842204,AttackAmplifier:0.0f,TextureName:\"named/dios/koseki\",SpecialAttackType:6,comboSeq:0,CustomMaxDamage:70,isCharged:0b,baseAttackModifier:6.0f,SB.SEffect:{WitherEdge:20},AttributeModifiers:[{UUIDMost:-3801225194067177672L,UUIDLeast:-6586624321849018929L,Amount:6.0d,Slot:\"mainhand\",AttributeName:\"generic.attackDamage\",Operation:0,Name:\"Weapon modifier\"},{UUIDMost:-422425648963762075L,UUIDLeast:-5756800103171642205L,Amount:-2.4000000953674316d,Slot:\"mainhand\",AttributeName:\"generic.attackSpeed\",Operation:0,Name:\"Weapon modifier\"}],StandbyRenderType:3}",
+			"text": "RangeAttack即幻影剑技,要使用幻影剑技,刀首先需要解锁\"SB:幻影剑\"的功能(我也不知道为什么要用这个缩写)喵~$(br2)当刀处于Bewitched状态并具有力量附魔时,tooltips中会出现SB:幻影剑的字样,说明刀可以使用幻影剑技喵~$(br2)使用幻影剑需要消耗耀魂值喵~"
+		},
+		{
+			"type": "spotlight",
+			"title": "SummonedSword和SummonedBlade",
+			"item": "flammpfeil.slashblade:slashbladeNamed{RangeAttackType:1,ench:[{lvl:1s,id:7s},{lvl:2s,id:48s}],SlashBlade:{},ModelName:\"named/dios/dios\",isDefaultBewitched:1b,CurrentItemName:\"flammpfeil.slashblade.named.koseki\",SummonedSwordColor:-1842204,AttackAmplifier:0.0f,TextureName:\"named/dios/koseki\",SpecialAttackType:6,comboSeq:0,CustomMaxDamage:70,isCharged:0b,baseAttackModifier:6.0f,SB.SEffect:{WitherEdge:20},AttributeModifiers:[{UUIDMost:-3801225194067177672L,UUIDLeast:-6586624321849018929L,Amount:6.0d,Slot:\"mainhand\",AttributeName:\"generic.attackDamage\",Operation:0,Name:\"Weapon modifier\"},{UUIDMost:-422425648963762075L,UUIDLeast:-5756800103171642205L,Amount:-2.4000000953674316d,Slot:\"mainhand\",AttributeName:\"generic.attackSpeed\",Operation:0,Name:\"Weapon modifier\"}],StandbyRenderType:3}",
+			"text": "幻影剑有一种特殊类型——幻影飞刀喵~$(br2)将可以使用幻影剑的刀置于非点燃的刀挂台上,手持耀魂宝珠左键即可使两者相互切换喵~$(br2)幻影飞刀相比幻影剑具有一定的追踪效果,但幻影剑技中的幻影剑仍为普通的幻影剑喵~"
+		},
+		{
+			"anchor": "附魔效果",
+			"type": "text",
+			"title": "附魔效果",
+			"text": "原版的部分附魔在拔刀剑上能具有特殊的效果喵~具有特殊效果的附魔有:$(li)力量$(li)摔落保护$(li)火焰保护$(li)荆棘$(li)冲击$(li)水下呼吸$(li)时运$(li)耐久$(li)抢夺"
+		},
+		{
+			"type": "text",
+			"title": "力量",
+			"text": "当刀处于Bewitched状态并具有力量附魔时,刀能使用幻影剑技喵~$(br2)且刀的部分攻击和SA的伤害受力量效果的加成喵~"
+		},
+		{
+			"type": "text",
+			"title": "摔落保护",
+			"text": "附有摔落保护的刀能够使用AerialRave和ChargeFloating喵~$(br2)前者使玩家在挥刀时保持水平速度为0喵~$(br2)后者使玩家蓄力SA时水平速度为正常下落速度的1/level且会重制下落高度喵~"
+		},
+		{
+			"type": "text",
+			"title": "火焰保护",
+			"text": "附有火焰保护的刀能够使用FireResistance喵~$(br2)效果为使玩家在挥刀或蓄力SA时获得火焰保护等级的抗火效果,同时使玩家在岩浆中的移动速度额外增加(5*火焰保护等级)%喵~"
+		},
+		{
+			"type": "text",
+			"title": "荆棘",
+			"text": "附有荆棘的刀在格挡远程攻击时不再消除弹射物而是反弹弹射物喵~$(br2)此外附有荆棘的刀能够使用ProjectileBarrier(将刀置于身前旋转以格挡伤害),操作为按住潜行键并右键蓄力喵~"
+		},
+		{
+			"type": "text",
+			"title": "冲击",
+			"text": "附有冲击的刀能使次元斩将敌人拉向玩家喵~$(br2)此外如果刀还处于Bewitched状态则可以使用UpthrustBlast,效果为攻击敌人使=时将一枚幻影剑插入敌人身体,幻影剑炸裂后将敌人击飞喵~"
+		},
+		{
+			"type": "text",
+			"title": "水下呼吸",
+			"text": "附有水下呼吸的刀能够使用WaterBreathing喵~$(br2)效果为使玩家在挥刀或蓄力SA时获得水下呼吸等级的水下呼吸效果,同时使玩家在水中的移动速度额外增加(5*水下呼吸等级)%喵~$(br2)但是,由于未知原因的bug,玩家只需手持附有水下呼吸的刀即可触发效果并且移动速度增加的异常之多喵~"
+		},
+		{
+			"type": "text",
+			"title": "时运",
+			"text": "附有时运的刀能够使用ArmorDrop喵~$(br2)效果为被Saya2(鞘击收回的那一击)击中的敌人,死亡时掉落手持物品的概率为99%,如果时运等级大于1则对手持物品和盔甲都有效喵~"
+		},
+		{
+			"type": "text",
+			"title": "耐久",
+			"text": "附有耐久的刀会影响印魂碎片的掉落(见$(l:tantacat_tutorial/entry_3#印魂碎片)印魂碎片$())喵~$(br2)此外,当刀具有多于5个附魔时,断刀掉落耀魂碎片时会消耗刀的一条附魔产生一个带有此附魔的耀魂碎片喵~$(br2)为了避免这种情况,你可以给刀附上耐久附魔,每级耐久可以抵消一次这种作用并产生一个稀有池附魔的破碎的耀魂喵~"
+		},
+		{
+			"type": "text",
+			"text": "然而,经测试发现由于bug,刀失去附魔的部分并没有生效,所以耐久附魔在这个部分的效果从纯粹正面变成了一种中性的效果喵~$(br2)如果想要获得更多的印魂碎片,推荐不附魔耐久附魔喵~"
+		},
+		{
+			"type": "text",
+			"title": "抢夺",
+			"text": "抢夺附魔的特殊效果也是影响印魂碎片掉落,在此不再赘述喵~"
+		},
+		{
+			"type": "text",
+			"title": "其他",
+			"text": "猫猫表示太累了,这个部分不想讲了,详细的可以参考五叶写的部分喵~$(br2)主要都是关于剑技的喵~$(br2)或许下个版本会补上喵~"
+		}
+    ]
+}

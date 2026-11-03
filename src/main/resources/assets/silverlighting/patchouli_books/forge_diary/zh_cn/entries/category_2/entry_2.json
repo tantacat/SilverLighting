@@ -1,0 +1,33 @@
+{
+	"category": "category_2",
+	"sortnum": 2,
+	"name": "胴田贯",
+	"icon": "flammpfeil.slashblade:slashbladeNamed{TextureName:\"named/muramasa/doutanuki\",ModelName:\"named/muramasa/muramasa\"}",
+	"advancement": "silverlighting:named/doutanuki",
+	"pages":[
+		{
+			"type" : "text",
+			"text" : "她是正寻回记忆的古代利刃。$(br2)她会向你展示，千年前的一切。"
+		},
+		{
+			"type" : "text",
+			"title" : "遗尘",
+			"text" : "曾有一个剑娘的黄金时代。$(br2)剑娘是这个时代的主色调。$(br2)直到有一天，令人恐惧的灾祸降临。$(br2)于是，她们都被埋葬在了千年之前。"
+		},
+		{
+			"type" : "text",
+			"title" : "锈铭",
+			"text" : "她的刀铭黯淡无光，即便你尽可能的修复，那刀铭上仍有细小的纹路无法复原。"
+		},
+        {
+            "type": "text",
+            "title": "追忆",
+            "text": "那个黄金的时代里，世界还不像今日一般荒芜。遍地都是刀匠与剑娘，他们一同对抗着由黑暗滋生的怪物，在这个世界上开出了绚烂的文明之花。$(br2)但来自地狱的灾厄摧毁了这一切。$(br2)刀匠于凋零中死去，刀剑在死战中崩断，她的记忆的最后，整个世界尸横遍野。$(br2)千年已逝。如今的你，是最后的刀匠。"
+        },
+        {
+            "type": "text",
+            "title": "旧识",
+            "text": "在千年之前，她认识你。$(br2)尽管记忆尚未清晰，但她相当笃定。$(br2)最后的刀匠，唯一的刀匠。$(br2)为何你会苏醒于这个世界？$(br2)为何你有着锻刀法的记忆？$(br2)为何你能如同本能一般挥出精妙的剑技？$(br2)刀匠。你，究竟是谁？"
+        }
+	]
+}

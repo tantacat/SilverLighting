@@ -1,0 +1,22 @@
+{
+  "parent": "silverlighting:proudsoul/proudsoul",
+  "display": {
+    "title": {
+      "translate": "achievement.flammpfeil.slashblade.bladeStand"
+    },
+    "description": {
+      "translate": "achievement.flammpfeil.slashblade.bladeStand.desc",
+      "with": [ "\n" ]
+    },
+    "icon": {
+      "item": "silverlighting:brokenbamboo",
+      "data": 8
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "action": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

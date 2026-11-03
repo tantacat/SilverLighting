@@ -1,0 +1,56 @@
+{
+	"category": "category_3",
+	"sortnum": 5,
+	"name": "持剑步法",
+	"icon": "",
+	"pages":[
+		{
+			"type" : "text",
+			"text" : " "
+		},
+        {
+            "type": "empty"
+        },
+		{
+			"type" : "text",
+			"title" : "连闪（Style Action）",
+			"text" : "与剑同心，可以迅速进行短距离的快速突进，突进期间用剑$(l)抵御所有伤害$()。但连续使用后，需要$(l)短暂休整$()才能继续使用。"
+		},
+		{
+			"type" : "image",
+			"images": [
+				"silverlighting:textures/image/3-5-连闪-1.png",
+				"silverlighting:textures/image/3-5-连闪-2.png"
+			],
+			"text" : "按住方向键时按下特殊行动键（默认V）。"
+		},
+        
+        {
+            "type": "text",
+            "title": "瞬步（Air Tirck）",
+            "text": "向前发射一枚特殊的幻影剑，在命中时将自己$(l)转移$()到目标附近，是借助幻影剑进行迅速位移的技巧。"
+        },
+        {
+            "type": "image",
+            "images": [
+				"silverlighting:textures/image/3-5-瞬步.png"
+			],
+            "text": "按住前进和锁定时按下特殊行动键。"
+        },
+        
+        {
+            "type": "text",
+            "title": "踏燕（Enemy Step）",
+            "text": "位于空中，可以从附近的墙体或者生物借力，用剑保持平衡的同时进行$(l)二次跳跃$()。这种平衡只能保持一次，无法在空中多次借力跳跃。"
+        },
+        {
+            "type": "image",
+            "images": [
+				"silverlighting:textures/image/3-5-踏燕-1.png",
+				"silverlighting:textures/image/3-5-踏燕-2.png",
+				"silverlighting:textures/image/3-5-踏燕-3.png"
+			],
+            "text": "跳起后贴近墙壁/生物时按下跳跃。"
+        }
+	]
+}

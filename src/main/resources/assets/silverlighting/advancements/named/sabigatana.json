@@ -1,0 +1,32 @@
+{
+  "parent": "flammpfeil.slashblade:root",
+  "display": {
+    "title": {
+      "translate": "achievement.flammpfeil.slashblade.sabigatana"
+    },
+    "description": {
+      "translate": "achievement.flammpfeil.slashblade.sabigatana.desc",
+      "with": [ "\n" ]
+    },
+    "icon": {
+      "item": "flammpfeil.slashblade:slashbladeNamed",
+      "nbt": "{isBroken:true,TextureName:\"named/muramasa/sabigatana\",ModelName:\"named/muramasa/muramasa\"}",
+      "data": 100
+    },
+    "frame": "task",
+    "hidden": true
+  },
+  "criteria": {
+    "get": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "flammpfeil.slashblade:slashbladeNamed",
+            "nbt": "{CurrentItemName:\"flammpfeil.slashblade.named.sabigatana\"}"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+	"category": "category_1",
+	"sortnum": 2,
+	"name": "无铭刀「木偶」",
+	"icon": "flammpfeil.slashblade:slashbladeWood",
+	"advancement": "flammpfeil.slashblade:wood",
+	"pages":[
+		{
+			"type" : "text",
+			"text" : "无论未来有多少抉择，这里总是你的起点。"
+		},
+		{
+			"advancement": "flammpfeil.slashblade:wood",
+			"type": "text",
+			"title" : "成锋",
+			"text" : "木刀归鞘，严丝合缝。轻微的震颤仿佛贯穿了你的躯体，令你的心脏发出喜悦的共鸣。$(br2)你生来就是为了握紧她。你如此确信。$(br)她的名字自然而然的自你的脑海中浮现，又自然而然的从你的口中流出……初次见面，木偶。我的……无铭刀「木偶」。”$(br2)于是，你握紧了她。$(br)于是，她也握紧了你。"
+		},
+		{
+			"advancement": "flammpfeil.slashblade:wood",
+			"type" : "text",
+			"title" : "启灵",
+			"text" : "她同她的材质一样脆弱，但又绝不仅此而已……$(br2)她第一次向你开了口。尽管只是几个简单的字符，但传达到的信息远超这几个字符本身……$(br2)“她”，不是简单的工具，不是可以消耗的武器，她是真切的活着的…你的同伴。$(br2)这个世界依旧空荡，但你的身边，不再只有寂静。"
+		},
+		{
+			"advancement": "flammpfeil.slashblade:root",
+			"type" : "text",
+			"title" : "试锋",
+			"text" : "刀刃切开躯体的顿感犹在手心。$(br2)这似乎不该是木刀该有的锋利。你检查过她的躯体，像普通的木头一样破损着，但又丝毫不影响斩敌的流畅。$(br2)使用她的感觉令你着迷。那些刀下亡魂化作了属于你的荣耀，化作了属于刀剑的…$(l)荣耀之魂。"
+		},
+		{
+			"advancement": "flammpfeil.slashblade:root",
+			"type" : "text",
+			"title" : "承刃",
+			"text" : "你反复品味着斩敌的姿态，在脑海中细细勾勒出刀锋的轨迹，无论是你还是她，都还有很大的进步空间。$(br2)对你而言，自是对拔刀术的勤学精进。而在她的身上，你却看到了很多种不同的可能性……$(br)你的贪婪作祟。$(br)你还想要更多。"
+		},
+		{
+			"advancement": "flammpfeil.slashblade:root",
+			"type": "crafting",
+			"recipe": "flammpfeil.slashblade:bamboolight"
+		},
+		{
+			"advancement": "flammpfeil.slashblade:root",
+			"type": "crafting",
+			"recipe": "flammpfeil.slashblade:white",
+			"recipe2": "flammpfeil.slashblade:white3"
+		}
+	]
+}

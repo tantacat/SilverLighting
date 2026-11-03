@@ -1,0 +1,45 @@
+{
+	"category": "category_4",
+	"sortnum": 7,
+	"name": "狐月双面",
+	"icon": "flammpfeil.slashblade:slashbladeWrapper{TextureName:\"BambooKatana\"}",
+	"advancement": "silverlighting:wrape/bamboo",
+	"pages":[
+		{
+			"type" : "text",
+			"text" : "承载妖狐之力而归来的武士…你看她，又有几分似银纸？"
+		},
+		{
+			"type" : "text",
+			"title" : "无名",
+			"text" : "你将制式的武士刀收入鞘中。甚至不需要鞘的蕴造，她们本就严丝合缝。$(br2)于是，武士一般的剑娘被蕴造而出。$(br2)她是武者，是战士，是以红玉之名，回归你手的银纸。"
+		},
+		{
+			"type" : "text",
+			"title" : "红玉",
+			"text" : "她的身上看得出银纸的影子。但也只是影子。$(br2)并肩作战至此，你确信了她绝对不是银纸，她是独立的剑娘，只是继承了银纸的记忆和部分习惯…$(br2)不知为何，你感到庆幸，又感到无比悲伤。"
+		},
+        {
+            "type": "text",
+            "title": "狐月",
+            "text": "你做了一个梦。梦里，一黑一白的狐狸绕着你奔跑，你挥刀斩去，却毫不意外的被她们闪开。$(br2)她们向前跑去，奔向一方菱形的月亮，最终在月亮的两面化作了两道奇特的图案。$(br2)这图案…好熟悉。$(br2)那是你和银纸曾经讨论过，她想刻在挂牌上的，你最喜欢的图案……"
+        },
+		{
+			"type": "crafting",
+			"recipe": "flammpfeil.slashblade:flammpfeil.slashblade.named.fox.white",
+			"recipe2": "flammpfeil.slashblade:flammpfeil.slashblade.named.fox.black"
+		},
+		{
+			"advancement": "silverlighting:wrape/fox_black",
+			"type" : "text",
+			"title" : "黑狐",
+			"text" : "真好啊，她是独立的剑娘，不是银纸的替代品，是真真正正，由你锻造的剑……$(br2)从梦中获得的灵感，让你锻出了黑狐。$(br2)严肃的剑娘已经看不出什么银纸的影子，但你偶尔还是会看向手中刀剑的挂牌。$(br2)那是熟悉的图案。"
+		},
+        {
+			"advancement": "silverlighting:wrape/fox_white",
+            "type": "text",
+            "title": "白狐",
+            "text": "真糟啊，她不是银纸。你熟悉的银纸已经彻底死在了化身为鞘的那一天。$(br2)从梦中获得的灵感，让你锻出了白狐。$(br2)她和银纸很像，又绝对不是银纸。你们偶尔会一同看向手中刀剑的挂牌。$(br2)那是她存在过的证明。"
+        }
+	]
+}

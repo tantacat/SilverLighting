@@ -1,0 +1,53 @@
+{
+    "category": "category_1",
+    "sortnum": 6,
+    "name": "灵鞘",
+    "icon": "silverlighting:animasheath{TextureName:\"silver/sheath\",ModelName:\"silver/sheath\"}",
+	"advancement": "silverlighting:item/brokenbamboo",
+    "pages":[
+        {
+            "type" : "text",
+            "text" : "她将死去，她将归来。$(br2)创造奇迹吧，刀匠。"
+        },
+        {
+			"advancement": "silverlighting:item/brokenbamboo",
+            "type" : "spotlight",
+            "title" : "连心",
+            "item": "silverlighting:brokenbamboo",
+            "text": "就算失去了一切变为无貌之鞘，她依然在以她的方式保护你。$(br2)你手中那燃烧的碎片就是证明。$(br2)她的离开并非死亡。总有办法，一定有办法…$(br2)你必然将她重铸。"
+        },
+		{
+			"advancement": "silverlighting:item/brokenbamboo",
+			"type": "crafting",
+			"recipe": "silverlighting:silverlighting_recipe1"
+		},
+        {
+			"advancement": "silverlighting:animasheath/silverlighting",
+            "type" : "text",
+            "title" : "灵躯",
+            "text": "你锻成了一副奇妙的刀剑。你称其为奇迹的化身。$(br2)以这种方式，她回来了，回到了这具依然脆弱的躯体里。但这一次，折断绝不会再次让你们天人两隔。$(br2)尽管，是以这种暴力到无以复加的方式。"
+        },
+        {
+			"advancement": "silverlighting:animasheath/animasheath",
+            "type" : "text",
+            "title" : "灵鞘",
+            "text": "她再次折断了，但折断的只是脆弱的刀刃而已。$(br2)承载着她的意志的刀鞘，还留在你的手中。$(br2)脆弱的剑体无法铭刻刀铭，那便以更大的载体实行更少的功能，这就是你刻在刀鞘上的伪铭。$(br2)这也许意味着以后，她很难变成真正的妖刀…但眼下，还是她的陪伴更加重要。"
+        },
+		{
+			"advancement": "silverlighting:animasheath/animasheath",
+			"type": "crafting",
+			"recipe": "silverlighting:silverlighting_recipe2"
+		},
+        {
+			"advancement": "silverlighting:animasheath/animasheath",
+			"type": "text",
+            "title" : "归鞘",
+            "text": "借助伪铭，只需要简单的归鞘，就可以让普通的刀剑成为她施展拔刀术的载体。$(br2)借助伪铭，她可以承载那些技术，除了仍然会断刀，她和真正带有刀铭的妖刀没什么两样。$(br2)故事只要如此下去，一定会越来越好的吧？"
+        },
+		{
+			"advancement": "silverlighting:animasheath/animasheath",
+			"type": "crafting",
+			"recipe": "silverlighting:puresilver_recipe"
+		}
+    ]
+}

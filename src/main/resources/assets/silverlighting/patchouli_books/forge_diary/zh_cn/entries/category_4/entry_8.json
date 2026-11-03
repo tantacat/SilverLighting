@@ -1,0 +1,80 @@
+{
+	"category": "category_4",
+	"sortnum": 8,
+	"name": "灵鞘异章",
+	"icon": "silverlighting:animasheath{TextureName:\"silver/sheath\",ModelName:\"silver/sheath\"}",
+	"advancement": "silverlighting:animasheath/animasheath",
+	"pages":[
+		{
+			"type" : "text",
+			"text" : "两种平行的可能性于此交汇，这是只有你能铸成的伟业。"
+		},
+		{
+			"advancement": "silverlighting:animasheath/animasheath",
+			"type" : "text",
+			"title" : "汇流",
+			"text" : "如果你所铸成的奇迹，与她的愿望相交汇，会发生什么呢？$(br2)这是你的故事，你才是刀匠。$(br2)你有权利决定，接下来会发生什么。"
+		},
+		{
+			"advancement": "silverlighting:function/hidden_balkons",
+			"type" : "text",
+			"title" : "徒形",
+			"text" : "露台源于她的愿望，但也毫无疑问的，没有真正的刀铭。这些蕴造出的躯体，还没有成为妖刀的资格。$(br2)这显然不是你想要的。$(br2)于是你将虚伪的刀铭刻下，又铸成崭新的刀胚，做成她们的临时载体。$(br2)徒有其形，是为徒形。作为模具的躯体，终有一日会成为真正的妖刀。"
+		},
+        {
+			"advancement": "silverlighting:animasheath/animasheath_wood",
+            "type": "text",
+            "title": "缀云",
+            "text": "这具躯体限制了她的战斗力。$(br2)所以，她将成为你的眼，你的翼，将威胁扼杀于存在之前。$(br2)不会再有悲伤，不会再有危险，她会看清一切，她会掌控一切。$(br2)一切献给刀匠。"
+        },
+		{
+			"advancement": "silverlighting:animasheath/animasheath_wood",
+			"type": "crafting",
+			"recipe": "silverlighting:animasheath_drape_recipe"
+		},
+		{
+			"advancement": "silverlighting:animasheath/animasheath_stone",
+			"type" : "text",
+			"title" : "戾华",
+			"text" : "为什么你要选择她呢？$(br2)她没什么特别的力量，她对自己的战斗能力也没有信心。$(br2)就只剩下破坏力可以一看了。既然被选择了，那就…尽她所能？$(br2)一切献给刀匠。"
+		},
+		{
+			"advancement": "silverlighting:animasheath/animasheath_stone",
+			"type": "crafting",
+			"recipe": "silverlighting:animasheath_spite_recipe"
+		},
+		{
+			"advancement": "silverlighting:animasheath/animasheath_iron",
+			"type" : "text",
+			"title" : "铁刃",
+			"text" : "杀死敌人。这是最简单的战术。$(br2)让她耻辱的不是落败，而是因为这具身体拖慢了你的脚步。$(br2)她是最纯粹的刀剑，最纯粹的武器，秉持着最纯粹的杀意。$(br2)一切献给刀匠。"
+		},
+		{
+			"advancement": "silverlighting:animasheath/animasheath_iron",
+			"type": "crafting",
+			"recipe": "silverlighting:animasheath_edge_recipe"
+		},
+        {
+			"advancement": "silverlighting:animasheath/animasheath_gold",
+            "type": "text",
+            "title": "刹明",
+            "text": "要得到力量……无论代价如何。$(br2)她的身体依然孱弱，她的刀锋依然圆钝，但她已经不再依赖这些。$(br2)魔纹会给她带来力量。尽管这让她的身体摇摇欲坠…她甘之如饴。$(br2)一切献给刀匠。"
+        },
+		{
+			"advancement": "silverlighting:animasheath/animasheath_gold",
+			"type": "crafting",
+			"recipe": "silverlighting:animasheath_gleam_recipe"
+		},
+        {
+			"advancement": "silverlighting:animasheath/animasheath_diamond",
+            "type": "text",
+            "title": "仿钻",
+            "text": "金刚不过幻梦一场…吗？$(br2)一切骄傲，一切荣耀，似乎都在折断的那一刹那归于虚无。$(br2)她不再以金刚自居。这具身体，这些力量，仅仅只是为了与你并肩。$(br2)一切献给刀匠。"
+        },
+		{
+			"advancement": "silverlighting:animasheath/animasheath_diamond",
+			"type": "crafting",
+			"recipe": "silverlighting:animasheath_phos_recipe"
+		}
+	]
+}

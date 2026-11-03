@@ -1,0 +1,21 @@
+{
+  "parent": "silverlighting:proudsoul/enchantmentsoul",
+  "display": {
+    "title": {
+      "translate": "advancement.silverlighting.enchant_simpleblade"
+    },
+    "description": {
+      "translate": "advancement.silverlighting.enchant_simpleblade.desc",
+      "with": [ "\n" ]
+    },
+    "icon": {
+      "item": "minecraft:gunpowder"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "smelt": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

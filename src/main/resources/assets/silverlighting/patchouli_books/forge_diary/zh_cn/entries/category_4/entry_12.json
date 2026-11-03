@@ -1,0 +1,48 @@
+{
+	"category": "category_4",
+	"sortnum": 12,
+	"name": "旧日魔神",
+	"icon": "flammpfeil.slashblade:slashbladeNamed{TextureName:\"named/yamato\",ModelName:\"named/yamato\"}",
+	"advancement": "minecraft:end/kill_dragon",
+	"pages":[
+		{
+			"type" : "text",
+			"text" : "除了使命，她什么都想不起来。既然使命已经达成，她也该有个去处。"
+		},
+		{
+			"advancement": "silverlighting:named/brokenyamato",
+			"type" : "text",
+			"title" : "封龙",
+			"text" : "击溃末地的暴君之后，出现在你眼前的除了她誓死保护的龙蛋，还有一把折断的刀剑。$(br2)那是一位昏迷的剑娘，使用了相当古老的锻造技术，你能感受到她的意志仍在，但太久未被滋养，已然失去意识。$(br2)她也许能向你展示许多东西，关于那个千年前的时代。"
+		},
+		{
+			"advancement": "silverlighting:named/brokenyamato",
+			"type" : "text",
+			"title" : "旧神",
+			"text" : "你检查了她的躯体。$(br2)虽然已经折断，但出乎意料的光洁如新，就连刃口也依旧锋利。唯一可惜的是，她似乎失去了很多记忆，以至于没办法好好的配合你使用拔刀术。$(br2)从她零碎的言语中，你觉察到，她所生存的年代也许并非你所了解的黄金年代…"
+		},
+        {
+			"advancement": "silverlighting:named/brokenyamato",
+            "type": "text",
+            "title": "残心",
+            "text": "虽然是初次见面，但你对她很熟悉。$(br2)相当熟悉。$(br2)这具折断的躯体所使用的…绝对是你的技术。$(br2)可你明明才刚踏入锻刀一途不久。$(br2)也许，将她修复之后，她会告诉你答案。"
+        },
+		{
+			"advancement": "silverlighting:named/brokenyamato",
+			"type": "crafting",
+			"recipe": "flammpfeil.slashblade:yamato"
+		},
+        {
+			"advancement": "silverlighting:named/yamato",
+            "type": "text",
+            "title": "复现",
+            "text": "那是一段关于黄金时代的诞生的故事。$(br2)暴君之龙突兀的从异界降临，暴君的麾下肆无忌惮的掠夺这个世界，民不聊生。$(br2)于是，有人站了出来，用他所锻造的有意志的刀剑击败了那位暴君之龙。$(br2)那把剑最终与暴君一同被放逐回了原本的世界，并作为封印，永远镇压着暴君无法再次逃离。$(br2)直至昨日。"
+        },
+        {
+			"advancement": "silverlighting:named/yamato",
+            "type": "text",
+            "title": "起源？",
+            "text": "那个人就是你。$(br2)那把刀就是她。$(br2)这已经是你能追溯到的最久远的故事。$(br2)然而，每个久远的故事里，都有你的身影。$(br2)继续追索昨日的故事，还是延续明日的故事？$(br2)这取决于你，我们的…刀匠。"
+        }
+	]
+}

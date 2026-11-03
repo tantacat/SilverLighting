@@ -1,0 +1,31 @@
+{
+  "parent": "silverlighting:animasheath/silverlighting",
+  "display": {
+    "title": {
+      "translate": "advancement.silverlighting.dokkaebisheath"
+    },
+    "description": {
+      "translate": "advancement.silverlighting.dokkaebisheath.desc",
+      "with": [ "\n" ]
+    },
+    "icon": {
+      "item": "silverlighting:animasheath",
+      "nbt": "{TextureName:\"silver/dokkaebisheath\",ModelName:\"silver/dokkaebisheath\"}"
+    },
+    "frame": "challenge",
+    "hidden": true
+  },
+  "criteria": {
+    "get": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "silverlighting:animasheath",
+            "nbt": "{CurrentItemName:\"silverlighting.dokkaebisheath\"}"
+          }
+        ]
+      }
+    }
+  }
+}

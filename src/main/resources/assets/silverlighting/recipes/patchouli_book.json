@@ -1,0 +1,22 @@
+{
+  "conditions": [
+	{
+		"type" : "forge:mod_loaded",
+        "modid" : "patchouli"
+	}
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "group": "silverlighting:forge_diary",
+  "result": {
+    "item": "patchouli:guide_book",
+    "nbt": "{\"patchouli:book\":\"silverlighting:forge_diary\"}"
+  },
+  "ingredients": [
+    {
+      "item": "minecraft:book"
+    },
+    {
+      "item": "silverlighting:brokenbamboo"
+    }
+  ]
+}

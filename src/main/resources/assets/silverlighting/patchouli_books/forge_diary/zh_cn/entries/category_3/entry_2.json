@@ -1,0 +1,64 @@
+{
+	"category": "category_3",
+	"sortnum": 2,
+	"name": "单刀剑技",
+	"icon": "",
+	"pages":[
+		{
+			"type" : "text",
+			"text" : " "
+		},
+        {
+            "type": "empty"
+        },
+        
+		{
+			"type" : "text",
+			"title" : "藏刃拔刀",
+			"text" : "立足地面，在连续的两次鞘击后，迅速拔刀挥砍一次的剑技，也是长久以来，你最熟悉的技巧。刀剑终究不是钝器，鞘击的力度$(l)不足以$()完全杀死敌人，但好在鞘击也$(l)不会$()损伤刀刃。"
+		},
+		{
+			"type" : "image",
+			"images": [
+				"silverlighting:textures/image/3-2-藏刃拔刀-1.png",
+				"silverlighting:textures/image/3-2-藏刃拔刀-2.png",
+				"silverlighting:textures/image/3-2-藏刃拔刀-3.png"
+			],
+			"text" : "评级较低时，连续右键。"
+		},
+        
+        {
+            "type": "text",
+            "title": "六方出势",
+            "text": "立足地面，在刀足够趁手的时候，从多个方向发起连绵不绝的斩击，最后一击甚至可以$(l)挥出剑气$()。"
+        },
+        {
+            "type": "image",
+            "images": [
+				"silverlighting:textures/image/3-2-六方出势-1.png",
+				"silverlighting:textures/image/3-2-六方出势-2.png",
+				"silverlighting:textures/image/3-2-六方出势-3.png",
+				"silverlighting:textures/image/3-2-六方出势-4.png",
+				"silverlighting:textures/image/3-2-六方出势-5.png",
+				"silverlighting:textures/image/3-2-六方出势-6.png"
+			],
+            "text": "评级较高时，连续右键。"
+        },
+        
+        {
+            "type": "text",
+            "title": "疾走居合（Rapid Slash）",
+            "text": "立足地面，在拔刀的同时全力冲刺。可以顺势$(l)挑飞敌人$()，自身也会随之起跳。"
+        },
+        {
+            "type": "image",
+            "images": [
+				"silverlighting:textures/image/3-2-疾走居合-1.png",
+				"silverlighting:textures/image/3-2-疾走居合-2.png",
+				"silverlighting:textures/image/3-2-疾走居合-3.png",
+				"silverlighting:textures/image/3-2-疾走居合-4.png"
+			],
+            "text": "在地面按住前进和潜行时，按下右键释放疾走居合。长按右键额外进行击飞和起跳。"
+        }
+	]
+}

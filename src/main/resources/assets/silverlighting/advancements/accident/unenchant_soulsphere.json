@@ -1,0 +1,21 @@
+{
+  "parent": "silverlighting:proudsoul/enchantmentsoul",
+  "display": {
+    "title": {
+      "translate": "advancement.silverlighting.unenchant_soulsphere"
+    },
+    "description": {
+      "translate": "advancement.silverlighting.unenchant_soulsphere.desc",
+      "with": [ "\n" ]
+    },
+    "icon": {
+      "item": "minecraft:furnace"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "smelt": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

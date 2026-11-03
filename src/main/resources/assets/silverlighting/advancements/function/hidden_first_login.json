@@ -1,0 +1,8 @@
+{
+  "parent": "flammpfeil.slashblade:root",
+  "criteria": {
+    "login": {
+      "trigger": "minecraft:location"
+    }
+  }
+}

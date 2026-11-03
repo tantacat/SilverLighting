@@ -1,0 +1,41 @@
+{
+	"category": "category_4",
+	"sortnum": 1,
+	"name": "以铭赋形",
+	"icon": "flammpfeil.slashblade:slashblade",
+	"advancement": "flammpfeil.slashblade:slashblade",
+	"pages":[
+		{
+			"type" : "text",
+			"text" : "刻在她身上的，是你的痕迹。"
+		},
+		{
+			"type" : "text",
+			"title" : "铭心",
+			"text" : "与以往的剑娘不同，她与你的联系，似乎更加深刻。$(br2)你注意到了锻造过程中自然出现的刀铭。也许这些变化，与刀铭息息相关。"
+		},
+		{
+			"type" : "text",
+			"title" : "封刃",
+			"text" : "她在躁动。你感觉到你和她的联系似乎隔着一层障壁，而这层障壁的来源…正是带来了这份联系的刀铭。$(br2)这黯淡无光的刀铭显然不是她的全部。"
+		},
+        {
+			"advancement": "silverlighting:enchanted",
+            "type": "text",
+            "title": "刻印",
+            "text": "刀铭流动着光芒，似乎源于你的心跳，又化为剑娘的心跳。$(br2)附魔的力量令刀铭觉醒，也带来了令人欣喜的新的希望…但这似乎还不是她的全部。$(br2)你注视着刀铭，仿佛上面有着你能看懂的文字。"
+        },
+        {
+			"advancement": "silverlighting:bewitched",
+            "type": "text",
+            "title": "化妖",
+            "text": "她将一切毫无保留的展现在了你的面前。这是你赐予的名字，属于这个名字的一切，理当尽属于你。"
+        },
+        {
+			"advancement": "silverlighting:bewitched",
+            "type": "text",
+            "title": "认主",
+            "text": "耀偏方三八面体的力量打开了最后的门扉。你是她的主人。认可这个身份，然后，去做符合身份的事。"
+        }
+	]
+}
